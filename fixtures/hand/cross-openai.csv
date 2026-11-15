@@ -1,0 +1,5 @@
+item_id,title,description,url,brand,seller_name,image_url,availability,availability_date,price,target_countries,store_country,gtin
+X1,Lamp,A hand-made row.,https://hand.example/X1,Handmade,Hand Shop,https://hand.example/X1.jpg,in_stock,,10.00 USD,US,US,4006381333931
+X2,Mug,A hand-made row.,https://hand.example/X2,Handmade,Hand Shop,https://hand.example/X2.jpg,pre_order,2027-01-15T00:00:00Z,10.00 USD,US,US,9780306406157
+X3,Towel,A hand-made row.,https://hand.example/X3,Handmade,Hand Shop,https://hand.example/X3.jpg,in_stock,,10.00 USD,US,US,96385074
+X4,Frame,A hand-made row.,https://hand.example/X4,Handmade,Hand Shop,https://hand.example/X4.jpg,in_stock,,10.00 USD,US,US,036000291452

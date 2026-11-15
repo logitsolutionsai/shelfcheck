@@ -1,0 +1,8234 @@
+{
+ "generated_by": "fixtures/generate.py",
+ "seed": 20261114,
+ "seeded": {
+  "check_digit": 84,
+  "target_countries": 61,
+  "preorder": 23,
+  "sale_price": 15,
+  "long_title": 12,
+  "restricted": 9,
+  "no_brand": 7,
+  "cross_price": 11,
+  "acp_decimal": 17
+ },
+ "check": [
+  {
+   "name": "openai-csv-alone",
+   "inputs": [
+    "store-a/products.csv"
+   ],
+   "formats": [
+    "openai",
+    "acp",
+    "google"
+   ],
+   "summary": {
+    "products": 1400,
+    "items": 3912
+   },
+   "problems": [
+    {
+     "rule": "openai.required.target_countries",
+     "file": "store-a/products.csv",
+     "line": 36,
+     "column": 13,
+     "pointer": null,
+     "item_id": "LAM0015-3",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "openai.availability.enum",
+     "file": "store-a/products.csv",
+     "line": 79,
+     "column": 9,
+     "pointer": null,
+     "item_id": "MUG0033-1",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "openai.required.target_countries",
+     "file": "store-a/products.csv",
+     "line": 100,
+     "column": 13,
+     "pointer": null,
+     "item_id": "MUG0043-1",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "openai.availability.enum",
+     "file": "store-a/products.csv",
+     "line": 123,
+     "column": 9,
+     "pointer": null,
+     "item_id": "FRA0056-1",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.csv",
+     "line": 157,
+     "column": 15,
+     "pointer": null,
+     "item_id": "PHO0071-3",
+     "formats": [
+      "openai",
+      "acp",
+      "google"
+     ],
+     "expected": "2"
+    },
+    {
+     "rule": "openai.required.target_countries",
+     "file": "store-a/products.csv",
+     "line": 169,
+     "column": 13,
+     "pointer": null,
+     "item_id": "LAM0075-3",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.csv",
+     "line": 170,
+     "column": 15,
+     "pointer": null,
+     "item_id": "LAM0075-4",
+     "formats": [
+      "openai",
+      "acp",
+      "google"
+     ],
+     "expected": "2"
+    },
+    {
+     "rule": "openai.required.target_countries",
+     "file": "store-a/products.csv",
+     "line": 187,
+     "column": 13,
+     "pointer": null,
+     "item_id": "MUG0083-3",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.csv",
+     "line": 192,
+     "column": 15,
+     "pointer": null,
+     "item_id": "TEE0084-3",
+     "formats": [
+      "openai",
+      "acp",
+      "google"
+     ],
+     "expected": "7"
+    },
+    {
+     "rule": "openai.title.length",
+     "file": "store-a/products.csv",
+     "line": 197,
+     "column": 2,
+     "pointer": null,
+     "item_id": "KET0087-1",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "google.title.length",
+     "file": "store-a/products.csv",
+     "line": 197,
+     "column": 2,
+     "pointer": null,
+     "item_id": "KET0087-1",
+     "formats": [
+      "google"
+     ]
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.csv",
+     "line": 215,
+     "column": 15,
+     "pointer": null,
+     "item_id": "MUG0093-2",
+     "formats": [
+      "openai",
+      "acp",
+      "google"
+     ],
+     "expected": "2"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.csv",
+     "line": 245,
+     "column": 15,
+     "pointer": null,
+     "item_id": "LAM0105-2",
+     "formats": [
+      "openai",
+      "acp",
+      "google"
+     ],
+     "expected": "2"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.csv",
+     "line": 248,
+     "column": 15,
+     "pointer": null,
+     "item_id": "FRA0106-3",
+     "formats": [
+      "openai",
+      "acp",
+      "google"
+     ],
+     "expected": "3"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.csv",
+     "line": 253,
+     "column": 15,
+     "pointer": null,
+     "item_id": "BAG0108-2",
+     "formats": [
+      "openai",
+      "acp",
+      "google"
+     ],
+     "expected": "8"
+    },
+    {
+     "rule": "openai.required.target_countries",
+     "file": "store-a/products.csv",
+     "line": 263,
+     "column": 13,
+     "pointer": null,
+     "item_id": "TEE0114-3",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "openai.required.target_countries",
+     "file": "store-a/products.csv",
+     "line": 274,
+     "column": 13,
+     "pointer": null,
+     "item_id": "PHO0121-1",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "openai.required.target_countries",
+     "file": "store-a/products.csv",
+     "line": 280,
+     "column": 13,
+     "pointer": null,
+     "item_id": "TEE0124-1",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.csv",
+     "line": 286,
+     "column": 15,
+     "pointer": null,
+     "item_id": "LAM0125-3",
+     "formats": [
+      "openai",
+      "acp",
+      "google"
+     ],
+     "expected": "5"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.csv",
+     "line": 291,
+     "column": 15,
+     "pointer": null,
+     "item_id": "KET0127-2",
+     "formats": [
+      "openai",
+      "acp",
+      "google"
+     ],
+     "expected": "0"
+    },
+    {
+     "rule": "openai.required.target_countries",
+     "file": "store-a/products.csv",
+     "line": 311,
+     "column": 13,
+     "pointer": null,
+     "item_id": "SOC0140-1",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "openai.sale_price.below_price",
+     "file": "store-a/products.csv",
+     "line": 314,
+     "column": 12,
+     "pointer": null,
+     "item_id": "TAB0142-1",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "openai.required.target_countries",
+     "file": "store-a/products.csv",
+     "line": 350,
+     "column": 13,
+     "pointer": null,
+     "item_id": "BAG0158-1",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.csv",
+     "line": 358,
+     "column": 15,
+     "pointer": null,
+     "item_id": "SOC0160-4",
+     "formats": [
+      "openai",
+      "acp",
+      "google"
+     ],
+     "expected": "9"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.csv",
+     "line": 366,
+     "column": 15,
+     "pointer": null,
+     "item_id": "MUG0163-2",
+     "formats": [
+      "openai",
+      "acp",
+      "google"
+     ],
+     "expected": "4"
+    },
+    {
+     "rule": "openai.required.brand",
+     "file": "store-a/products.csv",
+     "line": 387,
+     "column": 5,
+     "pointer": null,
+     "item_id": "LAM0175-1",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "google.brand.required_new",
+     "file": "store-a/products.csv",
+     "line": 387,
+     "column": 5,
+     "pointer": null,
+     "item_id": "LAM0175-1",
+     "formats": [
+      "google"
+     ]
+    },
+    {
+     "rule": "openai.required.target_countries",
+     "file": "store-a/products.csv",
+     "line": 388,
+     "column": 13,
+     "pointer": null,
+     "item_id": "FRA0176-1",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "openai.required.target_countries",
+     "file": "store-a/products.csv",
+     "line": 421,
+     "column": 13,
+     "pointer": null,
+     "item_id": "PHO0191-1",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "openai.title.length",
+     "file": "store-a/products.csv",
+     "line": 434,
+     "column": 2,
+     "pointer": null,
+     "item_id": "FRA0196-1",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "google.title.length",
+     "file": "store-a/products.csv",
+     "line": 434,
+     "column": 2,
+     "pointer": null,
+     "item_id": "FRA0196-1",
+     "formats": [
+      "google"
+     ]
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.csv",
+     "line": 441,
+     "column": 15,
+     "pointer": null,
+     "item_id": "KET0197-4",
+     "formats": [
+      "openai",
+      "acp",
+      "google"
+     ],
+     "expected": "8"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.csv",
+     "line": 442,
+     "column": 15,
+     "pointer": null,
+     "item_id": "BAG0198-1",
+     "formats": [
+      "openai",
+      "acp",
+      "google"
+     ],
+     "expected": "5"
+    },
+    {
+     "rule": "openai.required.target_countries",
+     "file": "store-a/products.csv",
+     "line": 444,
+     "column": 13,
+     "pointer": null,
+     "item_id": "BAG0198-3",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "openai.required.target_countries",
+     "file": "store-a/products.csv",
+     "line": 447,
+     "column": 13,
+     "pointer": null,
+     "item_id": "SOC0200-1",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.csv",
+     "line": 450,
+     "column": 15,
+     "pointer": null,
+     "item_id": "TAB0202-1",
+     "formats": [
+      "openai",
+      "acp",
+      "google"
+     ],
+     "expected": "0"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.csv",
+     "line": 492,
+     "column": 15,
+     "pointer": null,
+     "item_id": "BAG0218-1",
+     "formats": [
+      "openai",
+      "acp",
+      "google"
+     ],
+     "expected": "0"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.csv",
+     "line": 495,
+     "column": 15,
+     "pointer": null,
+     "item_id": "TOW0219-1",
+     "formats": [
+      "openai",
+      "acp",
+      "google"
+     ],
+     "expected": "1"
+    },
+    {
+     "rule": "openai.required.brand",
+     "file": "store-a/products.csv",
+     "line": 524,
+     "column": 5,
+     "pointer": null,
+     "item_id": "MUG0233-1",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "google.brand.required_new",
+     "file": "store-a/products.csv",
+     "line": 524,
+     "column": 5,
+     "pointer": null,
+     "item_id": "MUG0233-1",
+     "formats": [
+      "google"
+     ]
+    },
+    {
+     "rule": "openai.sale_price.below_price",
+     "file": "store-a/products.csv",
+     "line": 531,
+     "column": 12,
+     "pointer": null,
+     "item_id": "BAG0238-1",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.csv",
+     "line": 546,
+     "column": 15,
+     "pointer": null,
+     "item_id": "LAM0245-2",
+     "formats": [
+      "openai",
+      "acp",
+      "google"
+     ],
+     "expected": "0"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.csv",
+     "line": 550,
+     "column": 15,
+     "pointer": null,
+     "item_id": "BAG0248-1",
+     "formats": [
+      "openai",
+      "acp",
+      "google"
+     ],
+     "expected": "7"
+    },
+    {
+     "rule": "openai.required.target_countries",
+     "file": "store-a/products.csv",
+     "line": 552,
+     "column": 13,
+     "pointer": null,
+     "item_id": "BAG0248-3",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "openai.required.target_countries",
+     "file": "store-a/products.csv",
+     "line": 596,
+     "column": 13,
+     "pointer": null,
+     "item_id": "TOW0269-1",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.csv",
+     "line": 623,
+     "column": 15,
+     "pointer": null,
+     "item_id": "MUG0283-2",
+     "formats": [
+      "openai",
+      "acp",
+      "google"
+     ],
+     "expected": "8"
+    },
+    {
+     "rule": "openai.sale_price.below_price",
+     "file": "store-a/products.csv",
+     "line": 635,
+     "column": 12,
+     "pointer": null,
+     "item_id": "FRA0286-3",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "openai.required.target_countries",
+     "file": "store-a/products.csv",
+     "line": 639,
+     "column": 13,
+     "pointer": null,
+     "item_id": "KET0287-3",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.csv",
+     "line": 645,
+     "column": 15,
+     "pointer": null,
+     "item_id": "TAB0292-1",
+     "formats": [
+      "openai",
+      "acp",
+      "google"
+     ],
+     "expected": "0"
+    },
+    {
+     "rule": "openai.availability.enum",
+     "file": "store-a/products.csv",
+     "line": 689,
+     "column": 9,
+     "pointer": null,
+     "item_id": "SOC0310-4",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "openai.availability.enum",
+     "file": "store-a/products.csv",
+     "line": 734,
+     "column": 9,
+     "pointer": null,
+     "item_id": "SOC0330-1",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.csv",
+     "line": 739,
+     "column": 15,
+     "pointer": null,
+     "item_id": "MUG0333-2",
+     "formats": [
+      "openai",
+      "acp",
+      "google"
+     ],
+     "expected": "8"
+    },
+    {
+     "rule": "openai.title.length",
+     "file": "store-a/products.csv",
+     "line": 799,
+     "column": 2,
+     "pointer": null,
+     "item_id": "SOC0360-2",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "google.title.length",
+     "file": "store-a/products.csv",
+     "line": 799,
+     "column": 2,
+     "pointer": null,
+     "item_id": "SOC0360-2",
+     "formats": [
+      "google"
+     ]
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.csv",
+     "line": 838,
+     "column": 15,
+     "pointer": null,
+     "item_id": "TOW0379-3",
+     "formats": [
+      "openai",
+      "acp",
+      "google"
+     ],
+     "expected": "2"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.csv",
+     "line": 843,
+     "column": 15,
+     "pointer": null,
+     "item_id": "SOC0380-4",
+     "formats": [
+      "openai",
+      "acp",
+      "google"
+     ],
+     "expected": "6"
+    },
+    {
+     "rule": "openai.required.target_countries",
+     "file": "store-a/products.csv",
+     "line": 847,
+     "column": 13,
+     "pointer": null,
+     "item_id": "TAB0382-1",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "openai.availability.enum",
+     "file": "store-a/products.csv",
+     "line": 867,
+     "column": 9,
+     "pointer": null,
+     "item_id": "SOC0390-4",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "openai.title.length",
+     "file": "store-a/products.csv",
+     "line": 870,
+     "column": 2,
+     "pointer": null,
+     "item_id": "PHO0391-3",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "google.title.length",
+     "file": "store-a/products.csv",
+     "line": 870,
+     "column": 2,
+     "pointer": null,
+     "item_id": "PHO0391-3",
+     "formats": [
+      "google"
+     ]
+    },
+    {
+     "rule": "openai.required.target_countries",
+     "file": "store-a/products.csv",
+     "line": 895,
+     "column": 13,
+     "pointer": null,
+     "item_id": "PHO0401-3",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.csv",
+     "line": 903,
+     "column": 15,
+     "pointer": null,
+     "item_id": "TEE0404-2",
+     "formats": [
+      "openai",
+      "acp",
+      "google"
+     ],
+     "expected": "3"
+    },
+    {
+     "rule": "openai.availability.enum",
+     "file": "store-a/products.csv",
+     "line": 939,
+     "column": 9,
+     "pointer": null,
+     "item_id": "TOW0419-2",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.csv",
+     "line": 946,
+     "column": 15,
+     "pointer": null,
+     "item_id": "PHO0421-3",
+     "formats": [
+      "openai",
+      "acp",
+      "google"
+     ],
+     "expected": "7"
+    },
+    {
+     "rule": "openai.required.target_countries",
+     "file": "store-a/products.csv",
+     "line": 951,
+     "column": 13,
+     "pointer": null,
+     "item_id": "MUG0423-2",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.csv",
+     "line": 980,
+     "column": 15,
+     "pointer": null,
+     "item_id": "MUG0433-1",
+     "formats": [
+      "openai",
+      "acp",
+      "google"
+     ],
+     "expected": "1"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.csv",
+     "line": 985,
+     "column": 15,
+     "pointer": null,
+     "item_id": "LAM0435-3",
+     "formats": [
+      "openai",
+      "acp",
+      "google"
+     ],
+     "expected": "6"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.csv",
+     "line": 1011,
+     "column": 15,
+     "pointer": null,
+     "item_id": "TEE0444-1",
+     "formats": [
+      "openai",
+      "acp",
+      "google"
+     ],
+     "expected": "1"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.csv",
+     "line": 1026,
+     "column": 15,
+     "pointer": null,
+     "item_id": "KET0447-3",
+     "formats": [
+      "openai",
+      "acp",
+      "google"
+     ],
+     "expected": "8"
+    },
+    {
+     "rule": "openai.title.length",
+     "file": "store-a/products.csv",
+     "line": 1031,
+     "column": 2,
+     "pointer": null,
+     "item_id": "BAG0448-3",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "google.title.length",
+     "file": "store-a/products.csv",
+     "line": 1031,
+     "column": 2,
+     "pointer": null,
+     "item_id": "BAG0448-3",
+     "formats": [
+      "google"
+     ]
+    },
+    {
+     "rule": "openai.availability.enum",
+     "file": "store-a/products.csv",
+     "line": 1033,
+     "column": 9,
+     "pointer": null,
+     "item_id": "TOW0449-2",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "openai.required.target_countries",
+     "file": "store-a/products.csv",
+     "line": 1058,
+     "column": 13,
+     "pointer": null,
+     "item_id": "BAG0458-2",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "openai.availability.enum",
+     "file": "store-a/products.csv",
+     "line": 1073,
+     "column": 9,
+     "pointer": null,
+     "item_id": "TEE0464-1",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.csv",
+     "line": 1099,
+     "column": 15,
+     "pointer": null,
+     "item_id": "TEE0474-2",
+     "formats": [
+      "openai",
+      "acp",
+      "google"
+     ],
+     "expected": "5"
+    },
+    {
+     "rule": "openai.title.length",
+     "file": "store-a/products.csv",
+     "line": 1129,
+     "column": 2,
+     "pointer": null,
+     "item_id": "TEE0484-1",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "google.title.length",
+     "file": "store-a/products.csv",
+     "line": 1129,
+     "column": 2,
+     "pointer": null,
+     "item_id": "TEE0484-1",
+     "formats": [
+      "google"
+     ]
+    },
+    {
+     "rule": "openai.required.target_countries",
+     "file": "store-a/products.csv",
+     "line": 1154,
+     "column": 13,
+     "pointer": null,
+     "item_id": "TOW0489-4",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "openai.required.target_countries",
+     "file": "store-a/products.csv",
+     "line": 1173,
+     "column": 13,
+     "pointer": null,
+     "item_id": "LAM0495-3",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "openai.required.target_countries",
+     "file": "store-a/products.csv",
+     "line": 1180,
+     "column": 13,
+     "pointer": null,
+     "item_id": "KET0497-1",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "openai.sale_price.below_price",
+     "file": "store-a/products.csv",
+     "line": 1182,
+     "column": 12,
+     "pointer": null,
+     "item_id": "BAG0498-1",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "openai.availability.enum",
+     "file": "store-a/products.csv",
+     "line": 1212,
+     "column": 9,
+     "pointer": null,
+     "item_id": "LAM0505-2",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.csv",
+     "line": 1218,
+     "column": 15,
+     "pointer": null,
+     "item_id": "KET0507-1",
+     "formats": [
+      "openai",
+      "acp",
+      "google"
+     ],
+     "expected": "3"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.csv",
+     "line": 1220,
+     "column": 15,
+     "pointer": null,
+     "item_id": "BAG0508-1",
+     "formats": [
+      "openai",
+      "acp",
+      "google"
+     ],
+     "expected": "7"
+    },
+    {
+     "rule": "gs1.gtin.restricted_prefix",
+     "file": "store-a/products.csv",
+     "line": 1246,
+     "column": 15,
+     "pointer": null,
+     "item_id": "FRA0516-2",
+     "formats": [
+      "openai",
+      "acp",
+      "google"
+     ]
+    },
+    {
+     "rule": "openai.required.target_countries",
+     "file": "store-a/products.csv",
+     "line": 1276,
+     "column": 13,
+     "pointer": null,
+     "item_id": "TEE0524-3",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.csv",
+     "line": 1282,
+     "column": 15,
+     "pointer": null,
+     "item_id": "FRA0526-2",
+     "formats": [
+      "openai",
+      "acp",
+      "google"
+     ],
+     "expected": "5"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.csv",
+     "line": 1295,
+     "column": 15,
+     "pointer": null,
+     "item_id": "SOC0530-2",
+     "formats": [
+      "openai",
+      "acp",
+      "google"
+     ],
+     "expected": "4"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.csv",
+     "line": 1309,
+     "column": 15,
+     "pointer": null,
+     "item_id": "LAM0535-1",
+     "formats": [
+      "openai",
+      "acp",
+      "google"
+     ],
+     "expected": "1"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.csv",
+     "line": 1315,
+     "column": 15,
+     "pointer": null,
+     "item_id": "KET0537-3",
+     "formats": [
+      "openai",
+      "acp",
+      "google"
+     ],
+     "expected": "9"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.csv",
+     "line": 1332,
+     "column": 15,
+     "pointer": null,
+     "item_id": "PHO0541-4",
+     "formats": [
+      "openai",
+      "acp",
+      "google"
+     ],
+     "expected": "7"
+    },
+    {
+     "rule": "openai.required.target_countries",
+     "file": "store-a/products.csv",
+     "line": 1378,
+     "column": 13,
+     "pointer": null,
+     "item_id": "KET0557-1",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "openai.required.brand",
+     "file": "store-a/products.csv",
+     "line": 1381,
+     "column": 5,
+     "pointer": null,
+     "item_id": "KET0557-4",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "google.brand.required_new",
+     "file": "store-a/products.csv",
+     "line": 1381,
+     "column": 5,
+     "pointer": null,
+     "item_id": "KET0557-4",
+     "formats": [
+      "google"
+     ]
+    },
+    {
+     "rule": "openai.required.target_countries",
+     "file": "store-a/products.csv",
+     "line": 1395,
+     "column": 13,
+     "pointer": null,
+     "item_id": "TAB0562-3",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "openai.required.target_countries",
+     "file": "store-a/products.csv",
+     "line": 1433,
+     "column": 13,
+     "pointer": null,
+     "item_id": "LAM0575-1",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "openai.required.target_countries",
+     "file": "store-a/products.csv",
+     "line": 1451,
+     "column": 13,
+     "pointer": null,
+     "item_id": "PHO0581-2",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "openai.availability.enum",
+     "file": "store-a/products.csv",
+     "line": 1476,
+     "column": 9,
+     "pointer": null,
+     "item_id": "SOC0590-1",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "openai.required.target_countries",
+     "file": "store-a/products.csv",
+     "line": 1513,
+     "column": 13,
+     "pointer": null,
+     "item_id": "PHO0601-2",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "openai.required.target_countries",
+     "file": "store-a/products.csv",
+     "line": 1526,
+     "column": 13,
+     "pointer": null,
+     "item_id": "LAM0605-2",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "openai.availability.enum",
+     "file": "store-a/products.csv",
+     "line": 1572,
+     "column": 9,
+     "pointer": null,
+     "item_id": "SOC0620-3",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "openai.sale_price.below_price",
+     "file": "store-a/products.csv",
+     "line": 1577,
+     "column": 12,
+     "pointer": null,
+     "item_id": "TAB0622-2",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.csv",
+     "line": 1612,
+     "column": 15,
+     "pointer": null,
+     "item_id": "LAM0635-1",
+     "formats": [
+      "openai",
+      "acp",
+      "google"
+     ],
+     "expected": "5"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.csv",
+     "line": 1641,
+     "column": 15,
+     "pointer": null,
+     "item_id": "TEE0644-1",
+     "formats": [
+      "openai",
+      "acp",
+      "google"
+     ],
+     "expected": "5"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.csv",
+     "line": 1681,
+     "column": 15,
+     "pointer": null,
+     "item_id": "LAM0655-1",
+     "formats": [
+      "openai",
+      "acp",
+      "google"
+     ],
+     "expected": "4"
+    },
+    {
+     "rule": "openai.required.target_countries",
+     "file": "store-a/products.csv",
+     "line": 1682,
+     "column": 13,
+     "pointer": null,
+     "item_id": "LAM0655-2",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "gs1.gtin.restricted_prefix",
+     "file": "store-a/products.csv",
+     "line": 1719,
+     "column": 15,
+     "pointer": null,
+     "item_id": "TOW0669-1",
+     "formats": [
+      "openai",
+      "acp",
+      "google"
+     ]
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.csv",
+     "line": 1721,
+     "column": 15,
+     "pointer": null,
+     "item_id": "TOW0669-3",
+     "formats": [
+      "openai",
+      "acp",
+      "google"
+     ],
+     "expected": "7"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.csv",
+     "line": 1733,
+     "column": 15,
+     "pointer": null,
+     "item_id": "MUG0673-1",
+     "formats": [
+      "openai",
+      "acp",
+      "google"
+     ],
+     "expected": "0"
+    },
+    {
+     "rule": "openai.title.length",
+     "file": "store-a/products.csv",
+     "line": 1796,
+     "column": 2,
+     "pointer": null,
+     "item_id": "FRA0696-1",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "google.title.length",
+     "file": "store-a/products.csv",
+     "line": 1796,
+     "column": 2,
+     "pointer": null,
+     "item_id": "FRA0696-1",
+     "formats": [
+      "google"
+     ]
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.csv",
+     "line": 1797,
+     "column": 15,
+     "pointer": null,
+     "item_id": "FRA0696-2",
+     "formats": [
+      "openai",
+      "acp",
+      "google"
+     ],
+     "expected": "5"
+    },
+    {
+     "rule": "openai.sale_price.below_price",
+     "file": "store-a/products.csv",
+     "line": 1845,
+     "column": 12,
+     "pointer": null,
+     "item_id": "TAB0712-1",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "openai.required.target_countries",
+     "file": "store-a/products.csv",
+     "line": 1849,
+     "column": 13,
+     "pointer": null,
+     "item_id": "TEE0714-2",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "openai.required.target_countries",
+     "file": "store-a/products.csv",
+     "line": 1869,
+     "column": 13,
+     "pointer": null,
+     "item_id": "TOW0719-2",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "openai.required.target_countries",
+     "file": "store-a/products.csv",
+     "line": 1896,
+     "column": 13,
+     "pointer": null,
+     "item_id": "FRA0726-2",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "openai.availability.enum",
+     "file": "store-a/products.csv",
+     "line": 1965,
+     "column": 9,
+     "pointer": null,
+     "item_id": "PHO0751-2",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.csv",
+     "line": 1987,
+     "column": 15,
+     "pointer": null,
+     "item_id": "KET0757-2",
+     "formats": [
+      "openai",
+      "acp",
+      "google"
+     ],
+     "expected": "6"
+    },
+    {
+     "rule": "openai.required.target_countries",
+     "file": "store-a/products.csv",
+     "line": 1992,
+     "column": 13,
+     "pointer": null,
+     "item_id": "BAG0758-2",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "openai.sale_price.below_price",
+     "file": "store-a/products.csv",
+     "line": 2015,
+     "column": 12,
+     "pointer": null,
+     "item_id": "SOC0770-1",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.csv",
+     "line": 2052,
+     "column": 15,
+     "pointer": null,
+     "item_id": "PHO0781-2",
+     "formats": [
+      "openai",
+      "acp",
+      "google"
+     ],
+     "expected": "4"
+    },
+    {
+     "rule": "openai.sale_price.below_price",
+     "file": "store-a/products.csv",
+     "line": 2083,
+     "column": 12,
+     "pointer": null,
+     "item_id": "PHO0791-1",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "openai.required.target_countries",
+     "file": "store-a/products.csv",
+     "line": 2087,
+     "column": 13,
+     "pointer": null,
+     "item_id": "MUG0793-2",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "openai.required.target_countries",
+     "file": "store-a/products.csv",
+     "line": 2104,
+     "column": 13,
+     "pointer": null,
+     "item_id": "KET0797-2",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.csv",
+     "line": 2165,
+     "column": 15,
+     "pointer": null,
+     "item_id": "LAM0815-1",
+     "formats": [
+      "openai",
+      "acp",
+      "google"
+     ],
+     "expected": "0"
+    },
+    {
+     "rule": "openai.availability.enum",
+     "file": "store-a/products.csv",
+     "line": 2218,
+     "column": 9,
+     "pointer": null,
+     "item_id": "TAB0832-1",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "openai.required.target_countries",
+     "file": "store-a/products.csv",
+     "line": 2221,
+     "column": 13,
+     "pointer": null,
+     "item_id": "TAB0832-4",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.csv",
+     "line": 2224,
+     "column": 15,
+     "pointer": null,
+     "item_id": "MUG0833-1",
+     "formats": [
+      "openai",
+      "acp",
+      "google"
+     ],
+     "expected": "4"
+    },
+    {
+     "rule": "openai.required.target_countries",
+     "file": "store-a/products.csv",
+     "line": 2240,
+     "column": 13,
+     "pointer": null,
+     "item_id": "TOW0839-3",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "openai.title.length",
+     "file": "store-a/products.csv",
+     "line": 2249,
+     "column": 2,
+     "pointer": null,
+     "item_id": "PHO0841-2",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "google.title.length",
+     "file": "store-a/products.csv",
+     "line": 2249,
+     "column": 2,
+     "pointer": null,
+     "item_id": "PHO0841-2",
+     "formats": [
+      "google"
+     ]
+    },
+    {
+     "rule": "openai.required.target_countries",
+     "file": "store-a/products.csv",
+     "line": 2271,
+     "column": 13,
+     "pointer": null,
+     "item_id": "BAG0848-1",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "openai.required.brand",
+     "file": "store-a/products.csv",
+     "line": 2274,
+     "column": 5,
+     "pointer": null,
+     "item_id": "TOW0849-1",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "google.brand.required_new",
+     "file": "store-a/products.csv",
+     "line": 2274,
+     "column": 5,
+     "pointer": null,
+     "item_id": "TOW0849-1",
+     "formats": [
+      "google"
+     ]
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.csv",
+     "line": 2303,
+     "column": 15,
+     "pointer": null,
+     "item_id": "TOW0859-2",
+     "formats": [
+      "openai",
+      "acp",
+      "google"
+     ],
+     "expected": "9"
+    },
+    {
+     "rule": "openai.title.length",
+     "file": "store-a/products.csv",
+     "line": 2314,
+     "column": 2,
+     "pointer": null,
+     "item_id": "TAB0862-2",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "google.title.length",
+     "file": "store-a/products.csv",
+     "line": 2314,
+     "column": 2,
+     "pointer": null,
+     "item_id": "TAB0862-2",
+     "formats": [
+      "google"
+     ]
+    },
+    {
+     "rule": "openai.availability.enum",
+     "file": "store-a/products.csv",
+     "line": 2322,
+     "column": 9,
+     "pointer": null,
+     "item_id": "TEE0864-3",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.csv",
+     "line": 2323,
+     "column": 15,
+     "pointer": null,
+     "item_id": "TEE0864-4",
+     "formats": [
+      "openai",
+      "acp",
+      "google"
+     ],
+     "expected": "0"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.csv",
+     "line": 2333,
+     "column": 15,
+     "pointer": null,
+     "item_id": "FRA0866-5",
+     "formats": [
+      "openai",
+      "acp",
+      "google"
+     ],
+     "expected": "6"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.csv",
+     "line": 2346,
+     "column": 15,
+     "pointer": null,
+     "item_id": "TAB0872-1",
+     "formats": [
+      "openai",
+      "acp",
+      "google"
+     ],
+     "expected": "6"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.csv",
+     "line": 2348,
+     "column": 15,
+     "pointer": null,
+     "item_id": "MUG0873-1",
+     "formats": [
+      "openai",
+      "acp",
+      "google"
+     ],
+     "expected": "9"
+    },
+    {
+     "rule": "openai.required.target_countries",
+     "file": "store-a/products.csv",
+     "line": 2387,
+     "column": 13,
+     "pointer": null,
+     "item_id": "TOW0889-3",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "openai.sale_price.below_price",
+     "file": "store-a/products.csv",
+     "line": 2396,
+     "column": 12,
+     "pointer": null,
+     "item_id": "TAB0892-3",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.csv",
+     "line": 2411,
+     "column": 15,
+     "pointer": null,
+     "item_id": "FRA0896-2",
+     "formats": [
+      "openai",
+      "acp",
+      "google"
+     ],
+     "expected": "7"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.csv",
+     "line": 2432,
+     "column": 15,
+     "pointer": null,
+     "item_id": "PHO0901-2",
+     "formats": [
+      "openai",
+      "acp",
+      "google"
+     ],
+     "expected": "9"
+    },
+    {
+     "rule": "openai.required.target_countries",
+     "file": "store-a/products.csv",
+     "line": 2466,
+     "column": 13,
+     "pointer": null,
+     "item_id": "MUG0913-1",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "gs1.gtin.restricted_prefix",
+     "file": "store-a/products.csv",
+     "line": 2496,
+     "column": 15,
+     "pointer": null,
+     "item_id": "TEE0924-2",
+     "formats": [
+      "openai",
+      "acp",
+      "google"
+     ]
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.csv",
+     "line": 2536,
+     "column": 15,
+     "pointer": null,
+     "item_id": "BAG0938-4",
+     "formats": [
+      "openai",
+      "acp",
+      "google"
+     ],
+     "expected": "4"
+    },
+    {
+     "rule": "openai.required.target_countries",
+     "file": "store-a/products.csv",
+     "line": 2553,
+     "column": 13,
+     "pointer": null,
+     "item_id": "TEE0944-3",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "gs1.gtin.restricted_prefix",
+     "file": "store-a/products.csv",
+     "line": 2565,
+     "column": 15,
+     "pointer": null,
+     "item_id": "BAG0948-4",
+     "formats": [
+      "openai",
+      "acp",
+      "google"
+     ]
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.csv",
+     "line": 2583,
+     "column": 15,
+     "pointer": null,
+     "item_id": "TEE0954-2",
+     "formats": [
+      "openai",
+      "acp",
+      "google"
+     ],
+     "expected": "1"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.csv",
+     "line": 2584,
+     "column": 15,
+     "pointer": null,
+     "item_id": "TEE0954-3",
+     "formats": [
+      "openai",
+      "acp",
+      "google"
+     ],
+     "expected": "8"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.csv",
+     "line": 2630,
+     "column": 15,
+     "pointer": null,
+     "item_id": "TOW0969-2",
+     "formats": [
+      "openai",
+      "acp",
+      "google"
+     ],
+     "expected": "2"
+    },
+    {
+     "rule": "openai.required.brand",
+     "file": "store-a/products.csv",
+     "line": 2651,
+     "column": 5,
+     "pointer": null,
+     "item_id": "LAM0975-5",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "google.brand.required_new",
+     "file": "store-a/products.csv",
+     "line": 2651,
+     "column": 5,
+     "pointer": null,
+     "item_id": "LAM0975-5",
+     "formats": [
+      "google"
+     ]
+    },
+    {
+     "rule": "openai.required.target_countries",
+     "file": "store-a/products.csv",
+     "line": 2692,
+     "column": 13,
+     "pointer": null,
+     "item_id": "SOC0990-4",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "openai.required.target_countries",
+     "file": "store-a/products.csv",
+     "line": 2736,
+     "column": 13,
+     "pointer": null,
+     "item_id": "TEE1004-1",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "openai.required.brand",
+     "file": "store-a/products.csv",
+     "line": 2743,
+     "column": 5,
+     "pointer": null,
+     "item_id": "FRA1006-2",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "google.brand.required_new",
+     "file": "store-a/products.csv",
+     "line": 2743,
+     "column": 5,
+     "pointer": null,
+     "item_id": "FRA1006-2",
+     "formats": [
+      "google"
+     ]
+    },
+    {
+     "rule": "openai.required.target_countries",
+     "file": "store-a/products.csv",
+     "line": 2759,
+     "column": 13,
+     "pointer": null,
+     "item_id": "PHO1011-4",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.csv",
+     "line": 2803,
+     "column": 15,
+     "pointer": null,
+     "item_id": "KET1027-2",
+     "formats": [
+      "openai",
+      "acp",
+      "google"
+     ],
+     "expected": "6"
+    },
+    {
+     "rule": "openai.sale_price.below_price",
+     "file": "store-a/products.csv",
+     "line": 2807,
+     "column": 12,
+     "pointer": null,
+     "item_id": "SOC1030-1",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "gs1.gtin.restricted_prefix",
+     "file": "store-a/products.csv",
+     "line": 2824,
+     "column": 15,
+     "pointer": null,
+     "item_id": "KET1037-1",
+     "formats": [
+      "openai",
+      "acp",
+      "google"
+     ]
+    },
+    {
+     "rule": "openai.required.target_countries",
+     "file": "store-a/products.csv",
+     "line": 2862,
+     "column": 13,
+     "pointer": null,
+     "item_id": "SOC1050-1",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "openai.required.target_countries",
+     "file": "store-a/products.csv",
+     "line": 2887,
+     "column": 13,
+     "pointer": null,
+     "item_id": "TOW1059-3",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "openai.sale_price.below_price",
+     "file": "store-a/products.csv",
+     "line": 2888,
+     "column": 12,
+     "pointer": null,
+     "item_id": "TOW1059-4",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "openai.required.target_countries",
+     "file": "store-a/products.csv",
+     "line": 2891,
+     "column": 13,
+     "pointer": null,
+     "item_id": "PHO1061-1",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "openai.sale_price.below_price",
+     "file": "store-a/products.csv",
+     "line": 2895,
+     "column": 12,
+     "pointer": null,
+     "item_id": "PHO1061-5",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.csv",
+     "line": 2915,
+     "column": 15,
+     "pointer": null,
+     "item_id": "TOW1069-3",
+     "formats": [
+      "openai",
+      "acp",
+      "google"
+     ],
+     "expected": "2"
+    },
+    {
+     "rule": "gs1.gtin.restricted_prefix",
+     "file": "store-a/products.csv",
+     "line": 2935,
+     "column": 15,
+     "pointer": null,
+     "item_id": "LAM1075-5",
+     "formats": [
+      "openai",
+      "acp",
+      "google"
+     ]
+    },
+    {
+     "rule": "openai.availability.enum",
+     "file": "store-a/products.csv",
+     "line": 2962,
+     "column": 9,
+     "pointer": null,
+     "item_id": "TEE1084-4",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "openai.sale_price.below_price",
+     "file": "store-a/products.csv",
+     "line": 2980,
+     "column": 12,
+     "pointer": null,
+     "item_id": "PHO1091-3",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "openai.required.target_countries",
+     "file": "store-a/products.csv",
+     "line": 2989,
+     "column": 13,
+     "pointer": null,
+     "item_id": "TEE1094-1",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.csv",
+     "line": 3008,
+     "column": 15,
+     "pointer": null,
+     "item_id": "SOC1100-2",
+     "formats": [
+      "openai",
+      "acp",
+      "google"
+     ],
+     "expected": "1"
+    },
+    {
+     "rule": "openai.title.length",
+     "file": "store-a/products.csv",
+     "line": 3034,
+     "column": 2,
+     "pointer": null,
+     "item_id": "BAG1108-1",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "google.title.length",
+     "file": "store-a/products.csv",
+     "line": 3034,
+     "column": 2,
+     "pointer": null,
+     "item_id": "BAG1108-1",
+     "formats": [
+      "google"
+     ]
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.csv",
+     "line": 3045,
+     "column": 15,
+     "pointer": null,
+     "item_id": "TAB1112-1",
+     "formats": [
+      "openai",
+      "acp",
+      "google"
+     ],
+     "expected": "2"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.csv",
+     "line": 3068,
+     "column": 15,
+     "pointer": null,
+     "item_id": "TOW1119-1",
+     "formats": [
+      "openai",
+      "acp",
+      "google"
+     ],
+     "expected": "1"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.csv",
+     "line": 3075,
+     "column": 15,
+     "pointer": null,
+     "item_id": "PHO1121-3",
+     "formats": [
+      "openai",
+      "acp",
+      "google"
+     ],
+     "expected": "9"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.csv",
+     "line": 3082,
+     "column": 15,
+     "pointer": null,
+     "item_id": "TEE1124-1",
+     "formats": [
+      "openai",
+      "acp",
+      "google"
+     ],
+     "expected": "7"
+    },
+    {
+     "rule": "openai.sale_price.below_price",
+     "file": "store-a/products.csv",
+     "line": 3118,
+     "column": 12,
+     "pointer": null,
+     "item_id": "LAM1135-1",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "openai.required.target_countries",
+     "file": "store-a/products.csv",
+     "line": 3136,
+     "column": 13,
+     "pointer": null,
+     "item_id": "TOW1139-2",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "openai.title.length",
+     "file": "store-a/products.csv",
+     "line": 3137,
+     "column": 2,
+     "pointer": null,
+     "item_id": "SOC1140-1",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "google.title.length",
+     "file": "store-a/products.csv",
+     "line": 3137,
+     "column": 2,
+     "pointer": null,
+     "item_id": "SOC1140-1",
+     "formats": [
+      "google"
+     ]
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.csv",
+     "line": 3141,
+     "column": 15,
+     "pointer": null,
+     "item_id": "SOC1140-5",
+     "formats": [
+      "openai",
+      "acp",
+      "google"
+     ],
+     "expected": "5"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.csv",
+     "line": 3213,
+     "column": 15,
+     "pointer": null,
+     "item_id": "TEE1164-1",
+     "formats": [
+      "openai",
+      "acp",
+      "google"
+     ],
+     "expected": "5"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.csv",
+     "line": 3214,
+     "column": 15,
+     "pointer": null,
+     "item_id": "TEE1164-2",
+     "formats": [
+      "openai",
+      "acp",
+      "google"
+     ],
+     "expected": "1"
+    },
+    {
+     "rule": "openai.availability.enum",
+     "file": "store-a/products.csv",
+     "line": 3242,
+     "column": 9,
+     "pointer": null,
+     "item_id": "TAB1172-4",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "gs1.gtin.restricted_prefix",
+     "file": "store-a/products.csv",
+     "line": 3274,
+     "column": 15,
+     "pointer": null,
+     "item_id": "TAB1182-4",
+     "formats": [
+      "openai",
+      "acp",
+      "google"
+     ]
+    },
+    {
+     "rule": "openai.required.target_countries",
+     "file": "store-a/products.csv",
+     "line": 3282,
+     "column": 13,
+     "pointer": null,
+     "item_id": "LAM1185-2",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "gs1.gtin.restricted_prefix",
+     "file": "store-a/products.csv",
+     "line": 3304,
+     "column": 15,
+     "pointer": null,
+     "item_id": "TEE1194-3",
+     "formats": [
+      "openai",
+      "acp",
+      "google"
+     ]
+    },
+    {
+     "rule": "openai.availability.enum",
+     "file": "store-a/products.csv",
+     "line": 3316,
+     "column": 9,
+     "pointer": null,
+     "item_id": "TOW1199-2",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "openai.required.target_countries",
+     "file": "store-a/products.csv",
+     "line": 3332,
+     "column": 13,
+     "pointer": null,
+     "item_id": "TEE1204-2",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "openai.required.target_countries",
+     "file": "store-a/products.csv",
+     "line": 3338,
+     "column": 13,
+     "pointer": null,
+     "item_id": "KET1207-3",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "openai.availability.enum",
+     "file": "store-a/products.csv",
+     "line": 3339,
+     "column": 9,
+     "pointer": null,
+     "item_id": "KET1207-4",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.csv",
+     "line": 3404,
+     "column": 15,
+     "pointer": null,
+     "item_id": "FRA1226-4",
+     "formats": [
+      "openai",
+      "acp",
+      "google"
+     ],
+     "expected": "3"
+    },
+    {
+     "rule": "openai.required.target_countries",
+     "file": "store-a/products.csv",
+     "line": 3428,
+     "column": 13,
+     "pointer": null,
+     "item_id": "TAB1232-1",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "openai.required.brand",
+     "file": "store-a/products.csv",
+     "line": 3449,
+     "column": 5,
+     "pointer": null,
+     "item_id": "BAG1238-2",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "google.brand.required_new",
+     "file": "store-a/products.csv",
+     "line": 3449,
+     "column": 5,
+     "pointer": null,
+     "item_id": "BAG1238-2",
+     "formats": [
+      "google"
+     ]
+    },
+    {
+     "rule": "gs1.gtin.restricted_prefix",
+     "file": "store-a/products.csv",
+     "line": 3450,
+     "column": 15,
+     "pointer": null,
+     "item_id": "TOW1239-1",
+     "formats": [
+      "openai",
+      "acp",
+      "google"
+     ]
+    },
+    {
+     "rule": "openai.availability.enum",
+     "file": "store-a/products.csv",
+     "line": 3455,
+     "column": 9,
+     "pointer": null,
+     "item_id": "SOC1240-1",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.csv",
+     "line": 3459,
+     "column": 15,
+     "pointer": null,
+     "item_id": "SOC1240-5",
+     "formats": [
+      "openai",
+      "acp",
+      "google"
+     ],
+     "expected": "2"
+    },
+    {
+     "rule": "openai.availability.enum",
+     "file": "store-a/products.csv",
+     "line": 3490,
+     "column": 9,
+     "pointer": null,
+     "item_id": "TAB1252-4",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "openai.availability.enum",
+     "file": "store-a/products.csv",
+     "line": 3503,
+     "column": 9,
+     "pointer": null,
+     "item_id": "LAM1255-5",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.csv",
+     "line": 3528,
+     "column": 15,
+     "pointer": null,
+     "item_id": "MUG1263-2",
+     "formats": [
+      "openai",
+      "acp",
+      "google"
+     ],
+     "expected": "5"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.csv",
+     "line": 3533,
+     "column": 15,
+     "pointer": null,
+     "item_id": "TEE1264-4",
+     "formats": [
+      "openai",
+      "acp",
+      "google"
+     ],
+     "expected": "9"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.csv",
+     "line": 3536,
+     "column": 15,
+     "pointer": null,
+     "item_id": "LAM1265-2",
+     "formats": [
+      "openai",
+      "acp",
+      "google"
+     ],
+     "expected": "0"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.csv",
+     "line": 3542,
+     "column": 15,
+     "pointer": null,
+     "item_id": "FRA1266-4",
+     "formats": [
+      "openai",
+      "acp",
+      "google"
+     ],
+     "expected": "8"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.csv",
+     "line": 3558,
+     "column": 15,
+     "pointer": null,
+     "item_id": "PHO1271-4",
+     "formats": [
+      "openai",
+      "acp",
+      "google"
+     ],
+     "expected": "9"
+    },
+    {
+     "rule": "openai.required.target_countries",
+     "file": "store-a/products.csv",
+     "line": 3573,
+     "column": 13,
+     "pointer": null,
+     "item_id": "LAM1275-4",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.csv",
+     "line": 3588,
+     "column": 15,
+     "pointer": null,
+     "item_id": "TAB1282-1",
+     "formats": [
+      "openai",
+      "acp",
+      "google"
+     ],
+     "expected": "6"
+    },
+    {
+     "rule": "openai.required.target_countries",
+     "file": "store-a/products.csv",
+     "line": 3614,
+     "column": 13,
+     "pointer": null,
+     "item_id": "TOW1289-4",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "openai.required.target_countries",
+     "file": "store-a/products.csv",
+     "line": 3631,
+     "column": 13,
+     "pointer": null,
+     "item_id": "LAM1295-1",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "openai.required.target_countries",
+     "file": "store-a/products.csv",
+     "line": 3643,
+     "column": 13,
+     "pointer": null,
+     "item_id": "SOC1300-2",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.csv",
+     "line": 3677,
+     "column": 15,
+     "pointer": null,
+     "item_id": "PHO1311-2",
+     "formats": [
+      "openai",
+      "acp",
+      "google"
+     ],
+     "expected": "7"
+    },
+    {
+     "rule": "openai.availability.enum",
+     "file": "store-a/products.csv",
+     "line": 3688,
+     "column": 9,
+     "pointer": null,
+     "item_id": "LAM1315-1",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.csv",
+     "line": 3706,
+     "column": 15,
+     "pointer": null,
+     "item_id": "PHO1321-4",
+     "formats": [
+      "openai",
+      "acp",
+      "google"
+     ],
+     "expected": "7"
+    },
+    {
+     "rule": "openai.availability.enum",
+     "file": "store-a/products.csv",
+     "line": 3737,
+     "column": 9,
+     "pointer": null,
+     "item_id": "TOW1329-2",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.csv",
+     "line": 3747,
+     "column": 15,
+     "pointer": null,
+     "item_id": "PHO1331-4",
+     "formats": [
+      "openai",
+      "acp",
+      "google"
+     ],
+     "expected": "0"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.csv",
+     "line": 3748,
+     "column": 15,
+     "pointer": null,
+     "item_id": "TAB1332-1",
+     "formats": [
+      "openai",
+      "acp",
+      "google"
+     ],
+     "expected": "7"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.csv",
+     "line": 3759,
+     "column": 15,
+     "pointer": null,
+     "item_id": "TEE1334-5",
+     "formats": [
+      "openai",
+      "acp",
+      "google"
+     ],
+     "expected": "3"
+    },
+    {
+     "rule": "openai.title.length",
+     "file": "store-a/products.csv",
+     "line": 3802,
+     "column": 2,
+     "pointer": null,
+     "item_id": "BAG1348-1",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "google.title.length",
+     "file": "store-a/products.csv",
+     "line": 3802,
+     "column": 2,
+     "pointer": null,
+     "item_id": "BAG1348-1",
+     "formats": [
+      "google"
+     ]
+    },
+    {
+     "rule": "openai.sale_price.below_price",
+     "file": "store-a/products.csv",
+     "line": 3836,
+     "column": 12,
+     "pointer": null,
+     "item_id": "BAG1358-3",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "openai.required.target_countries",
+     "file": "store-a/products.csv",
+     "line": 3860,
+     "column": 13,
+     "pointer": null,
+     "item_id": "KET1367-1",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.csv",
+     "line": 3868,
+     "column": 15,
+     "pointer": null,
+     "item_id": "TOW1369-3",
+     "formats": [
+      "openai",
+      "acp",
+      "google"
+     ],
+     "expected": "8"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.csv",
+     "line": 3877,
+     "column": 15,
+     "pointer": null,
+     "item_id": "TAB1372-1",
+     "formats": [
+      "openai",
+      "acp",
+      "google"
+     ],
+     "expected": "0"
+    },
+    {
+     "rule": "openai.required.target_countries",
+     "file": "store-a/products.csv",
+     "line": 3885,
+     "column": 13,
+     "pointer": null,
+     "item_id": "MUG1373-4",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.csv",
+     "line": 3889,
+     "column": 15,
+     "pointer": null,
+     "item_id": "TEE1374-4",
+     "formats": [
+      "openai",
+      "acp",
+      "google"
+     ],
+     "expected": "3"
+    }
+   ]
+  },
+  {
+   "name": "store-a-three-feeds",
+   "inputs": [
+    "store-a/products.csv",
+    "store-a/products.xml",
+    "store-a/acp"
+   ],
+   "formats": [
+    "openai",
+    "acp",
+    "google"
+   ],
+   "summary": {
+    "products": 1400,
+    "items": 11736
+   },
+   "problems": [
+    {
+     "rule": "openai.required.target_countries",
+     "file": "store-a/products.csv",
+     "line": 36,
+     "column": 13,
+     "pointer": null,
+     "item_id": "LAM0015-3",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "acp.schema.product",
+     "file": "store-a/acp/products.jsonl",
+     "line": 16,
+     "column": null,
+     "pointer": "/variants/3/price/amount",
+     "item_id": "FRA0016-4",
+     "formats": [
+      "acp"
+     ]
+    },
+    {
+     "rule": "openai.availability.enum",
+     "file": "store-a/products.csv",
+     "line": 79,
+     "column": 9,
+     "pointer": null,
+     "item_id": "MUG0033-1",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "acp.schema.product",
+     "file": "store-a/acp/products.jsonl",
+     "line": 35,
+     "column": null,
+     "pointer": "/variants/0/price/amount",
+     "item_id": "LAM0035-1",
+     "formats": [
+      "acp"
+     ]
+    },
+    {
+     "rule": "openai.required.target_countries",
+     "file": "store-a/products.csv",
+     "line": 100,
+     "column": 13,
+     "pointer": null,
+     "item_id": "MUG0043-1",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "openai.availability.enum",
+     "file": "store-a/products.csv",
+     "line": 123,
+     "column": 9,
+     "pointer": null,
+     "item_id": "FRA0056-1",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.csv",
+     "line": 157,
+     "column": 15,
+     "pointer": null,
+     "item_id": "PHO0071-3",
+     "formats": [
+      "openai"
+     ],
+     "expected": "2"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.xml",
+     "line": 3112,
+     "column": null,
+     "pointer": null,
+     "item_id": "PHO0071-3",
+     "formats": [
+      "google"
+     ],
+     "expected": "2"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/acp/products.jsonl",
+     "line": 71,
+     "column": null,
+     "pointer": "/variants/2/barcodes/0/value",
+     "item_id": "PHO0071-3",
+     "formats": [
+      "acp"
+     ],
+     "expected": "2"
+    },
+    {
+     "rule": "openai.required.target_countries",
+     "file": "store-a/products.csv",
+     "line": 169,
+     "column": 13,
+     "pointer": null,
+     "item_id": "LAM0075-3",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.csv",
+     "line": 170,
+     "column": 15,
+     "pointer": null,
+     "item_id": "LAM0075-4",
+     "formats": [
+      "openai"
+     ],
+     "expected": "2"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.xml",
+     "line": 3363,
+     "column": null,
+     "pointer": null,
+     "item_id": "LAM0075-4",
+     "formats": [
+      "google"
+     ],
+     "expected": "2"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/acp/products.jsonl",
+     "line": 75,
+     "column": null,
+     "pointer": "/variants/3/barcodes/0/value",
+     "item_id": "LAM0075-4",
+     "formats": [
+      "acp"
+     ],
+     "expected": "2"
+    },
+    {
+     "rule": "cross.price",
+     "file": "store-a/products.xml",
+     "line": 3458,
+     "column": null,
+     "pointer": null,
+     "item_id": "BAG0078-1",
+     "formats": [
+      "openai",
+      "google"
+     ]
+    },
+    {
+     "rule": "openai.required.target_countries",
+     "file": "store-a/products.csv",
+     "line": 187,
+     "column": 13,
+     "pointer": null,
+     "item_id": "MUG0083-3",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.csv",
+     "line": 192,
+     "column": 15,
+     "pointer": null,
+     "item_id": "TEE0084-3",
+     "formats": [
+      "openai"
+     ],
+     "expected": "7"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.xml",
+     "line": 3789,
+     "column": null,
+     "pointer": null,
+     "item_id": "TEE0084-3",
+     "formats": [
+      "google"
+     ],
+     "expected": "7"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/acp/products.jsonl",
+     "line": 84,
+     "column": null,
+     "pointer": "/variants/2/barcodes/0/value",
+     "item_id": "TEE0084-3",
+     "formats": [
+      "acp"
+     ],
+     "expected": "7"
+    },
+    {
+     "rule": "openai.title.length",
+     "file": "store-a/products.csv",
+     "line": 197,
+     "column": 2,
+     "pointer": null,
+     "item_id": "KET0087-1",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "google.title.length",
+     "file": "store-a/products.xml",
+     "line": 3880,
+     "column": null,
+     "pointer": null,
+     "item_id": "KET0087-1",
+     "formats": [
+      "google"
+     ]
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.csv",
+     "line": 215,
+     "column": 15,
+     "pointer": null,
+     "item_id": "MUG0093-2",
+     "formats": [
+      "openai"
+     ],
+     "expected": "2"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.xml",
+     "line": 4238,
+     "column": null,
+     "pointer": null,
+     "item_id": "MUG0093-2",
+     "formats": [
+      "google"
+     ],
+     "expected": "2"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/acp/products.jsonl",
+     "line": 93,
+     "column": null,
+     "pointer": "/variants/1/barcodes/0/value",
+     "item_id": "MUG0093-2",
+     "formats": [
+      "acp"
+     ],
+     "expected": "2"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.csv",
+     "line": 245,
+     "column": 15,
+     "pointer": null,
+     "item_id": "LAM0105-2",
+     "formats": [
+      "openai"
+     ],
+     "expected": "2"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.xml",
+     "line": 4830,
+     "column": null,
+     "pointer": null,
+     "item_id": "LAM0105-2",
+     "formats": [
+      "google"
+     ],
+     "expected": "2"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/acp/products.jsonl",
+     "line": 105,
+     "column": null,
+     "pointer": "/variants/1/barcodes/0/value",
+     "item_id": "LAM0105-2",
+     "formats": [
+      "acp"
+     ],
+     "expected": "2"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.csv",
+     "line": 248,
+     "column": 15,
+     "pointer": null,
+     "item_id": "FRA0106-3",
+     "formats": [
+      "openai"
+     ],
+     "expected": "3"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.xml",
+     "line": 4886,
+     "column": null,
+     "pointer": null,
+     "item_id": "FRA0106-3",
+     "formats": [
+      "google"
+     ],
+     "expected": "3"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/acp/products.jsonl",
+     "line": 106,
+     "column": null,
+     "pointer": "/variants/2/barcodes/0/value",
+     "item_id": "FRA0106-3",
+     "formats": [
+      "acp"
+     ],
+     "expected": "3"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.csv",
+     "line": 253,
+     "column": 15,
+     "pointer": null,
+     "item_id": "BAG0108-2",
+     "formats": [
+      "openai"
+     ],
+     "expected": "8"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.xml",
+     "line": 4984,
+     "column": null,
+     "pointer": null,
+     "item_id": "BAG0108-2",
+     "formats": [
+      "google"
+     ],
+     "expected": "8"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/acp/products.jsonl",
+     "line": 108,
+     "column": null,
+     "pointer": "/variants/1/barcodes/0/value",
+     "item_id": "BAG0108-2",
+     "formats": [
+      "acp"
+     ],
+     "expected": "8"
+    },
+    {
+     "rule": "openai.required.target_countries",
+     "file": "store-a/products.csv",
+     "line": 263,
+     "column": 13,
+     "pointer": null,
+     "item_id": "TEE0114-3",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "openai.required.target_countries",
+     "file": "store-a/products.csv",
+     "line": 274,
+     "column": 13,
+     "pointer": null,
+     "item_id": "PHO0121-1",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "openai.required.target_countries",
+     "file": "store-a/products.csv",
+     "line": 280,
+     "column": 13,
+     "pointer": null,
+     "item_id": "TEE0124-1",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.csv",
+     "line": 286,
+     "column": 15,
+     "pointer": null,
+     "item_id": "LAM0125-3",
+     "formats": [
+      "openai"
+     ],
+     "expected": "5"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.xml",
+     "line": 5656,
+     "column": null,
+     "pointer": null,
+     "item_id": "LAM0125-3",
+     "formats": [
+      "google"
+     ],
+     "expected": "5"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/acp/products.jsonl",
+     "line": 125,
+     "column": null,
+     "pointer": "/variants/2/barcodes/0/value",
+     "item_id": "LAM0125-3",
+     "formats": [
+      "acp"
+     ],
+     "expected": "5"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.csv",
+     "line": 291,
+     "column": 15,
+     "pointer": null,
+     "item_id": "KET0127-2",
+     "formats": [
+      "openai"
+     ],
+     "expected": "0"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.xml",
+     "line": 5750,
+     "column": null,
+     "pointer": null,
+     "item_id": "KET0127-2",
+     "formats": [
+      "google"
+     ],
+     "expected": "0"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/acp/products.jsonl",
+     "line": 127,
+     "column": null,
+     "pointer": "/variants/1/barcodes/0/value",
+     "item_id": "KET0127-2",
+     "formats": [
+      "acp"
+     ],
+     "expected": "0"
+    },
+    {
+     "rule": "openai.required.target_countries",
+     "file": "store-a/products.csv",
+     "line": 311,
+     "column": 13,
+     "pointer": null,
+     "item_id": "SOC0140-1",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "openai.sale_price.below_price",
+     "file": "store-a/products.csv",
+     "line": 314,
+     "column": 12,
+     "pointer": null,
+     "item_id": "TAB0142-1",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "openai.required.target_countries",
+     "file": "store-a/products.csv",
+     "line": 350,
+     "column": 13,
+     "pointer": null,
+     "item_id": "BAG0158-1",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.csv",
+     "line": 358,
+     "column": 15,
+     "pointer": null,
+     "item_id": "SOC0160-4",
+     "formats": [
+      "openai"
+     ],
+     "expected": "9"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.xml",
+     "line": 7127,
+     "column": null,
+     "pointer": null,
+     "item_id": "SOC0160-4",
+     "formats": [
+      "google"
+     ],
+     "expected": "9"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/acp/products.jsonl",
+     "line": 160,
+     "column": null,
+     "pointer": "/variants/3/barcodes/0/value",
+     "item_id": "SOC0160-4",
+     "formats": [
+      "acp"
+     ],
+     "expected": "9"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.csv",
+     "line": 366,
+     "column": 15,
+     "pointer": null,
+     "item_id": "MUG0163-2",
+     "formats": [
+      "openai"
+     ],
+     "expected": "4"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.xml",
+     "line": 7281,
+     "column": null,
+     "pointer": null,
+     "item_id": "MUG0163-2",
+     "formats": [
+      "google"
+     ],
+     "expected": "4"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/acp/products.jsonl",
+     "line": 163,
+     "column": null,
+     "pointer": "/variants/1/barcodes/0/value",
+     "item_id": "MUG0163-2",
+     "formats": [
+      "acp"
+     ],
+     "expected": "4"
+    },
+    {
+     "rule": "openai.required.brand",
+     "file": "store-a/products.csv",
+     "line": 387,
+     "column": 5,
+     "pointer": null,
+     "item_id": "LAM0175-1",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "google.brand.required_new",
+     "file": "store-a/products.xml",
+     "line": 7676,
+     "column": null,
+     "pointer": null,
+     "item_id": "LAM0175-1",
+     "formats": [
+      "google"
+     ]
+    },
+    {
+     "rule": "openai.required.target_countries",
+     "file": "store-a/products.csv",
+     "line": 388,
+     "column": 13,
+     "pointer": null,
+     "item_id": "FRA0176-1",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "cross.price",
+     "file": "store-a/products.xml",
+     "line": 7778,
+     "column": null,
+     "pointer": null,
+     "item_id": "KET0177-1",
+     "formats": [
+      "openai",
+      "google"
+     ]
+    },
+    {
+     "rule": "openai.required.target_countries",
+     "file": "store-a/products.csv",
+     "line": 421,
+     "column": 13,
+     "pointer": null,
+     "item_id": "PHO0191-1",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "openai.title.length",
+     "file": "store-a/products.csv",
+     "line": 434,
+     "column": 2,
+     "pointer": null,
+     "item_id": "FRA0196-1",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "google.title.length",
+     "file": "store-a/products.xml",
+     "line": 8577,
+     "column": null,
+     "pointer": null,
+     "item_id": "FRA0196-1",
+     "formats": [
+      "google"
+     ]
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.csv",
+     "line": 441,
+     "column": 15,
+     "pointer": null,
+     "item_id": "KET0197-4",
+     "formats": [
+      "openai"
+     ],
+     "expected": "8"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.xml",
+     "line": 8714,
+     "column": null,
+     "pointer": null,
+     "item_id": "KET0197-4",
+     "formats": [
+      "google"
+     ],
+     "expected": "8"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/acp/products.jsonl",
+     "line": 197,
+     "column": null,
+     "pointer": "/variants/3/barcodes/0/value",
+     "item_id": "KET0197-4",
+     "formats": [
+      "acp"
+     ],
+     "expected": "8"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.csv",
+     "line": 442,
+     "column": 15,
+     "pointer": null,
+     "item_id": "BAG0198-1",
+     "formats": [
+      "openai"
+     ],
+     "expected": "5"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.xml",
+     "line": 8734,
+     "column": null,
+     "pointer": null,
+     "item_id": "BAG0198-1",
+     "formats": [
+      "google"
+     ],
+     "expected": "5"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/acp/products.jsonl",
+     "line": 198,
+     "column": null,
+     "pointer": "/variants/0/barcodes/0/value",
+     "item_id": "BAG0198-1",
+     "formats": [
+      "acp"
+     ],
+     "expected": "5"
+    },
+    {
+     "rule": "openai.required.target_countries",
+     "file": "store-a/products.csv",
+     "line": 444,
+     "column": 13,
+     "pointer": null,
+     "item_id": "BAG0198-3",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "openai.required.target_countries",
+     "file": "store-a/products.csv",
+     "line": 447,
+     "column": 13,
+     "pointer": null,
+     "item_id": "SOC0200-1",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.csv",
+     "line": 450,
+     "column": 15,
+     "pointer": null,
+     "item_id": "TAB0202-1",
+     "formats": [
+      "openai"
+     ],
+     "expected": "0"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.xml",
+     "line": 8902,
+     "column": null,
+     "pointer": null,
+     "item_id": "TAB0202-1",
+     "formats": [
+      "google"
+     ],
+     "expected": "0"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/acp/products.jsonl",
+     "line": 202,
+     "column": null,
+     "pointer": "/variants/0/barcodes/0/value",
+     "item_id": "TAB0202-1",
+     "formats": [
+      "acp"
+     ],
+     "expected": "0"
+    },
+    {
+     "rule": "acp.schema.product",
+     "file": "store-a/acp/products.jsonl",
+     "line": 203,
+     "column": null,
+     "pointer": "/variants/2/price/amount",
+     "item_id": "MUG0203-3",
+     "formats": [
+      "acp"
+     ]
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.csv",
+     "line": 492,
+     "column": 15,
+     "pointer": null,
+     "item_id": "BAG0218-1",
+     "formats": [
+      "openai"
+     ],
+     "expected": "0"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.xml",
+     "line": 9727,
+     "column": null,
+     "pointer": null,
+     "item_id": "BAG0218-1",
+     "formats": [
+      "google"
+     ],
+     "expected": "0"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/acp/products.jsonl",
+     "line": 218,
+     "column": null,
+     "pointer": "/variants/0/barcodes/0/value",
+     "item_id": "BAG0218-1",
+     "formats": [
+      "acp"
+     ],
+     "expected": "0"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.csv",
+     "line": 495,
+     "column": 15,
+     "pointer": null,
+     "item_id": "TOW0219-1",
+     "formats": [
+      "openai"
+     ],
+     "expected": "1"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.xml",
+     "line": 9795,
+     "column": null,
+     "pointer": null,
+     "item_id": "TOW0219-1",
+     "formats": [
+      "google"
+     ],
+     "expected": "1"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/acp/products.jsonl",
+     "line": 219,
+     "column": null,
+     "pointer": "/variants/0/barcodes/0/value",
+     "item_id": "TOW0219-1",
+     "formats": [
+      "acp"
+     ],
+     "expected": "1"
+    },
+    {
+     "rule": "openai.required.brand",
+     "file": "store-a/products.csv",
+     "line": 524,
+     "column": 5,
+     "pointer": null,
+     "item_id": "MUG0233-1",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "google.brand.required_new",
+     "file": "store-a/products.xml",
+     "line": 10384,
+     "column": null,
+     "pointer": null,
+     "item_id": "MUG0233-1",
+     "formats": [
+      "google"
+     ]
+    },
+    {
+     "rule": "openai.sale_price.below_price",
+     "file": "store-a/products.csv",
+     "line": 531,
+     "column": 12,
+     "pointer": null,
+     "item_id": "BAG0238-1",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "cross.price",
+     "file": "store-a/products.xml",
+     "line": 10623,
+     "column": null,
+     "pointer": null,
+     "item_id": "TOW0239-1",
+     "formats": [
+      "openai",
+      "google"
+     ]
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.csv",
+     "line": 546,
+     "column": 15,
+     "pointer": null,
+     "item_id": "LAM0245-2",
+     "formats": [
+      "openai"
+     ],
+     "expected": "0"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.xml",
+     "line": 10844,
+     "column": null,
+     "pointer": null,
+     "item_id": "LAM0245-2",
+     "formats": [
+      "google"
+     ],
+     "expected": "0"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/acp/products.jsonl",
+     "line": 245,
+     "column": null,
+     "pointer": "/variants/1/barcodes/0/value",
+     "item_id": "LAM0245-2",
+     "formats": [
+      "acp"
+     ],
+     "expected": "0"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.csv",
+     "line": 550,
+     "column": 15,
+     "pointer": null,
+     "item_id": "BAG0248-1",
+     "formats": [
+      "openai"
+     ],
+     "expected": "7"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.xml",
+     "line": 10922,
+     "column": null,
+     "pointer": null,
+     "item_id": "BAG0248-1",
+     "formats": [
+      "google"
+     ],
+     "expected": "7"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/acp/products.jsonl",
+     "line": 248,
+     "column": null,
+     "pointer": "/variants/0/barcodes/0/value",
+     "item_id": "BAG0248-1",
+     "formats": [
+      "acp"
+     ],
+     "expected": "7"
+    },
+    {
+     "rule": "openai.required.target_countries",
+     "file": "store-a/products.csv",
+     "line": 552,
+     "column": 13,
+     "pointer": null,
+     "item_id": "BAG0248-3",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "openai.required.target_countries",
+     "file": "store-a/products.csv",
+     "line": 596,
+     "column": 13,
+     "pointer": null,
+     "item_id": "TOW0269-1",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.csv",
+     "line": 623,
+     "column": 15,
+     "pointer": null,
+     "item_id": "MUG0283-2",
+     "formats": [
+      "openai"
+     ],
+     "expected": "8"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.xml",
+     "line": 12401,
+     "column": null,
+     "pointer": null,
+     "item_id": "MUG0283-2",
+     "formats": [
+      "google"
+     ],
+     "expected": "8"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/acp/products.jsonl",
+     "line": 283,
+     "column": null,
+     "pointer": "/variants/1/barcodes/0/value",
+     "item_id": "MUG0283-2",
+     "formats": [
+      "acp"
+     ],
+     "expected": "8"
+    },
+    {
+     "rule": "openai.sale_price.below_price",
+     "file": "store-a/products.csv",
+     "line": 635,
+     "column": 12,
+     "pointer": null,
+     "item_id": "FRA0286-3",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "openai.required.target_countries",
+     "file": "store-a/products.csv",
+     "line": 639,
+     "column": 13,
+     "pointer": null,
+     "item_id": "KET0287-3",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.csv",
+     "line": 645,
+     "column": 15,
+     "pointer": null,
+     "item_id": "TAB0292-1",
+     "formats": [
+      "openai"
+     ],
+     "expected": "0"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.xml",
+     "line": 12841,
+     "column": null,
+     "pointer": null,
+     "item_id": "TAB0292-1",
+     "formats": [
+      "google"
+     ],
+     "expected": "0"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/acp/products.jsonl",
+     "line": 292,
+     "column": null,
+     "pointer": "/variants/0/barcodes/0/value",
+     "item_id": "TAB0292-1",
+     "formats": [
+      "acp"
+     ],
+     "expected": "0"
+    },
+    {
+     "rule": "openai.availability.enum",
+     "file": "store-a/products.csv",
+     "line": 689,
+     "column": 9,
+     "pointer": null,
+     "item_id": "SOC0310-4",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "openai.availability.enum",
+     "file": "store-a/products.csv",
+     "line": 734,
+     "column": 9,
+     "pointer": null,
+     "item_id": "SOC0330-1",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.csv",
+     "line": 739,
+     "column": 15,
+     "pointer": null,
+     "item_id": "MUG0333-2",
+     "formats": [
+      "openai"
+     ],
+     "expected": "8"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.xml",
+     "line": 14735,
+     "column": null,
+     "pointer": null,
+     "item_id": "MUG0333-2",
+     "formats": [
+      "google"
+     ],
+     "expected": "8"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/acp/products.jsonl",
+     "line": 333,
+     "column": null,
+     "pointer": "/variants/1/barcodes/0/value",
+     "item_id": "MUG0333-2",
+     "formats": [
+      "acp"
+     ],
+     "expected": "8"
+    },
+    {
+     "rule": "openai.title.length",
+     "file": "store-a/products.csv",
+     "line": 799,
+     "column": 2,
+     "pointer": null,
+     "item_id": "SOC0360-2",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "google.title.length",
+     "file": "store-a/products.xml",
+     "line": 15931,
+     "column": null,
+     "pointer": null,
+     "item_id": "SOC0360-2",
+     "formats": [
+      "google"
+     ]
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.csv",
+     "line": 838,
+     "column": 15,
+     "pointer": null,
+     "item_id": "TOW0379-3",
+     "formats": [
+      "openai"
+     ],
+     "expected": "2"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.xml",
+     "line": 16703,
+     "column": null,
+     "pointer": null,
+     "item_id": "TOW0379-3",
+     "formats": [
+      "google"
+     ],
+     "expected": "2"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/acp/products.jsonl",
+     "line": 379,
+     "column": null,
+     "pointer": "/variants/2/barcodes/0/value",
+     "item_id": "TOW0379-3",
+     "formats": [
+      "acp"
+     ],
+     "expected": "2"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.csv",
+     "line": 843,
+     "column": 15,
+     "pointer": null,
+     "item_id": "SOC0380-4",
+     "formats": [
+      "openai"
+     ],
+     "expected": "6"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.xml",
+     "line": 16807,
+     "column": null,
+     "pointer": null,
+     "item_id": "SOC0380-4",
+     "formats": [
+      "google"
+     ],
+     "expected": "6"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/acp/products.jsonl",
+     "line": 380,
+     "column": null,
+     "pointer": "/variants/3/barcodes/0/value",
+     "item_id": "SOC0380-4",
+     "formats": [
+      "acp"
+     ],
+     "expected": "6"
+    },
+    {
+     "rule": "openai.required.target_countries",
+     "file": "store-a/products.csv",
+     "line": 847,
+     "column": 13,
+     "pointer": null,
+     "item_id": "TAB0382-1",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "openai.availability.enum",
+     "file": "store-a/products.csv",
+     "line": 867,
+     "column": 9,
+     "pointer": null,
+     "item_id": "SOC0390-4",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "openai.title.length",
+     "file": "store-a/products.csv",
+     "line": 870,
+     "column": 2,
+     "pointer": null,
+     "item_id": "PHO0391-3",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "google.title.length",
+     "file": "store-a/products.xml",
+     "line": 17325,
+     "column": null,
+     "pointer": null,
+     "item_id": "PHO0391-3",
+     "formats": [
+      "google"
+     ]
+    },
+    {
+     "rule": "openai.required.target_countries",
+     "file": "store-a/products.csv",
+     "line": 895,
+     "column": 13,
+     "pointer": null,
+     "item_id": "PHO0401-3",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.csv",
+     "line": 903,
+     "column": 15,
+     "pointer": null,
+     "item_id": "TEE0404-2",
+     "formats": [
+      "openai"
+     ],
+     "expected": "3"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.xml",
+     "line": 17988,
+     "column": null,
+     "pointer": null,
+     "item_id": "TEE0404-2",
+     "formats": [
+      "google"
+     ],
+     "expected": "3"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/acp/products.jsonl",
+     "line": 404,
+     "column": null,
+     "pointer": "/variants/1/barcodes/0/value",
+     "item_id": "TEE0404-2",
+     "formats": [
+      "acp"
+     ],
+     "expected": "3"
+    },
+    {
+     "rule": "openai.availability.enum",
+     "file": "store-a/products.csv",
+     "line": 939,
+     "column": 9,
+     "pointer": null,
+     "item_id": "TOW0419-2",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.csv",
+     "line": 946,
+     "column": 15,
+     "pointer": null,
+     "item_id": "PHO0421-3",
+     "formats": [
+      "openai"
+     ],
+     "expected": "7"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.xml",
+     "line": 18865,
+     "column": null,
+     "pointer": null,
+     "item_id": "PHO0421-3",
+     "formats": [
+      "google"
+     ],
+     "expected": "7"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/acp/products.jsonl",
+     "line": 421,
+     "column": null,
+     "pointer": "/variants/2/barcodes/0/value",
+     "item_id": "PHO0421-3",
+     "formats": [
+      "acp"
+     ],
+     "expected": "7"
+    },
+    {
+     "rule": "openai.required.target_countries",
+     "file": "store-a/products.csv",
+     "line": 951,
+     "column": 13,
+     "pointer": null,
+     "item_id": "MUG0423-2",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "cross.price",
+     "file": "store-a/products.xml",
+     "line": 19138,
+     "column": null,
+     "pointer": null,
+     "item_id": "FRA0426-2",
+     "formats": [
+      "openai",
+      "google"
+     ]
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.csv",
+     "line": 980,
+     "column": 15,
+     "pointer": null,
+     "item_id": "MUG0433-1",
+     "formats": [
+      "openai"
+     ],
+     "expected": "1"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.xml",
+     "line": 19531,
+     "column": null,
+     "pointer": null,
+     "item_id": "MUG0433-1",
+     "formats": [
+      "google"
+     ],
+     "expected": "1"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/acp/products.jsonl",
+     "line": 433,
+     "column": null,
+     "pointer": "/variants/0/barcodes/0/value",
+     "item_id": "MUG0433-1",
+     "formats": [
+      "acp"
+     ],
+     "expected": "1"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.csv",
+     "line": 985,
+     "column": 15,
+     "pointer": null,
+     "item_id": "LAM0435-3",
+     "formats": [
+      "openai"
+     ],
+     "expected": "6"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.xml",
+     "line": 19630,
+     "column": null,
+     "pointer": null,
+     "item_id": "LAM0435-3",
+     "formats": [
+      "google"
+     ],
+     "expected": "6"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/acp/products.jsonl",
+     "line": 435,
+     "column": null,
+     "pointer": "/variants/2/barcodes/0/value",
+     "item_id": "LAM0435-3",
+     "formats": [
+      "acp"
+     ],
+     "expected": "6"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.csv",
+     "line": 1011,
+     "column": 15,
+     "pointer": null,
+     "item_id": "TEE0444-1",
+     "formats": [
+      "openai"
+     ],
+     "expected": "1"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.xml",
+     "line": 20141,
+     "column": null,
+     "pointer": null,
+     "item_id": "TEE0444-1",
+     "formats": [
+      "google"
+     ],
+     "expected": "1"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/acp/products.jsonl",
+     "line": 444,
+     "column": null,
+     "pointer": "/variants/0/barcodes/0/value",
+     "item_id": "TEE0444-1",
+     "formats": [
+      "acp"
+     ],
+     "expected": "1"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.csv",
+     "line": 1026,
+     "column": 15,
+     "pointer": null,
+     "item_id": "KET0447-3",
+     "formats": [
+      "openai"
+     ],
+     "expected": "8"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.xml",
+     "line": 20416,
+     "column": null,
+     "pointer": null,
+     "item_id": "KET0447-3",
+     "formats": [
+      "google"
+     ],
+     "expected": "8"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/acp/products.jsonl",
+     "line": 447,
+     "column": null,
+     "pointer": "/variants/2/barcodes/0/value",
+     "item_id": "KET0447-3",
+     "formats": [
+      "acp"
+     ],
+     "expected": "8"
+    },
+    {
+     "rule": "openai.title.length",
+     "file": "store-a/products.csv",
+     "line": 1031,
+     "column": 2,
+     "pointer": null,
+     "item_id": "BAG0448-3",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "google.title.length",
+     "file": "store-a/products.xml",
+     "line": 20509,
+     "column": null,
+     "pointer": null,
+     "item_id": "BAG0448-3",
+     "formats": [
+      "google"
+     ]
+    },
+    {
+     "rule": "openai.availability.enum",
+     "file": "store-a/products.csv",
+     "line": 1033,
+     "column": 9,
+     "pointer": null,
+     "item_id": "TOW0449-2",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "openai.required.target_countries",
+     "file": "store-a/products.csv",
+     "line": 1058,
+     "column": 13,
+     "pointer": null,
+     "item_id": "BAG0458-2",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "openai.availability.enum",
+     "file": "store-a/products.csv",
+     "line": 1073,
+     "column": 9,
+     "pointer": null,
+     "item_id": "TEE0464-1",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.csv",
+     "line": 1099,
+     "column": 15,
+     "pointer": null,
+     "item_id": "TEE0474-2",
+     "formats": [
+      "openai"
+     ],
+     "expected": "5"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.xml",
+     "line": 21864,
+     "column": null,
+     "pointer": null,
+     "item_id": "TEE0474-2",
+     "formats": [
+      "google"
+     ],
+     "expected": "5"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/acp/products.jsonl",
+     "line": 474,
+     "column": null,
+     "pointer": "/variants/1/barcodes/0/value",
+     "item_id": "TEE0474-2",
+     "formats": [
+      "acp"
+     ],
+     "expected": "5"
+    },
+    {
+     "rule": "cross.price",
+     "file": "store-a/products.xml",
+     "line": 22074,
+     "column": null,
+     "pointer": null,
+     "item_id": "KET0477-2",
+     "formats": [
+      "openai",
+      "google"
+     ]
+    },
+    {
+     "rule": "openai.title.length",
+     "file": "store-a/products.csv",
+     "line": 1129,
+     "column": 2,
+     "pointer": null,
+     "item_id": "TEE0484-1",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "google.title.length",
+     "file": "store-a/products.xml",
+     "line": 22452,
+     "column": null,
+     "pointer": null,
+     "item_id": "TEE0484-1",
+     "formats": [
+      "google"
+     ]
+    },
+    {
+     "rule": "openai.required.target_countries",
+     "file": "store-a/products.csv",
+     "line": 1154,
+     "column": 13,
+     "pointer": null,
+     "item_id": "TOW0489-4",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "openai.required.target_countries",
+     "file": "store-a/products.csv",
+     "line": 1173,
+     "column": 13,
+     "pointer": null,
+     "item_id": "LAM0495-3",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "openai.required.target_countries",
+     "file": "store-a/products.csv",
+     "line": 1180,
+     "column": 13,
+     "pointer": null,
+     "item_id": "KET0497-1",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "openai.sale_price.below_price",
+     "file": "store-a/products.csv",
+     "line": 1182,
+     "column": 12,
+     "pointer": null,
+     "item_id": "BAG0498-1",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "openai.availability.enum",
+     "file": "store-a/products.csv",
+     "line": 1212,
+     "column": 9,
+     "pointer": null,
+     "item_id": "LAM0505-2",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.csv",
+     "line": 1218,
+     "column": 15,
+     "pointer": null,
+     "item_id": "KET0507-1",
+     "formats": [
+      "openai"
+     ],
+     "expected": "3"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.xml",
+     "line": 24194,
+     "column": null,
+     "pointer": null,
+     "item_id": "KET0507-1",
+     "formats": [
+      "google"
+     ],
+     "expected": "3"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/acp/products.jsonl",
+     "line": 507,
+     "column": null,
+     "pointer": "/variants/0/barcodes/0/value",
+     "item_id": "KET0507-1",
+     "formats": [
+      "acp"
+     ],
+     "expected": "3"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.csv",
+     "line": 1220,
+     "column": 15,
+     "pointer": null,
+     "item_id": "BAG0508-1",
+     "formats": [
+      "openai"
+     ],
+     "expected": "7"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.xml",
+     "line": 24232,
+     "column": null,
+     "pointer": null,
+     "item_id": "BAG0508-1",
+     "formats": [
+      "google"
+     ],
+     "expected": "7"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/acp/products.jsonl",
+     "line": 508,
+     "column": null,
+     "pointer": "/variants/0/barcodes/0/value",
+     "item_id": "BAG0508-1",
+     "formats": [
+      "acp"
+     ],
+     "expected": "7"
+    },
+    {
+     "rule": "gs1.gtin.restricted_prefix",
+     "file": "store-a/products.csv",
+     "line": 1246,
+     "column": 15,
+     "pointer": null,
+     "item_id": "FRA0516-2",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "gs1.gtin.restricted_prefix",
+     "file": "store-a/products.xml",
+     "line": 24765,
+     "column": null,
+     "pointer": null,
+     "item_id": "FRA0516-2",
+     "formats": [
+      "google"
+     ]
+    },
+    {
+     "rule": "gs1.gtin.restricted_prefix",
+     "file": "store-a/acp/products.jsonl",
+     "line": 516,
+     "column": null,
+     "pointer": "/variants/1/barcodes/0/value",
+     "item_id": "FRA0516-2",
+     "formats": [
+      "acp"
+     ]
+    },
+    {
+     "rule": "openai.required.target_countries",
+     "file": "store-a/products.csv",
+     "line": 1276,
+     "column": 13,
+     "pointer": null,
+     "item_id": "TEE0524-3",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.csv",
+     "line": 1282,
+     "column": 15,
+     "pointer": null,
+     "item_id": "FRA0526-2",
+     "formats": [
+      "openai"
+     ],
+     "expected": "5"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.xml",
+     "line": 25466,
+     "column": null,
+     "pointer": null,
+     "item_id": "FRA0526-2",
+     "formats": [
+      "google"
+     ],
+     "expected": "5"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/acp/products.jsonl",
+     "line": 526,
+     "column": null,
+     "pointer": "/variants/1/barcodes/0/value",
+     "item_id": "FRA0526-2",
+     "formats": [
+      "acp"
+     ],
+     "expected": "5"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.csv",
+     "line": 1295,
+     "column": 15,
+     "pointer": null,
+     "item_id": "SOC0530-2",
+     "formats": [
+      "openai"
+     ],
+     "expected": "4"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.xml",
+     "line": 25717,
+     "column": null,
+     "pointer": null,
+     "item_id": "SOC0530-2",
+     "formats": [
+      "google"
+     ],
+     "expected": "4"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/acp/products.jsonl",
+     "line": 530,
+     "column": null,
+     "pointer": "/variants/1/barcodes/0/value",
+     "item_id": "SOC0530-2",
+     "formats": [
+      "acp"
+     ],
+     "expected": "4"
+    },
+    {
+     "rule": "acp.schema.product",
+     "file": "store-a/acp/products.jsonl",
+     "line": 531,
+     "column": null,
+     "pointer": "/variants/3/price/amount",
+     "item_id": "PHO0531-4",
+     "formats": [
+      "acp"
+     ]
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.csv",
+     "line": 1309,
+     "column": 15,
+     "pointer": null,
+     "item_id": "LAM0535-1",
+     "formats": [
+      "openai"
+     ],
+     "expected": "1"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.xml",
+     "line": 25999,
+     "column": null,
+     "pointer": null,
+     "item_id": "LAM0535-1",
+     "formats": [
+      "google"
+     ],
+     "expected": "1"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/acp/products.jsonl",
+     "line": 535,
+     "column": null,
+     "pointer": "/variants/0/barcodes/0/value",
+     "item_id": "LAM0535-1",
+     "formats": [
+      "acp"
+     ],
+     "expected": "1"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.csv",
+     "line": 1315,
+     "column": 15,
+     "pointer": null,
+     "item_id": "KET0537-3",
+     "formats": [
+      "openai"
+     ],
+     "expected": "9"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.xml",
+     "line": 26111,
+     "column": null,
+     "pointer": null,
+     "item_id": "KET0537-3",
+     "formats": [
+      "google"
+     ],
+     "expected": "9"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/acp/products.jsonl",
+     "line": 537,
+     "column": null,
+     "pointer": "/variants/2/barcodes/0/value",
+     "item_id": "KET0537-3",
+     "formats": [
+      "acp"
+     ],
+     "expected": "9"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.csv",
+     "line": 1332,
+     "column": 15,
+     "pointer": null,
+     "item_id": "PHO0541-4",
+     "formats": [
+      "openai"
+     ],
+     "expected": "7"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.xml",
+     "line": 26450,
+     "column": null,
+     "pointer": null,
+     "item_id": "PHO0541-4",
+     "formats": [
+      "google"
+     ],
+     "expected": "7"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/acp/products.jsonl",
+     "line": 541,
+     "column": null,
+     "pointer": "/variants/3/barcodes/0/value",
+     "item_id": "PHO0541-4",
+     "formats": [
+      "acp"
+     ],
+     "expected": "7"
+    },
+    {
+     "rule": "acp.schema.product",
+     "file": "store-a/acp/products.jsonl",
+     "line": 545,
+     "column": null,
+     "pointer": "/variants/1/price/amount",
+     "item_id": "LAM0545-2",
+     "formats": [
+      "acp"
+     ]
+    },
+    {
+     "rule": "openai.required.target_countries",
+     "file": "store-a/products.csv",
+     "line": 1378,
+     "column": 13,
+     "pointer": null,
+     "item_id": "KET0557-1",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "openai.required.brand",
+     "file": "store-a/products.csv",
+     "line": 1381,
+     "column": 5,
+     "pointer": null,
+     "item_id": "KET0557-4",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "google.brand.required_new",
+     "file": "store-a/products.xml",
+     "line": 27366,
+     "column": null,
+     "pointer": null,
+     "item_id": "KET0557-4",
+     "formats": [
+      "google"
+     ]
+    },
+    {
+     "rule": "openai.required.target_countries",
+     "file": "store-a/products.csv",
+     "line": 1395,
+     "column": 13,
+     "pointer": null,
+     "item_id": "TAB0562-3",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "openai.required.target_countries",
+     "file": "store-a/products.csv",
+     "line": 1433,
+     "column": 13,
+     "pointer": null,
+     "item_id": "LAM0575-1",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "acp.schema.product",
+     "file": "store-a/acp/products.jsonl",
+     "line": 576,
+     "column": null,
+     "pointer": "/variants/1/price/amount",
+     "item_id": "FRA0576-2",
+     "formats": [
+      "acp"
+     ]
+    },
+    {
+     "rule": "acp.schema.product",
+     "file": "store-a/acp/products.jsonl",
+     "line": 576,
+     "column": null,
+     "pointer": "/variants/2/price/amount",
+     "item_id": "FRA0576-3",
+     "formats": [
+      "acp"
+     ]
+    },
+    {
+     "rule": "openai.required.target_countries",
+     "file": "store-a/products.csv",
+     "line": 1451,
+     "column": 13,
+     "pointer": null,
+     "item_id": "PHO0581-2",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "acp.schema.product",
+     "file": "store-a/acp/products.jsonl",
+     "line": 589,
+     "column": null,
+     "pointer": "/variants/0/price/amount",
+     "item_id": "TOW0589-1",
+     "formats": [
+      "acp"
+     ]
+    },
+    {
+     "rule": "openai.availability.enum",
+     "file": "store-a/products.csv",
+     "line": 1476,
+     "column": 9,
+     "pointer": null,
+     "item_id": "SOC0590-1",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "openai.required.target_countries",
+     "file": "store-a/products.csv",
+     "line": 1513,
+     "column": 13,
+     "pointer": null,
+     "item_id": "PHO0601-2",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "openai.required.target_countries",
+     "file": "store-a/products.csv",
+     "line": 1526,
+     "column": 13,
+     "pointer": null,
+     "item_id": "LAM0605-2",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "openai.availability.enum",
+     "file": "store-a/products.csv",
+     "line": 1572,
+     "column": 9,
+     "pointer": null,
+     "item_id": "SOC0620-3",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "openai.sale_price.below_price",
+     "file": "store-a/products.csv",
+     "line": 1577,
+     "column": 12,
+     "pointer": null,
+     "item_id": "TAB0622-2",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.csv",
+     "line": 1612,
+     "column": 15,
+     "pointer": null,
+     "item_id": "LAM0635-1",
+     "formats": [
+      "openai"
+     ],
+     "expected": "5"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.xml",
+     "line": 31966,
+     "column": null,
+     "pointer": null,
+     "item_id": "LAM0635-1",
+     "formats": [
+      "google"
+     ],
+     "expected": "5"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/acp/products.jsonl",
+     "line": 635,
+     "column": null,
+     "pointer": "/variants/0/barcodes/0/value",
+     "item_id": "LAM0635-1",
+     "formats": [
+      "acp"
+     ],
+     "expected": "5"
+    },
+    {
+     "rule": "acp.schema.product",
+     "file": "store-a/acp/products.jsonl",
+     "line": 635,
+     "column": null,
+     "pointer": "/variants/1/price/amount",
+     "item_id": "LAM0635-2",
+     "formats": [
+      "acp"
+     ]
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.csv",
+     "line": 1641,
+     "column": 15,
+     "pointer": null,
+     "item_id": "TEE0644-1",
+     "formats": [
+      "openai"
+     ],
+     "expected": "5"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.xml",
+     "line": 32514,
+     "column": null,
+     "pointer": null,
+     "item_id": "TEE0644-1",
+     "formats": [
+      "google"
+     ],
+     "expected": "5"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/acp/products.jsonl",
+     "line": 644,
+     "column": null,
+     "pointer": "/variants/0/barcodes/0/value",
+     "item_id": "TEE0644-1",
+     "formats": [
+      "acp"
+     ],
+     "expected": "5"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.csv",
+     "line": 1681,
+     "column": 15,
+     "pointer": null,
+     "item_id": "LAM0655-1",
+     "formats": [
+      "openai"
+     ],
+     "expected": "4"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.xml",
+     "line": 33301,
+     "column": null,
+     "pointer": null,
+     "item_id": "LAM0655-1",
+     "formats": [
+      "google"
+     ],
+     "expected": "4"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/acp/products.jsonl",
+     "line": 655,
+     "column": null,
+     "pointer": "/variants/0/barcodes/0/value",
+     "item_id": "LAM0655-1",
+     "formats": [
+      "acp"
+     ],
+     "expected": "4"
+    },
+    {
+     "rule": "openai.required.target_countries",
+     "file": "store-a/products.csv",
+     "line": 1682,
+     "column": 13,
+     "pointer": null,
+     "item_id": "LAM0655-2",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "gs1.gtin.restricted_prefix",
+     "file": "store-a/products.csv",
+     "line": 1719,
+     "column": 15,
+     "pointer": null,
+     "item_id": "TOW0669-1",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "gs1.gtin.restricted_prefix",
+     "file": "store-a/products.xml",
+     "line": 34074,
+     "column": null,
+     "pointer": null,
+     "item_id": "TOW0669-1",
+     "formats": [
+      "google"
+     ]
+    },
+    {
+     "rule": "gs1.gtin.restricted_prefix",
+     "file": "store-a/acp/products.jsonl",
+     "line": 669,
+     "column": null,
+     "pointer": "/variants/0/barcodes/0/value",
+     "item_id": "TOW0669-1",
+     "formats": [
+      "acp"
+     ]
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.csv",
+     "line": 1721,
+     "column": 15,
+     "pointer": null,
+     "item_id": "TOW0669-3",
+     "formats": [
+      "openai"
+     ],
+     "expected": "7"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.xml",
+     "line": 34110,
+     "column": null,
+     "pointer": null,
+     "item_id": "TOW0669-3",
+     "formats": [
+      "google"
+     ],
+     "expected": "7"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/acp/products.jsonl",
+     "line": 669,
+     "column": null,
+     "pointer": "/variants/2/barcodes/0/value",
+     "item_id": "TOW0669-3",
+     "formats": [
+      "acp"
+     ],
+     "expected": "7"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.csv",
+     "line": 1733,
+     "column": 15,
+     "pointer": null,
+     "item_id": "MUG0673-1",
+     "formats": [
+      "openai"
+     ],
+     "expected": "0"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.xml",
+     "line": 34355,
+     "column": null,
+     "pointer": null,
+     "item_id": "MUG0673-1",
+     "formats": [
+      "google"
+     ],
+     "expected": "0"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/acp/products.jsonl",
+     "line": 673,
+     "column": null,
+     "pointer": "/variants/0/barcodes/0/value",
+     "item_id": "MUG0673-1",
+     "formats": [
+      "acp"
+     ],
+     "expected": "0"
+    },
+    {
+     "rule": "cross.price",
+     "file": "store-a/products.xml",
+     "line": 35476,
+     "column": null,
+     "pointer": null,
+     "item_id": "MUG0693-5",
+     "formats": [
+      "openai",
+      "google"
+     ]
+    },
+    {
+     "rule": "openai.title.length",
+     "file": "store-a/products.csv",
+     "line": 1796,
+     "column": 2,
+     "pointer": null,
+     "item_id": "FRA0696-1",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "google.title.length",
+     "file": "store-a/products.xml",
+     "line": 35577,
+     "column": null,
+     "pointer": null,
+     "item_id": "FRA0696-1",
+     "formats": [
+      "google"
+     ]
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.csv",
+     "line": 1797,
+     "column": 15,
+     "pointer": null,
+     "item_id": "FRA0696-2",
+     "formats": [
+      "openai"
+     ],
+     "expected": "5"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.xml",
+     "line": 35604,
+     "column": null,
+     "pointer": null,
+     "item_id": "FRA0696-2",
+     "formats": [
+      "google"
+     ],
+     "expected": "5"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/acp/products.jsonl",
+     "line": 696,
+     "column": null,
+     "pointer": "/variants/1/barcodes/0/value",
+     "item_id": "FRA0696-2",
+     "formats": [
+      "acp"
+     ],
+     "expected": "5"
+    },
+    {
+     "rule": "openai.sale_price.below_price",
+     "file": "store-a/products.csv",
+     "line": 1845,
+     "column": 12,
+     "pointer": null,
+     "item_id": "TAB0712-1",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "openai.required.target_countries",
+     "file": "store-a/products.csv",
+     "line": 1849,
+     "column": 13,
+     "pointer": null,
+     "item_id": "TEE0714-2",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "openai.required.target_countries",
+     "file": "store-a/products.csv",
+     "line": 1869,
+     "column": 13,
+     "pointer": null,
+     "item_id": "TOW0719-2",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "cross.price",
+     "file": "store-a/products.xml",
+     "line": 37469,
+     "column": null,
+     "pointer": null,
+     "item_id": "LAM0725-2",
+     "formats": [
+      "openai",
+      "google"
+     ]
+    },
+    {
+     "rule": "openai.required.target_countries",
+     "file": "store-a/products.csv",
+     "line": 1896,
+     "column": 13,
+     "pointer": null,
+     "item_id": "FRA0726-2",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "openai.availability.enum",
+     "file": "store-a/products.csv",
+     "line": 1965,
+     "column": 9,
+     "pointer": null,
+     "item_id": "PHO0751-2",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "cross.price",
+     "file": "store-a/products.xml",
+     "line": 39073,
+     "column": null,
+     "pointer": null,
+     "item_id": "TEE0754-2",
+     "formats": [
+      "openai",
+      "google"
+     ]
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.csv",
+     "line": 1987,
+     "column": 15,
+     "pointer": null,
+     "item_id": "KET0757-2",
+     "formats": [
+      "openai"
+     ],
+     "expected": "6"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.xml",
+     "line": 39328,
+     "column": null,
+     "pointer": null,
+     "item_id": "KET0757-2",
+     "formats": [
+      "google"
+     ],
+     "expected": "6"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/acp/products.jsonl",
+     "line": 757,
+     "column": null,
+     "pointer": "/variants/1/barcodes/0/value",
+     "item_id": "KET0757-2",
+     "formats": [
+      "acp"
+     ],
+     "expected": "6"
+    },
+    {
+     "rule": "openai.required.target_countries",
+     "file": "store-a/products.csv",
+     "line": 1992,
+     "column": 13,
+     "pointer": null,
+     "item_id": "BAG0758-2",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "acp.schema.product",
+     "file": "store-a/acp/products.jsonl",
+     "line": 759,
+     "column": null,
+     "pointer": "/variants/0/price/amount",
+     "item_id": "TOW0759-1",
+     "formats": [
+      "acp"
+     ]
+    },
+    {
+     "rule": "openai.sale_price.below_price",
+     "file": "store-a/products.csv",
+     "line": 2015,
+     "column": 12,
+     "pointer": null,
+     "item_id": "SOC0770-1",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.csv",
+     "line": 2052,
+     "column": 15,
+     "pointer": null,
+     "item_id": "PHO0781-2",
+     "formats": [
+      "openai"
+     ],
+     "expected": "4"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.xml",
+     "line": 40616,
+     "column": null,
+     "pointer": null,
+     "item_id": "PHO0781-2",
+     "formats": [
+      "google"
+     ],
+     "expected": "4"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/acp/products.jsonl",
+     "line": 781,
+     "column": null,
+     "pointer": "/variants/1/barcodes/0/value",
+     "item_id": "PHO0781-2",
+     "formats": [
+      "acp"
+     ],
+     "expected": "4"
+    },
+    {
+     "rule": "openai.sale_price.below_price",
+     "file": "store-a/products.csv",
+     "line": 2083,
+     "column": 12,
+     "pointer": null,
+     "item_id": "PHO0791-1",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "openai.required.target_countries",
+     "file": "store-a/products.csv",
+     "line": 2087,
+     "column": 13,
+     "pointer": null,
+     "item_id": "MUG0793-2",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "openai.required.target_countries",
+     "file": "store-a/products.csv",
+     "line": 2104,
+     "column": 13,
+     "pointer": null,
+     "item_id": "KET0797-2",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.csv",
+     "line": 2165,
+     "column": 15,
+     "pointer": null,
+     "item_id": "LAM0815-1",
+     "formats": [
+      "openai"
+     ],
+     "expected": "0"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.xml",
+     "line": 42858,
+     "column": null,
+     "pointer": null,
+     "item_id": "LAM0815-1",
+     "formats": [
+      "google"
+     ],
+     "expected": "0"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/acp/products.jsonl",
+     "line": 815,
+     "column": null,
+     "pointer": "/variants/0/barcodes/0/value",
+     "item_id": "LAM0815-1",
+     "formats": [
+      "acp"
+     ],
+     "expected": "0"
+    },
+    {
+     "rule": "openai.availability.enum",
+     "file": "store-a/products.csv",
+     "line": 2218,
+     "column": 9,
+     "pointer": null,
+     "item_id": "TAB0832-1",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "openai.required.target_countries",
+     "file": "store-a/products.csv",
+     "line": 2221,
+     "column": 13,
+     "pointer": null,
+     "item_id": "TAB0832-4",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.csv",
+     "line": 2224,
+     "column": 15,
+     "pointer": null,
+     "item_id": "MUG0833-1",
+     "formats": [
+      "openai"
+     ],
+     "expected": "4"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.xml",
+     "line": 44001,
+     "column": null,
+     "pointer": null,
+     "item_id": "MUG0833-1",
+     "formats": [
+      "google"
+     ],
+     "expected": "4"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/acp/products.jsonl",
+     "line": 833,
+     "column": null,
+     "pointer": "/variants/0/barcodes/0/value",
+     "item_id": "MUG0833-1",
+     "formats": [
+      "acp"
+     ],
+     "expected": "4"
+    },
+    {
+     "rule": "openai.required.target_countries",
+     "file": "store-a/products.csv",
+     "line": 2240,
+     "column": 13,
+     "pointer": null,
+     "item_id": "TOW0839-3",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "openai.title.length",
+     "file": "store-a/products.csv",
+     "line": 2249,
+     "column": 2,
+     "pointer": null,
+     "item_id": "PHO0841-2",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "google.title.length",
+     "file": "store-a/products.xml",
+     "line": 44500,
+     "column": null,
+     "pointer": null,
+     "item_id": "PHO0841-2",
+     "formats": [
+      "google"
+     ]
+    },
+    {
+     "rule": "openai.required.target_countries",
+     "file": "store-a/products.csv",
+     "line": 2271,
+     "column": 13,
+     "pointer": null,
+     "item_id": "BAG0848-1",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "openai.required.brand",
+     "file": "store-a/products.csv",
+     "line": 2274,
+     "column": 5,
+     "pointer": null,
+     "item_id": "TOW0849-1",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "google.brand.required_new",
+     "file": "store-a/products.xml",
+     "line": 44966,
+     "column": null,
+     "pointer": null,
+     "item_id": "TOW0849-1",
+     "formats": [
+      "google"
+     ]
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.csv",
+     "line": 2303,
+     "column": 15,
+     "pointer": null,
+     "item_id": "TOW0859-2",
+     "formats": [
+      "openai"
+     ],
+     "expected": "9"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.xml",
+     "line": 45564,
+     "column": null,
+     "pointer": null,
+     "item_id": "TOW0859-2",
+     "formats": [
+      "google"
+     ],
+     "expected": "9"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/acp/products.jsonl",
+     "line": 859,
+     "column": null,
+     "pointer": "/variants/1/barcodes/0/value",
+     "item_id": "TOW0859-2",
+     "formats": [
+      "acp"
+     ],
+     "expected": "9"
+    },
+    {
+     "rule": "openai.title.length",
+     "file": "store-a/products.csv",
+     "line": 2314,
+     "column": 2,
+     "pointer": null,
+     "item_id": "TAB0862-2",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "google.title.length",
+     "file": "store-a/products.xml",
+     "line": 45756,
+     "column": null,
+     "pointer": null,
+     "item_id": "TAB0862-2",
+     "formats": [
+      "google"
+     ]
+    },
+    {
+     "rule": "openai.availability.enum",
+     "file": "store-a/products.csv",
+     "line": 2322,
+     "column": 9,
+     "pointer": null,
+     "item_id": "TEE0864-3",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.csv",
+     "line": 2323,
+     "column": 15,
+     "pointer": null,
+     "item_id": "TEE0864-4",
+     "formats": [
+      "openai"
+     ],
+     "expected": "0"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.xml",
+     "line": 45942,
+     "column": null,
+     "pointer": null,
+     "item_id": "TEE0864-4",
+     "formats": [
+      "google"
+     ],
+     "expected": "0"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/acp/products.jsonl",
+     "line": 864,
+     "column": null,
+     "pointer": "/variants/3/barcodes/0/value",
+     "item_id": "TEE0864-4",
+     "formats": [
+      "acp"
+     ],
+     "expected": "0"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.csv",
+     "line": 2333,
+     "column": 15,
+     "pointer": null,
+     "item_id": "FRA0866-5",
+     "formats": [
+      "openai"
+     ],
+     "expected": "6"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.xml",
+     "line": 46131,
+     "column": null,
+     "pointer": null,
+     "item_id": "FRA0866-5",
+     "formats": [
+      "google"
+     ],
+     "expected": "6"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/acp/products.jsonl",
+     "line": 866,
+     "column": null,
+     "pointer": "/variants/4/barcodes/0/value",
+     "item_id": "FRA0866-5",
+     "formats": [
+      "acp"
+     ],
+     "expected": "6"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.csv",
+     "line": 2346,
+     "column": 15,
+     "pointer": null,
+     "item_id": "TAB0872-1",
+     "formats": [
+      "openai"
+     ],
+     "expected": "6"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.xml",
+     "line": 46401,
+     "column": null,
+     "pointer": null,
+     "item_id": "TAB0872-1",
+     "formats": [
+      "google"
+     ],
+     "expected": "6"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/acp/products.jsonl",
+     "line": 872,
+     "column": null,
+     "pointer": "/variants/0/barcodes/0/value",
+     "item_id": "TAB0872-1",
+     "formats": [
+      "acp"
+     ],
+     "expected": "6"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.csv",
+     "line": 2348,
+     "column": 15,
+     "pointer": null,
+     "item_id": "MUG0873-1",
+     "formats": [
+      "openai"
+     ],
+     "expected": "9"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.xml",
+     "line": 46439,
+     "column": null,
+     "pointer": null,
+     "item_id": "MUG0873-1",
+     "formats": [
+      "google"
+     ],
+     "expected": "9"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/acp/products.jsonl",
+     "line": 873,
+     "column": null,
+     "pointer": "/variants/0/barcodes/0/value",
+     "item_id": "MUG0873-1",
+     "formats": [
+      "acp"
+     ],
+     "expected": "9"
+    },
+    {
+     "rule": "acp.schema.product",
+     "file": "store-a/acp/products.jsonl",
+     "line": 873,
+     "column": null,
+     "pointer": "/variants/4/price/amount",
+     "item_id": "MUG0873-5",
+     "formats": [
+      "acp"
+     ]
+    },
+    {
+     "rule": "openai.required.target_countries",
+     "file": "store-a/products.csv",
+     "line": 2387,
+     "column": 13,
+     "pointer": null,
+     "item_id": "TOW0889-3",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "openai.sale_price.below_price",
+     "file": "store-a/products.csv",
+     "line": 2396,
+     "column": 12,
+     "pointer": null,
+     "item_id": "TAB0892-3",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.csv",
+     "line": 2411,
+     "column": 15,
+     "pointer": null,
+     "item_id": "FRA0896-2",
+     "formats": [
+      "openai"
+     ],
+     "expected": "7"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.xml",
+     "line": 47668,
+     "column": null,
+     "pointer": null,
+     "item_id": "FRA0896-2",
+     "formats": [
+      "google"
+     ],
+     "expected": "7"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/acp/products.jsonl",
+     "line": 896,
+     "column": null,
+     "pointer": "/variants/1/barcodes/0/value",
+     "item_id": "FRA0896-2",
+     "formats": [
+      "acp"
+     ],
+     "expected": "7"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.csv",
+     "line": 2432,
+     "column": 15,
+     "pointer": null,
+     "item_id": "PHO0901-2",
+     "formats": [
+      "openai"
+     ],
+     "expected": "9"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.xml",
+     "line": 48093,
+     "column": null,
+     "pointer": null,
+     "item_id": "PHO0901-2",
+     "formats": [
+      "google"
+     ],
+     "expected": "9"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/acp/products.jsonl",
+     "line": 901,
+     "column": null,
+     "pointer": "/variants/1/barcodes/0/value",
+     "item_id": "PHO0901-2",
+     "formats": [
+      "acp"
+     ],
+     "expected": "9"
+    },
+    {
+     "rule": "openai.required.target_countries",
+     "file": "store-a/products.csv",
+     "line": 2466,
+     "column": 13,
+     "pointer": null,
+     "item_id": "MUG0913-1",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "acp.schema.product",
+     "file": "store-a/acp/products.jsonl",
+     "line": 917,
+     "column": null,
+     "pointer": "/variants/1/price/amount",
+     "item_id": "KET0917-2",
+     "formats": [
+      "acp"
+     ]
+    },
+    {
+     "rule": "acp.schema.product",
+     "file": "store-a/acp/products.jsonl",
+     "line": 921,
+     "column": null,
+     "pointer": "/variants/0/price/amount",
+     "item_id": "PHO0921-1",
+     "formats": [
+      "acp"
+     ]
+    },
+    {
+     "rule": "gs1.gtin.restricted_prefix",
+     "file": "store-a/products.csv",
+     "line": 2496,
+     "column": 15,
+     "pointer": null,
+     "item_id": "TEE0924-2",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "gs1.gtin.restricted_prefix",
+     "file": "store-a/products.xml",
+     "line": 49353,
+     "column": null,
+     "pointer": null,
+     "item_id": "TEE0924-2",
+     "formats": [
+      "google"
+     ]
+    },
+    {
+     "rule": "gs1.gtin.restricted_prefix",
+     "file": "store-a/acp/products.jsonl",
+     "line": 924,
+     "column": null,
+     "pointer": "/variants/1/barcodes/0/value",
+     "item_id": "TEE0924-2",
+     "formats": [
+      "acp"
+     ]
+    },
+    {
+     "rule": "cross.price",
+     "file": "store-a/products.xml",
+     "line": 50031,
+     "column": null,
+     "pointer": null,
+     "item_id": "KET0937-3",
+     "formats": [
+      "openai",
+      "google"
+     ]
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.csv",
+     "line": 2536,
+     "column": 15,
+     "pointer": null,
+     "item_id": "BAG0938-4",
+     "formats": [
+      "openai"
+     ],
+     "expected": "4"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.xml",
+     "line": 50155,
+     "column": null,
+     "pointer": null,
+     "item_id": "BAG0938-4",
+     "formats": [
+      "google"
+     ],
+     "expected": "4"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/acp/products.jsonl",
+     "line": 938,
+     "column": null,
+     "pointer": "/variants/3/barcodes/0/value",
+     "item_id": "BAG0938-4",
+     "formats": [
+      "acp"
+     ],
+     "expected": "4"
+    },
+    {
+     "rule": "openai.required.target_countries",
+     "file": "store-a/products.csv",
+     "line": 2553,
+     "column": 13,
+     "pointer": null,
+     "item_id": "TEE0944-3",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "gs1.gtin.restricted_prefix",
+     "file": "store-a/products.csv",
+     "line": 2565,
+     "column": 15,
+     "pointer": null,
+     "item_id": "BAG0948-4",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "gs1.gtin.restricted_prefix",
+     "file": "store-a/products.xml",
+     "line": 50722,
+     "column": null,
+     "pointer": null,
+     "item_id": "BAG0948-4",
+     "formats": [
+      "google"
+     ]
+    },
+    {
+     "rule": "gs1.gtin.restricted_prefix",
+     "file": "store-a/acp/products.jsonl",
+     "line": 948,
+     "column": null,
+     "pointer": "/variants/3/barcodes/0/value",
+     "item_id": "BAG0948-4",
+     "formats": [
+      "acp"
+     ]
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.csv",
+     "line": 2583,
+     "column": 15,
+     "pointer": null,
+     "item_id": "TEE0954-2",
+     "formats": [
+      "openai"
+     ],
+     "expected": "1"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.xml",
+     "line": 51083,
+     "column": null,
+     "pointer": null,
+     "item_id": "TEE0954-2",
+     "formats": [
+      "google"
+     ],
+     "expected": "1"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/acp/products.jsonl",
+     "line": 954,
+     "column": null,
+     "pointer": "/variants/1/barcodes/0/value",
+     "item_id": "TEE0954-2",
+     "formats": [
+      "acp"
+     ],
+     "expected": "1"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.csv",
+     "line": 2584,
+     "column": 15,
+     "pointer": null,
+     "item_id": "TEE0954-3",
+     "formats": [
+      "openai"
+     ],
+     "expected": "8"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.xml",
+     "line": 51105,
+     "column": null,
+     "pointer": null,
+     "item_id": "TEE0954-3",
+     "formats": [
+      "google"
+     ],
+     "expected": "8"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/acp/products.jsonl",
+     "line": 954,
+     "column": null,
+     "pointer": "/variants/2/barcodes/0/value",
+     "item_id": "TEE0954-3",
+     "formats": [
+      "acp"
+     ],
+     "expected": "8"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.csv",
+     "line": 2630,
+     "column": 15,
+     "pointer": null,
+     "item_id": "TOW0969-2",
+     "formats": [
+      "openai"
+     ],
+     "expected": "2"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.xml",
+     "line": 52016,
+     "column": null,
+     "pointer": null,
+     "item_id": "TOW0969-2",
+     "formats": [
+      "google"
+     ],
+     "expected": "2"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/acp/products.jsonl",
+     "line": 969,
+     "column": null,
+     "pointer": "/variants/1/barcodes/0/value",
+     "item_id": "TOW0969-2",
+     "formats": [
+      "acp"
+     ],
+     "expected": "2"
+    },
+    {
+     "rule": "openai.required.brand",
+     "file": "store-a/products.csv",
+     "line": 2651,
+     "column": 5,
+     "pointer": null,
+     "item_id": "LAM0975-5",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "google.brand.required_new",
+     "file": "store-a/products.xml",
+     "line": 52406,
+     "column": null,
+     "pointer": null,
+     "item_id": "LAM0975-5",
+     "formats": [
+      "google"
+     ]
+    },
+    {
+     "rule": "cross.price",
+     "file": "store-a/products.xml",
+     "line": 52599,
+     "column": null,
+     "pointer": null,
+     "item_id": "BAG0978-1",
+     "formats": [
+      "openai",
+      "google"
+     ]
+    },
+    {
+     "rule": "openai.required.target_countries",
+     "file": "store-a/products.csv",
+     "line": 2692,
+     "column": 13,
+     "pointer": null,
+     "item_id": "SOC0990-4",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "openai.required.target_countries",
+     "file": "store-a/products.csv",
+     "line": 2736,
+     "column": 13,
+     "pointer": null,
+     "item_id": "TEE1004-1",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "openai.required.brand",
+     "file": "store-a/products.csv",
+     "line": 2743,
+     "column": 5,
+     "pointer": null,
+     "item_id": "FRA1006-2",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "google.brand.required_new",
+     "file": "store-a/products.xml",
+     "line": 54240,
+     "column": null,
+     "pointer": null,
+     "item_id": "FRA1006-2",
+     "formats": [
+      "google"
+     ]
+    },
+    {
+     "rule": "openai.required.target_countries",
+     "file": "store-a/products.csv",
+     "line": 2759,
+     "column": 13,
+     "pointer": null,
+     "item_id": "PHO1011-4",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.csv",
+     "line": 2803,
+     "column": 15,
+     "pointer": null,
+     "item_id": "KET1027-2",
+     "formats": [
+      "openai"
+     ],
+     "expected": "6"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.xml",
+     "line": 55429,
+     "column": null,
+     "pointer": null,
+     "item_id": "KET1027-2",
+     "formats": [
+      "google"
+     ],
+     "expected": "6"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/acp/products.jsonl",
+     "line": 1027,
+     "column": null,
+     "pointer": "/variants/1/barcodes/0/value",
+     "item_id": "KET1027-2",
+     "formats": [
+      "acp"
+     ],
+     "expected": "6"
+    },
+    {
+     "rule": "openai.sale_price.below_price",
+     "file": "store-a/products.csv",
+     "line": 2807,
+     "column": 12,
+     "pointer": null,
+     "item_id": "SOC1030-1",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "gs1.gtin.restricted_prefix",
+     "file": "store-a/products.csv",
+     "line": 2824,
+     "column": 15,
+     "pointer": null,
+     "item_id": "KET1037-1",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "gs1.gtin.restricted_prefix",
+     "file": "store-a/products.xml",
+     "line": 55841,
+     "column": null,
+     "pointer": null,
+     "item_id": "KET1037-1",
+     "formats": [
+      "google"
+     ]
+    },
+    {
+     "rule": "gs1.gtin.restricted_prefix",
+     "file": "store-a/acp/products.jsonl",
+     "line": 1037,
+     "column": null,
+     "pointer": "/variants/0/barcodes/0/value",
+     "item_id": "KET1037-1",
+     "formats": [
+      "acp"
+     ]
+    },
+    {
+     "rule": "openai.required.target_countries",
+     "file": "store-a/products.csv",
+     "line": 2862,
+     "column": 13,
+     "pointer": null,
+     "item_id": "SOC1050-1",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "openai.required.target_countries",
+     "file": "store-a/products.csv",
+     "line": 2887,
+     "column": 13,
+     "pointer": null,
+     "item_id": "TOW1059-3",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "openai.sale_price.below_price",
+     "file": "store-a/products.csv",
+     "line": 2888,
+     "column": 12,
+     "pointer": null,
+     "item_id": "TOW1059-4",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "openai.required.target_countries",
+     "file": "store-a/products.csv",
+     "line": 2891,
+     "column": 13,
+     "pointer": null,
+     "item_id": "PHO1061-1",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "openai.sale_price.below_price",
+     "file": "store-a/products.csv",
+     "line": 2895,
+     "column": 12,
+     "pointer": null,
+     "item_id": "PHO1061-5",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "acp.schema.product",
+     "file": "store-a/acp/products.jsonl",
+     "line": 1063,
+     "column": null,
+     "pointer": "/variants/2/price/amount",
+     "item_id": "MUG1063-3",
+     "formats": [
+      "acp"
+     ]
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.csv",
+     "line": 2915,
+     "column": 15,
+     "pointer": null,
+     "item_id": "TOW1069-3",
+     "formats": [
+      "openai"
+     ],
+     "expected": "2"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.xml",
+     "line": 57582,
+     "column": null,
+     "pointer": null,
+     "item_id": "TOW1069-3",
+     "formats": [
+      "google"
+     ],
+     "expected": "2"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/acp/products.jsonl",
+     "line": 1069,
+     "column": null,
+     "pointer": "/variants/2/barcodes/0/value",
+     "item_id": "TOW1069-3",
+     "formats": [
+      "acp"
+     ],
+     "expected": "2"
+    },
+    {
+     "rule": "gs1.gtin.restricted_prefix",
+     "file": "store-a/products.csv",
+     "line": 2935,
+     "column": 15,
+     "pointer": null,
+     "item_id": "LAM1075-5",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "gs1.gtin.restricted_prefix",
+     "file": "store-a/products.xml",
+     "line": 57987,
+     "column": null,
+     "pointer": null,
+     "item_id": "LAM1075-5",
+     "formats": [
+      "google"
+     ]
+    },
+    {
+     "rule": "gs1.gtin.restricted_prefix",
+     "file": "store-a/acp/products.jsonl",
+     "line": 1075,
+     "column": null,
+     "pointer": "/variants/4/barcodes/0/value",
+     "item_id": "LAM1075-5",
+     "formats": [
+      "acp"
+     ]
+    },
+    {
+     "rule": "openai.availability.enum",
+     "file": "store-a/products.csv",
+     "line": 2962,
+     "column": 9,
+     "pointer": null,
+     "item_id": "TEE1084-4",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "openai.sale_price.below_price",
+     "file": "store-a/products.csv",
+     "line": 2980,
+     "column": 12,
+     "pointer": null,
+     "item_id": "PHO1091-3",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "openai.required.target_countries",
+     "file": "store-a/products.csv",
+     "line": 2989,
+     "column": 13,
+     "pointer": null,
+     "item_id": "TEE1094-1",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.csv",
+     "line": 3008,
+     "column": 15,
+     "pointer": null,
+     "item_id": "SOC1100-2",
+     "formats": [
+      "openai"
+     ],
+     "expected": "1"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.xml",
+     "line": 59430,
+     "column": null,
+     "pointer": null,
+     "item_id": "SOC1100-2",
+     "formats": [
+      "google"
+     ],
+     "expected": "1"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/acp/products.jsonl",
+     "line": 1100,
+     "column": null,
+     "pointer": "/variants/1/barcodes/0/value",
+     "item_id": "SOC1100-2",
+     "formats": [
+      "acp"
+     ],
+     "expected": "1"
+    },
+    {
+     "rule": "openai.title.length",
+     "file": "store-a/products.csv",
+     "line": 3034,
+     "column": 2,
+     "pointer": null,
+     "item_id": "BAG1108-1",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "google.title.length",
+     "file": "store-a/products.xml",
+     "line": 59931,
+     "column": null,
+     "pointer": null,
+     "item_id": "BAG1108-1",
+     "formats": [
+      "google"
+     ]
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.csv",
+     "line": 3045,
+     "column": 15,
+     "pointer": null,
+     "item_id": "TAB1112-1",
+     "formats": [
+      "openai"
+     ],
+     "expected": "2"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.xml",
+     "line": 60170,
+     "column": null,
+     "pointer": null,
+     "item_id": "TAB1112-1",
+     "formats": [
+      "google"
+     ],
+     "expected": "2"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/acp/products.jsonl",
+     "line": 1112,
+     "column": null,
+     "pointer": "/variants/0/barcodes/0/value",
+     "item_id": "TAB1112-1",
+     "formats": [
+      "acp"
+     ],
+     "expected": "2"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.csv",
+     "line": 3068,
+     "column": 15,
+     "pointer": null,
+     "item_id": "TOW1119-1",
+     "formats": [
+      "openai"
+     ],
+     "expected": "1"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.xml",
+     "line": 60615,
+     "column": null,
+     "pointer": null,
+     "item_id": "TOW1119-1",
+     "formats": [
+      "google"
+     ],
+     "expected": "1"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/acp/products.jsonl",
+     "line": 1119,
+     "column": null,
+     "pointer": "/variants/0/barcodes/0/value",
+     "item_id": "TOW1119-1",
+     "formats": [
+      "acp"
+     ],
+     "expected": "1"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.csv",
+     "line": 3075,
+     "column": 15,
+     "pointer": null,
+     "item_id": "PHO1121-3",
+     "formats": [
+      "openai"
+     ],
+     "expected": "9"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.xml",
+     "line": 60762,
+     "column": null,
+     "pointer": null,
+     "item_id": "PHO1121-3",
+     "formats": [
+      "google"
+     ],
+     "expected": "9"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/acp/products.jsonl",
+     "line": 1121,
+     "column": null,
+     "pointer": "/variants/2/barcodes/0/value",
+     "item_id": "PHO1121-3",
+     "formats": [
+      "acp"
+     ],
+     "expected": "9"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.csv",
+     "line": 3082,
+     "column": 15,
+     "pointer": null,
+     "item_id": "TEE1124-1",
+     "formats": [
+      "openai"
+     ],
+     "expected": "7"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.xml",
+     "line": 60894,
+     "column": null,
+     "pointer": null,
+     "item_id": "TEE1124-1",
+     "formats": [
+      "google"
+     ],
+     "expected": "7"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/acp/products.jsonl",
+     "line": 1124,
+     "column": null,
+     "pointer": "/variants/0/barcodes/0/value",
+     "item_id": "TEE1124-1",
+     "formats": [
+      "acp"
+     ],
+     "expected": "7"
+    },
+    {
+     "rule": "openai.sale_price.below_price",
+     "file": "store-a/products.csv",
+     "line": 3118,
+     "column": 12,
+     "pointer": null,
+     "item_id": "LAM1135-1",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "openai.required.target_countries",
+     "file": "store-a/products.csv",
+     "line": 3136,
+     "column": 13,
+     "pointer": null,
+     "item_id": "TOW1139-2",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "openai.title.length",
+     "file": "store-a/products.csv",
+     "line": 3137,
+     "column": 2,
+     "pointer": null,
+     "item_id": "SOC1140-1",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "google.title.length",
+     "file": "store-a/products.xml",
+     "line": 61960,
+     "column": null,
+     "pointer": null,
+     "item_id": "SOC1140-1",
+     "formats": [
+      "google"
+     ]
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.csv",
+     "line": 3141,
+     "column": 15,
+     "pointer": null,
+     "item_id": "SOC1140-5",
+     "formats": [
+      "openai"
+     ],
+     "expected": "5"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.xml",
+     "line": 62057,
+     "column": null,
+     "pointer": null,
+     "item_id": "SOC1140-5",
+     "formats": [
+      "google"
+     ],
+     "expected": "5"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/acp/products.jsonl",
+     "line": 1140,
+     "column": null,
+     "pointer": "/variants/4/barcodes/0/value",
+     "item_id": "SOC1140-5",
+     "formats": [
+      "acp"
+     ],
+     "expected": "5"
+    },
+    {
+     "rule": "cross.price",
+     "file": "store-a/products.xml",
+     "line": 63065,
+     "column": null,
+     "pointer": null,
+     "item_id": "FRA1156-2",
+     "formats": [
+      "openai",
+      "google"
+     ]
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.csv",
+     "line": 3213,
+     "column": 15,
+     "pointer": null,
+     "item_id": "TEE1164-1",
+     "formats": [
+      "openai"
+     ],
+     "expected": "5"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.xml",
+     "line": 63476,
+     "column": null,
+     "pointer": null,
+     "item_id": "TEE1164-1",
+     "formats": [
+      "google"
+     ],
+     "expected": "5"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/acp/products.jsonl",
+     "line": 1164,
+     "column": null,
+     "pointer": "/variants/0/barcodes/0/value",
+     "item_id": "TEE1164-1",
+     "formats": [
+      "acp"
+     ],
+     "expected": "5"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.csv",
+     "line": 3214,
+     "column": 15,
+     "pointer": null,
+     "item_id": "TEE1164-2",
+     "formats": [
+      "openai"
+     ],
+     "expected": "1"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.xml",
+     "line": 63498,
+     "column": null,
+     "pointer": null,
+     "item_id": "TEE1164-2",
+     "formats": [
+      "google"
+     ],
+     "expected": "1"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/acp/products.jsonl",
+     "line": 1164,
+     "column": null,
+     "pointer": "/variants/1/barcodes/0/value",
+     "item_id": "TEE1164-2",
+     "formats": [
+      "acp"
+     ],
+     "expected": "1"
+    },
+    {
+     "rule": "openai.availability.enum",
+     "file": "store-a/products.csv",
+     "line": 3242,
+     "column": 9,
+     "pointer": null,
+     "item_id": "TAB1172-4",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "gs1.gtin.restricted_prefix",
+     "file": "store-a/products.csv",
+     "line": 3274,
+     "column": 15,
+     "pointer": null,
+     "item_id": "TAB1182-4",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "gs1.gtin.restricted_prefix",
+     "file": "store-a/products.xml",
+     "line": 64644,
+     "column": null,
+     "pointer": null,
+     "item_id": "TAB1182-4",
+     "formats": [
+      "google"
+     ]
+    },
+    {
+     "rule": "gs1.gtin.restricted_prefix",
+     "file": "store-a/acp/products.jsonl",
+     "line": 1182,
+     "column": null,
+     "pointer": "/variants/3/barcodes/0/value",
+     "item_id": "TAB1182-4",
+     "formats": [
+      "acp"
+     ]
+    },
+    {
+     "rule": "openai.required.target_countries",
+     "file": "store-a/products.csv",
+     "line": 3282,
+     "column": 13,
+     "pointer": null,
+     "item_id": "LAM1185-2",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "gs1.gtin.restricted_prefix",
+     "file": "store-a/products.csv",
+     "line": 3304,
+     "column": 15,
+     "pointer": null,
+     "item_id": "TEE1194-3",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "gs1.gtin.restricted_prefix",
+     "file": "store-a/products.xml",
+     "line": 65253,
+     "column": null,
+     "pointer": null,
+     "item_id": "TEE1194-3",
+     "formats": [
+      "google"
+     ]
+    },
+    {
+     "rule": "gs1.gtin.restricted_prefix",
+     "file": "store-a/acp/products.jsonl",
+     "line": 1194,
+     "column": null,
+     "pointer": "/variants/2/barcodes/0/value",
+     "item_id": "TEE1194-3",
+     "formats": [
+      "acp"
+     ]
+    },
+    {
+     "rule": "openai.availability.enum",
+     "file": "store-a/products.csv",
+     "line": 3316,
+     "column": 9,
+     "pointer": null,
+     "item_id": "TOW1199-2",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "openai.required.target_countries",
+     "file": "store-a/products.csv",
+     "line": 3332,
+     "column": 13,
+     "pointer": null,
+     "item_id": "TEE1204-2",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "openai.required.target_countries",
+     "file": "store-a/products.csv",
+     "line": 3338,
+     "column": 13,
+     "pointer": null,
+     "item_id": "KET1207-3",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "openai.availability.enum",
+     "file": "store-a/products.csv",
+     "line": 3339,
+     "column": 9,
+     "pointer": null,
+     "item_id": "KET1207-4",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "acp.schema.product",
+     "file": "store-a/acp/products.jsonl",
+     "line": 1217,
+     "column": null,
+     "pointer": "/variants/0/price/amount",
+     "item_id": "KET1217-1",
+     "formats": [
+      "acp"
+     ]
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.csv",
+     "line": 3404,
+     "column": 15,
+     "pointer": null,
+     "item_id": "FRA1226-4",
+     "formats": [
+      "openai"
+     ],
+     "expected": "3"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.xml",
+     "line": 67229,
+     "column": null,
+     "pointer": null,
+     "item_id": "FRA1226-4",
+     "formats": [
+      "google"
+     ],
+     "expected": "3"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/acp/products.jsonl",
+     "line": 1226,
+     "column": null,
+     "pointer": "/variants/3/barcodes/0/value",
+     "item_id": "FRA1226-4",
+     "formats": [
+      "acp"
+     ],
+     "expected": "3"
+    },
+    {
+     "rule": "openai.required.target_countries",
+     "file": "store-a/products.csv",
+     "line": 3428,
+     "column": 13,
+     "pointer": null,
+     "item_id": "TAB1232-1",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "openai.required.brand",
+     "file": "store-a/products.csv",
+     "line": 3449,
+     "column": 5,
+     "pointer": null,
+     "item_id": "BAG1238-2",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "google.brand.required_new",
+     "file": "store-a/products.xml",
+     "line": 68098,
+     "column": null,
+     "pointer": null,
+     "item_id": "BAG1238-2",
+     "formats": [
+      "google"
+     ]
+    },
+    {
+     "rule": "gs1.gtin.restricted_prefix",
+     "file": "store-a/products.csv",
+     "line": 3450,
+     "column": 15,
+     "pointer": null,
+     "item_id": "TOW1239-1",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "gs1.gtin.restricted_prefix",
+     "file": "store-a/products.xml",
+     "line": 68130,
+     "column": null,
+     "pointer": null,
+     "item_id": "TOW1239-1",
+     "formats": [
+      "google"
+     ]
+    },
+    {
+     "rule": "gs1.gtin.restricted_prefix",
+     "file": "store-a/acp/products.jsonl",
+     "line": 1239,
+     "column": null,
+     "pointer": "/variants/0/barcodes/0/value",
+     "item_id": "TOW1239-1",
+     "formats": [
+      "acp"
+     ]
+    },
+    {
+     "rule": "openai.availability.enum",
+     "file": "store-a/products.csv",
+     "line": 3455,
+     "column": 9,
+     "pointer": null,
+     "item_id": "SOC1240-1",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.csv",
+     "line": 3459,
+     "column": 15,
+     "pointer": null,
+     "item_id": "SOC1240-5",
+     "formats": [
+      "openai"
+     ],
+     "expected": "2"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.xml",
+     "line": 68311,
+     "column": null,
+     "pointer": null,
+     "item_id": "SOC1240-5",
+     "formats": [
+      "google"
+     ],
+     "expected": "2"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/acp/products.jsonl",
+     "line": 1240,
+     "column": null,
+     "pointer": "/variants/4/barcodes/0/value",
+     "item_id": "SOC1240-5",
+     "formats": [
+      "acp"
+     ],
+     "expected": "2"
+    },
+    {
+     "rule": "openai.availability.enum",
+     "file": "store-a/products.csv",
+     "line": 3490,
+     "column": 9,
+     "pointer": null,
+     "item_id": "TAB1252-4",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "openai.availability.enum",
+     "file": "store-a/products.csv",
+     "line": 3503,
+     "column": 9,
+     "pointer": null,
+     "item_id": "LAM1255-5",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "acp.schema.product",
+     "file": "store-a/acp/products.jsonl",
+     "line": 1262,
+     "column": null,
+     "pointer": "/variants/1/price/amount",
+     "item_id": "TAB1262-2",
+     "formats": [
+      "acp"
+     ]
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.csv",
+     "line": 3528,
+     "column": 15,
+     "pointer": null,
+     "item_id": "MUG1263-2",
+     "formats": [
+      "openai"
+     ],
+     "expected": "5"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.xml",
+     "line": 69646,
+     "column": null,
+     "pointer": null,
+     "item_id": "MUG1263-2",
+     "formats": [
+      "google"
+     ],
+     "expected": "5"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/acp/products.jsonl",
+     "line": 1263,
+     "column": null,
+     "pointer": "/variants/1/barcodes/0/value",
+     "item_id": "MUG1263-2",
+     "formats": [
+      "acp"
+     ],
+     "expected": "5"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.csv",
+     "line": 3533,
+     "column": 15,
+     "pointer": null,
+     "item_id": "TEE1264-4",
+     "formats": [
+      "openai"
+     ],
+     "expected": "9"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.xml",
+     "line": 69750,
+     "column": null,
+     "pointer": null,
+     "item_id": "TEE1264-4",
+     "formats": [
+      "google"
+     ],
+     "expected": "9"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/acp/products.jsonl",
+     "line": 1264,
+     "column": null,
+     "pointer": "/variants/3/barcodes/0/value",
+     "item_id": "TEE1264-4",
+     "formats": [
+      "acp"
+     ],
+     "expected": "9"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.csv",
+     "line": 3536,
+     "column": 15,
+     "pointer": null,
+     "item_id": "LAM1265-2",
+     "formats": [
+      "openai"
+     ],
+     "expected": "0"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.xml",
+     "line": 69814,
+     "column": null,
+     "pointer": null,
+     "item_id": "LAM1265-2",
+     "formats": [
+      "google"
+     ],
+     "expected": "0"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/acp/products.jsonl",
+     "line": 1265,
+     "column": null,
+     "pointer": "/variants/1/barcodes/0/value",
+     "item_id": "LAM1265-2",
+     "formats": [
+      "acp"
+     ],
+     "expected": "0"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.csv",
+     "line": 3542,
+     "column": 15,
+     "pointer": null,
+     "item_id": "FRA1266-4",
+     "formats": [
+      "openai"
+     ],
+     "expected": "8"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.xml",
+     "line": 69924,
+     "column": null,
+     "pointer": null,
+     "item_id": "FRA1266-4",
+     "formats": [
+      "google"
+     ],
+     "expected": "8"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/acp/products.jsonl",
+     "line": 1266,
+     "column": null,
+     "pointer": "/variants/3/barcodes/0/value",
+     "item_id": "FRA1266-4",
+     "formats": [
+      "acp"
+     ],
+     "expected": "8"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.csv",
+     "line": 3558,
+     "column": 15,
+     "pointer": null,
+     "item_id": "PHO1271-4",
+     "formats": [
+      "openai"
+     ],
+     "expected": "9"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.xml",
+     "line": 70247,
+     "column": null,
+     "pointer": null,
+     "item_id": "PHO1271-4",
+     "formats": [
+      "google"
+     ],
+     "expected": "9"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/acp/products.jsonl",
+     "line": 1271,
+     "column": null,
+     "pointer": "/variants/3/barcodes/0/value",
+     "item_id": "PHO1271-4",
+     "formats": [
+      "acp"
+     ],
+     "expected": "9"
+    },
+    {
+     "rule": "openai.required.target_countries",
+     "file": "store-a/products.csv",
+     "line": 3573,
+     "column": 13,
+     "pointer": null,
+     "item_id": "LAM1275-4",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.csv",
+     "line": 3588,
+     "column": 15,
+     "pointer": null,
+     "item_id": "TAB1282-1",
+     "formats": [
+      "openai"
+     ],
+     "expected": "6"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.xml",
+     "line": 70846,
+     "column": null,
+     "pointer": null,
+     "item_id": "TAB1282-1",
+     "formats": [
+      "google"
+     ],
+     "expected": "6"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/acp/products.jsonl",
+     "line": 1282,
+     "column": null,
+     "pointer": "/variants/0/barcodes/0/value",
+     "item_id": "TAB1282-1",
+     "formats": [
+      "acp"
+     ],
+     "expected": "6"
+    },
+    {
+     "rule": "openai.required.target_countries",
+     "file": "store-a/products.csv",
+     "line": 3614,
+     "column": 13,
+     "pointer": null,
+     "item_id": "TOW1289-4",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "openai.required.target_countries",
+     "file": "store-a/products.csv",
+     "line": 3631,
+     "column": 13,
+     "pointer": null,
+     "item_id": "LAM1295-1",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "openai.required.target_countries",
+     "file": "store-a/products.csv",
+     "line": 3643,
+     "column": 13,
+     "pointer": null,
+     "item_id": "SOC1300-2",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.csv",
+     "line": 3677,
+     "column": 15,
+     "pointer": null,
+     "item_id": "PHO1311-2",
+     "formats": [
+      "openai"
+     ],
+     "expected": "7"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.xml",
+     "line": 72617,
+     "column": null,
+     "pointer": null,
+     "item_id": "PHO1311-2",
+     "formats": [
+      "google"
+     ],
+     "expected": "7"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/acp/products.jsonl",
+     "line": 1311,
+     "column": null,
+     "pointer": "/variants/1/barcodes/0/value",
+     "item_id": "PHO1311-2",
+     "formats": [
+      "acp"
+     ],
+     "expected": "7"
+    },
+    {
+     "rule": "openai.availability.enum",
+     "file": "store-a/products.csv",
+     "line": 3688,
+     "column": 9,
+     "pointer": null,
+     "item_id": "LAM1315-1",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.csv",
+     "line": 3706,
+     "column": 15,
+     "pointer": null,
+     "item_id": "PHO1321-4",
+     "formats": [
+      "openai"
+     ],
+     "expected": "7"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.xml",
+     "line": 73190,
+     "column": null,
+     "pointer": null,
+     "item_id": "PHO1321-4",
+     "formats": [
+      "google"
+     ],
+     "expected": "7"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/acp/products.jsonl",
+     "line": 1321,
+     "column": null,
+     "pointer": "/variants/3/barcodes/0/value",
+     "item_id": "PHO1321-4",
+     "formats": [
+      "acp"
+     ],
+     "expected": "7"
+    },
+    {
+     "rule": "openai.availability.enum",
+     "file": "store-a/products.csv",
+     "line": 3737,
+     "column": 9,
+     "pointer": null,
+     "item_id": "TOW1329-2",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.csv",
+     "line": 3747,
+     "column": 15,
+     "pointer": null,
+     "item_id": "PHO1331-4",
+     "formats": [
+      "openai"
+     ],
+     "expected": "0"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.xml",
+     "line": 73966,
+     "column": null,
+     "pointer": null,
+     "item_id": "PHO1331-4",
+     "formats": [
+      "google"
+     ],
+     "expected": "0"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/acp/products.jsonl",
+     "line": 1331,
+     "column": null,
+     "pointer": "/variants/3/barcodes/0/value",
+     "item_id": "PHO1331-4",
+     "formats": [
+      "acp"
+     ],
+     "expected": "0"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.csv",
+     "line": 3748,
+     "column": 15,
+     "pointer": null,
+     "item_id": "TAB1332-1",
+     "formats": [
+      "openai"
+     ],
+     "expected": "7"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.xml",
+     "line": 73986,
+     "column": null,
+     "pointer": null,
+     "item_id": "TAB1332-1",
+     "formats": [
+      "google"
+     ],
+     "expected": "7"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/acp/products.jsonl",
+     "line": 1332,
+     "column": null,
+     "pointer": "/variants/0/barcodes/0/value",
+     "item_id": "TAB1332-1",
+     "formats": [
+      "acp"
+     ],
+     "expected": "7"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.csv",
+     "line": 3759,
+     "column": 15,
+     "pointer": null,
+     "item_id": "TEE1334-5",
+     "formats": [
+      "openai"
+     ],
+     "expected": "3"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.xml",
+     "line": 74204,
+     "column": null,
+     "pointer": null,
+     "item_id": "TEE1334-5",
+     "formats": [
+      "google"
+     ],
+     "expected": "3"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/acp/products.jsonl",
+     "line": 1334,
+     "column": null,
+     "pointer": "/variants/4/barcodes/0/value",
+     "item_id": "TEE1334-5",
+     "formats": [
+      "acp"
+     ],
+     "expected": "3"
+    },
+    {
+     "rule": "openai.title.length",
+     "file": "store-a/products.csv",
+     "line": 3802,
+     "column": 2,
+     "pointer": null,
+     "item_id": "BAG1348-1",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "google.title.length",
+     "file": "store-a/products.xml",
+     "line": 75017,
+     "column": null,
+     "pointer": null,
+     "item_id": "BAG1348-1",
+     "formats": [
+      "google"
+     ]
+    },
+    {
+     "rule": "acp.schema.product",
+     "file": "store-a/acp/products.jsonl",
+     "line": 1349,
+     "column": null,
+     "pointer": "/variants/3/price/amount",
+     "item_id": "TOW1349-4",
+     "formats": [
+      "acp"
+     ]
+    },
+    {
+     "rule": "openai.sale_price.below_price",
+     "file": "store-a/products.csv",
+     "line": 3836,
+     "column": 12,
+     "pointer": null,
+     "item_id": "BAG1358-3",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "openai.required.target_countries",
+     "file": "store-a/products.csv",
+     "line": 3860,
+     "column": 13,
+     "pointer": null,
+     "item_id": "KET1367-1",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.csv",
+     "line": 3868,
+     "column": 15,
+     "pointer": null,
+     "item_id": "TOW1369-3",
+     "formats": [
+      "openai"
+     ],
+     "expected": "8"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.xml",
+     "line": 76310,
+     "column": null,
+     "pointer": null,
+     "item_id": "TOW1369-3",
+     "formats": [
+      "google"
+     ],
+     "expected": "8"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/acp/products.jsonl",
+     "line": 1369,
+     "column": null,
+     "pointer": "/variants/2/barcodes/0/value",
+     "item_id": "TOW1369-3",
+     "formats": [
+      "acp"
+     ],
+     "expected": "8"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.csv",
+     "line": 3877,
+     "column": 15,
+     "pointer": null,
+     "item_id": "TAB1372-1",
+     "formats": [
+      "openai"
+     ],
+     "expected": "0"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.xml",
+     "line": 76495,
+     "column": null,
+     "pointer": null,
+     "item_id": "TAB1372-1",
+     "formats": [
+      "google"
+     ],
+     "expected": "0"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/acp/products.jsonl",
+     "line": 1372,
+     "column": null,
+     "pointer": "/variants/0/barcodes/0/value",
+     "item_id": "TAB1372-1",
+     "formats": [
+      "acp"
+     ],
+     "expected": "0"
+    },
+    {
+     "rule": "openai.required.target_countries",
+     "file": "store-a/products.csv",
+     "line": 3885,
+     "column": 13,
+     "pointer": null,
+     "item_id": "MUG1373-4",
+     "formats": [
+      "openai"
+     ]
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.csv",
+     "line": 3889,
+     "column": 15,
+     "pointer": null,
+     "item_id": "TEE1374-4",
+     "formats": [
+      "openai"
+     ],
+     "expected": "3"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/products.xml",
+     "line": 76728,
+     "column": null,
+     "pointer": null,
+     "item_id": "TEE1374-4",
+     "formats": [
+      "google"
+     ],
+     "expected": "3"
+    },
+    {
+     "rule": "gs1.gtin.check_digit",
+     "file": "store-a/acp/products.jsonl",
+     "line": 1374,
+     "column": null,
+     "pointer": "/variants/3/barcodes/0/value",
+     "item_id": "TEE1374-4",
+     "formats": [
+      "acp"
+     ],
+     "expected": "3"
+    }
+   ]
+  }
+ ],
+ "diff": [
+  {
+   "old": "store-a-oct/products.csv",
+   "new": "store-a-nov/products.csv",
+   "store": "store-a-export.csv",
+   "stats": {
+    "old_items": 31,
+    "new_items": 32,
+    "in_both": 29,
+    "by_gtin": 29,
+    "by_brand_mpn": 0,
+    "by_id": 0
+   },
+   "name": "oct-to-nov",
+   "decisions": null,
+   "changes": [
+    {
+     "id": "D1",
+     "kind": "id_reused",
+     "item_id": "PHN-X2-BLK",
+     "fingerprint": "gtin:0194253012344->0194253098768",
+     "status": "open"
+    },
+    {
+     "id": "D2",
+     "kind": "critical_attribute_changed",
+     "item_id": "TAB-S-128",
+     "fingerprint": "capacity:128 GB->256 GB",
+     "status": "open"
+    },
+    {
+     "id": "D3",
+     "kind": "id_changed",
+     "item_id": "LAMP-01",
+     "fingerprint": "id:LAMP-01->LAMP-01-WHT",
+     "status": "open"
+    },
+    {
+     "id": "D4",
+     "kind": "id_changed",
+     "item_id": "MUG-12-WHT",
+     "fingerprint": "id:MUG-12-WHT->MUG-12OZ-WHT",
+     "status": "open"
+    },
+    {
+     "id": "W1",
+     "kind": "store_stale",
+     "item_id": "TAB-S-128",
+     "fingerprint": "title:capacity:128 GB",
+     "status": "open"
+    },
+    {
+     "id": "W2",
+     "kind": "group_changed",
+     "item_id": "CUP-L",
+     "fingerprint": "group:CUP-L->CUP",
+     "status": "open"
+    },
+    {
+     "id": "W3",
+     "kind": "group_changed",
+     "item_id": "CUP-S",
+     "fingerprint": "group:CUP-S->CUP",
+     "status": "open"
+    },
+    {
+     "id": "W4",
+     "kind": "offer_id_has_price",
+     "item_id": "BAG-1",
+     "fingerprint": "offer:BAG-1-4999",
+     "status": "open"
+    },
+    {
+     "id": "W5",
+     "kind": "duplicate_id",
+     "item_id": "SOCK-3PK",
+     "fingerprint": "rows:2",
+     "status": "open"
+    },
+    {
+     "id": "I1",
+     "kind": "new",
+     "item_id": "LAMP-01-BLK",
+     "fingerprint": "new",
+     "status": "open"
+    },
+    {
+     "id": "I2",
+     "kind": "new",
+     "item_id": "NEW-1",
+     "fingerprint": "new",
+     "status": "open"
+    },
+    {
+     "id": "I3",
+     "kind": "retired",
+     "item_id": "OLD-1",
+     "fingerprint": "retired",
+     "status": "open"
+    },
+    {
+     "id": "I4",
+     "kind": "price_only",
+     "item_id": "KETTLE-1",
+     "fingerprint": "price:39.99 USD->34.99 USD",
+     "status": "open"
+    },
+    {
+     "id": "I5",
+     "kind": "stock_only",
+     "item_id": "TOWEL-1",
+     "fingerprint": "availability:in_stock->out_of_stock",
+     "status": "open"
+    }
+   ],
+   "needs_decision": 4
+  },
+  {
+   "old": "store-a-oct/products.csv",
+   "new": "store-a-nov/products.csv",
+   "store": "store-a-export.csv",
+   "stats": {
+    "old_items": 31,
+    "new_items": 32,
+    "in_both": 29,
+    "by_gtin": 29,
+    "by_brand_mpn": 0,
+    "by_id": 0
+   },
+   "name": "oct-to-nov-decided",
+   "decisions": "store-a-decisions.toml",
+   "changes": [
+    {
+     "id": "D1",
+     "kind": "id_reused",
+     "item_id": "PHN-X2-BLK",
+     "fingerprint": "gtin:0194253012344->0194253098768",
+     "status": "decided"
+    },
+    {
+     "id": "D2",
+     "kind": "critical_attribute_changed",
+     "item_id": "TAB-S-128",
+     "fingerprint": "capacity:128 GB->256 GB",
+     "status": "decided"
+    },
+    {
+     "id": "D3",
+     "kind": "id_changed",
+     "item_id": "LAMP-01",
+     "fingerprint": "id:LAMP-01->LAMP-01-WHT",
+     "status": "decided"
+    },
+    {
+     "id": "D4",
+     "kind": "id_changed",
+     "item_id": "MUG-12-WHT",
+     "fingerprint": "id:MUG-12-WHT->MUG-12OZ-WHT",
+     "status": "decided"
+    },
+    {
+     "id": "W1",
+     "kind": "store_stale",
+     "item_id": "TAB-S-128",
+     "fingerprint": "title:capacity:128 GB",
+     "status": "open"
+    },
+    {
+     "id": "W2",
+     "kind": "group_changed",
+     "item_id": "CUP-L",
+     "fingerprint": "group:CUP-L->CUP",
+     "status": "open"
+    },
+    {
+     "id": "W3",
+     "kind": "group_changed",
+     "item_id": "CUP-S",
+     "fingerprint": "group:CUP-S->CUP",
+     "status": "open"
+    },
+    {
+     "id": "W4",
+     "kind": "offer_id_has_price",
+     "item_id": "BAG-1",
+     "fingerprint": "offer:BAG-1-4999",
+     "status": "open"
+    },
+    {
+     "id": "W5",
+     "kind": "duplicate_id",
+     "item_id": "SOCK-3PK",
+     "fingerprint": "rows:2",
+     "status": "open"
+    },
+    {
+     "id": "I1",
+     "kind": "new",
+     "item_id": "LAMP-01-BLK",
+     "fingerprint": "new",
+     "status": "open"
+    },
+    {
+     "id": "I2",
+     "kind": "new",
+     "item_id": "NEW-1",
+     "fingerprint": "new",
+     "status": "open"
+    },
+    {
+     "id": "I3",
+     "kind": "retired",
+     "item_id": "OLD-1",
+     "fingerprint": "retired",
+     "status": "open"
+    },
+    {
+     "id": "I4",
+     "kind": "price_only",
+     "item_id": "KETTLE-1",
+     "fingerprint": "price:39.99 USD->34.99 USD",
+     "status": "open"
+    },
+    {
+     "id": "I5",
+     "kind": "stock_only",
+     "item_id": "TOWEL-1",
+     "fingerprint": "availability:in_stock->out_of_stock",
+     "status": "open"
+    }
+   ],
+   "needs_decision": 0
+  }
+ ]
+}

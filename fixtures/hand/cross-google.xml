@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:g="http://base.google.com/ns/1.0">
+<channel>
+<item><g:id>X1</g:id><title>Lamp</title><g:description>A hand-made item.</g:description><g:link>https://hand.example/X1</g:link><g:image_link>https://hand.example/X1.jpg</g:image_link><g:brand>Handmade</g:brand><g:availability>in_stock</g:availability><g:price>12.00 USD</g:price><g:gtin>4006381333931</g:gtin><g:condition>new</g:condition></item>
+<item><g:id>X2</g:id><title>Mug</title><g:description>A hand-made item.</g:description><g:link>https://hand.example/X2</g:link><g:image_link>https://hand.example/X2.jpg</g:image_link><g:brand>Handmade</g:brand><g:availability>preorder</g:availability><g:availability_date>2027-01-15T00:00:00Z</g:availability_date><g:price>10.00 USD</g:price><g:gtin>9780306406157</g:gtin><g:condition>new</g:condition></item>
+<item><g:id>X3</g:id><title>Towel</title><g:description>A hand-made item.</g:description><g:link>https://hand.example/X3</g:link><g:image_link>https://hand.example/X3.jpg</g:image_link><g:brand>HandMade Co</g:brand><g:availability>in_stock</g:availability><g:price>10.00 USD</g:price><g:gtin>96385074</g:gtin><g:condition>new</g:condition></item>
+<item><g:id>X4</g:id><title>Frame</title><g:description>A hand-made item.</g:description><g:link>https://hand.example/X4</g:link><g:image_link>https://hand.example/X4.jpg</g:image_link><g:brand>Handmade</g:brand><g:availability>in_stock</g:availability><g:price>10.00 USD</g:price><g:gtin>0036000291452</g:gtin><g:condition>new</g:condition></item>
+</channel>
+</rss>

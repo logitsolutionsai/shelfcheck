@@ -1,0 +1,22 @@
+---
+source: crates/shelfcheck-cli/tests/snapshots.rs
+expression: normalise_terminal(&terminal)
+---
+shelfcheck 0.1.0 · decisions target/insta-demo/no-decisions.toml
+
+match     29 in both · 29 by gtin · 0 by brand and mpn · 0 by id only     [time] s
+
+▲ D1  id_reused                    PHN-X2-BLK    PHN-X2-BLK was Phones and is now Phone cases.
+▲ D2  critical_attribute_changed   TAB-S-128     TAB-S-128 kept its id and barcode, but its storage changed from 128 GB to 256 GB.
+▲ D3  id_changed                   LAMP-01       LAMP-01 now has a new id, LAMP-01-WHT; the barcode did not change.
+▲ D4  id_changed                   MUG-12-WHT    MUG-12-WHT now has a new id, MUG-12OZ-WHT; the barcode did not change.
+▲ W1  store_stale                  TAB-S-128     The store title for TAB-S-128 still says 128 GB: "Slate Tab S, 128 GB, Grey".
+▲ W2  group_changed                CUP-L         CUP-L moved from group CUP-L to group CUP.
+▲ W3  group_changed                CUP-S         CUP-S moved from group CUP-S to group CUP.
+▲ W4  offer_id_has_price           BAG-1         The offer id BAG-1-4999 contains the price 49.99 USD.
+▲ W5  duplicate_id                 SOCK-3PK      SOCK-3PK appears on 2 rows of the new feed; the first is used.
+      1 price-only · 1 stock-only · 2 new · 1 retired
+
+4 changes need a decision.
+shelfcheck decide D1 --different --results target/insta-demo/diff --decisions target/insta-demo/no-decisions.toml    shelfcheck decide D2 --fixed --results target/insta-demo/diff --decisions target/insta-demo/no-decisions.toml    shelfcheck decide D3 --same --results target/insta-demo/diff --decisions target/insta-demo/no-decisions.toml    shelfcheck decide D4 --same --results target/insta-demo/diff --decisions target/insta-demo/no-decisions.toml
+report    target/insta-demo/diff/report.html   sarif results.sarif   csv failing-products.csv

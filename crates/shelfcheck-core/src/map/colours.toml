@@ -1,0 +1,21 @@
+# Colour alias table used by `diff`.
+# Two colour values are the same only when they are the same word (ignoring
+# case) or this table lists both under one canonical colour. Anything else
+# is a change. Add aliases here; never guess.
+
+black = ["black", "blk", "bk", "jet black"]
+white = ["white", "wht", "wh"]
+grey = ["grey", "gray", "gry"]
+silver = ["silver", "slv"]
+red = ["red", "rd"]
+blue = ["blue", "blu"]
+navy = ["navy", "navy blue", "nvy"]
+green = ["green", "grn"]
+yellow = ["yellow", "ylw", "yel"]
+orange = ["orange", "org"]
+pink = ["pink", "pnk"]
+purple = ["purple", "prp", "ppl"]
+brown = ["brown", "brn"]
+beige = ["beige", "bge"]
+gold = ["gold", "gld"]
+cream = ["cream", "crm"]

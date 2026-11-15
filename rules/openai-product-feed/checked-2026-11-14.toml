@@ -1,0 +1,439 @@
+# OpenAI product feed (file upload), as published.
+# The page shows no version or date, so the pack records the date it was checked.
+# Barcode rules (form, check digit, prefixes) are in the GS1 pack, which
+# applies to every format, so one barcode problem is one problem.
+
+[pack]
+id = "openai-product-feed"
+name = "OpenAI product feed"
+short = "OpenAI"
+applies_to = "openai"
+source = "https://developers.openai.com/commerce/specs/file-upload/products"
+version = "as published, checked 2026-11-14"
+checked = "2026-11-14"
+label = "Checked 2026-11-14; the spec shows no version"
+notes = [
+  "Conditionally required but not encoded, because the condition is not in the feed itself: is_ads_eligible (for ads) and marketplace_seller.",
+  "mpn goes with brand. brand is one of the eleven required fields, so an mpn without a brand is reported as a missing brand.",
+  "Never invent an mpn to replace a missing gtin.",
+]
+
+[[rule]]
+id = "openai.required.item_id"
+field = "item_id"
+kind = "required"
+when = "always"
+severity = "error"
+says = "item_id is missing. The OpenAI product feed requires it."
+cites = "item_id: required (one of the 11 required fields)"
+fix = "missing:item_id"
+title = "item_id is missing"
+detail = "id and sku are accepted as aliases for item_id."
+links = [{ label = "OpenAI: required fields", url = "https://developers.openai.com/commerce/specs/file-upload/products" }]
+
+[[rule]]
+id = "openai.required.title"
+field = "title"
+kind = "required"
+when = "always"
+severity = "error"
+says = "title is missing. The OpenAI product feed requires it."
+cites = "title: required (one of the 11 required fields)"
+fix = "missing:title"
+title = "title is missing"
+links = [{ label = "OpenAI: required fields", url = "https://developers.openai.com/commerce/specs/file-upload/products" }]
+
+[[rule]]
+id = "openai.required.description"
+field = "description"
+kind = "required"
+when = "always"
+severity = "error"
+says = "description is missing. The OpenAI product feed requires it."
+cites = "description: required (one of the 11 required fields)"
+fix = "missing:description"
+title = "description is missing"
+links = [{ label = "OpenAI: required fields", url = "https://developers.openai.com/commerce/specs/file-upload/products" }]
+
+[[rule]]
+id = "openai.required.url"
+field = "url"
+kind = "required"
+when = "always"
+severity = "error"
+says = "url is missing. The OpenAI product feed requires it."
+cites = "url: required (one of the 11 required fields)"
+fix = "missing:url"
+title = "url is missing"
+links = [{ label = "OpenAI: required fields", url = "https://developers.openai.com/commerce/specs/file-upload/products" }]
+
+[[rule]]
+id = "openai.required.brand"
+field = "brand"
+kind = "required"
+when = "always"
+severity = "error"
+says = "brand is missing. The OpenAI product feed requires it."
+cites = "brand: required (one of the 11 required fields)"
+fix = "missing:brand"
+title = "brand is missing"
+links = [{ label = "OpenAI: required fields", url = "https://developers.openai.com/commerce/specs/file-upload/products" }]
+
+[[rule]]
+id = "openai.required.seller_name"
+field = "seller_name"
+kind = "required"
+when = "always"
+severity = "error"
+says = "seller_name is missing. The OpenAI product feed requires it."
+cites = "seller_name: required (one of the 11 required fields)"
+fix = "missing:seller_name"
+title = "seller_name is missing"
+links = [{ label = "OpenAI: required fields", url = "https://developers.openai.com/commerce/specs/file-upload/products" }]
+
+[[rule]]
+id = "openai.required.image_url"
+field = "image_url"
+kind = "required"
+when = "always"
+severity = "error"
+says = "image_url is missing. The OpenAI product feed requires it."
+cites = "image_url: required (one of the 11 required fields)"
+fix = "missing:image_url"
+title = "image_url is missing"
+links = [{ label = "OpenAI: required fields", url = "https://developers.openai.com/commerce/specs/file-upload/products" }]
+
+[[rule]]
+id = "openai.required.availability"
+field = "availability"
+kind = "required"
+when = "always"
+severity = "error"
+says = "availability is missing. The OpenAI product feed requires it."
+cites = "availability: required (one of the 11 required fields)"
+fix = "missing:availability"
+title = "availability is missing"
+links = [{ label = "OpenAI: required fields", url = "https://developers.openai.com/commerce/specs/file-upload/products" }]
+
+[[rule]]
+id = "openai.required.price"
+field = "price"
+kind = "required"
+when = "always"
+severity = "error"
+says = "price is missing. The OpenAI product feed requires it."
+cites = "price: required (one of the 11 required fields)"
+fix = "missing:price"
+title = "price is missing"
+links = [{ label = "OpenAI: required fields", url = "https://developers.openai.com/commerce/specs/file-upload/products" }]
+
+[[rule]]
+id = "openai.required.target_countries"
+field = "target_countries"
+kind = "required"
+when = "always"
+severity = "error"
+says = "target_countries is missing. The OpenAI product feed requires it."
+cites = "target_countries: required (one of the 11 required fields)"
+fix = "missing:target_countries"
+title = "target_countries is missing"
+detail = "It is one of the eleven required fields, with store_country. Lists that say nine required fields leave out these two."
+links = [{ label = "OpenAI: required fields", url = "https://developers.openai.com/commerce/specs/file-upload/products" }]
+
+[[rule]]
+id = "openai.required.store_country"
+field = "store_country"
+kind = "required"
+when = "always"
+severity = "error"
+says = "store_country is missing. The OpenAI product feed requires it."
+cites = "store_country: required (one of the 11 required fields)"
+fix = "missing:store_country"
+title = "store_country is missing"
+detail = "It is one of the eleven required fields, with target_countries. Lists that say nine required fields leave out these two."
+links = [{ label = "OpenAI: required fields", url = "https://developers.openai.com/commerce/specs/file-upload/products" }]
+
+[[rule]]
+id = "openai.price.form"
+field = "price"
+kind = "price"
+severity = "error"
+says = "price {value} {reason}."
+cites = "price: major units and an uppercase ISO 4217 code, such as 79.99 USD"
+fix = "price_form"
+title = "price is not written as amount and currency, such as 79.99 USD"
+links = [{ label = "OpenAI: price", url = "https://developers.openai.com/commerce/specs/file-upload/products" }]
+
+[[rule]]
+id = "openai.sale_price.form"
+field = "sale_price"
+kind = "price"
+positive = true
+severity = "warning"
+says = "sale_price {value} {reason}, so OpenAI ignores it."
+cites = "sale_price: above 0, below price, same currency; otherwise ignored"
+fix = "sale_price_ignored"
+title = "sale_price is not below price, so OpenAI ignores it"
+links = [{ label = "OpenAI: sale_price", url = "https://developers.openai.com/commerce/specs/file-upload/products" }]
+
+[[rule]]
+id = "openai.sale_price.below_price"
+field = "sale_price"
+kind = "less_than_field"
+than = "price"
+severity = "warning"
+says = "sale_price {value} is not below price {other} in the same currency, so OpenAI ignores it."
+cites = "sale_price: above 0, below price, same currency; otherwise ignored"
+fix = "sale_price_ignored"
+title = "sale_price is not below price, so OpenAI ignores it"
+links = [{ label = "OpenAI: sale_price", url = "https://developers.openai.com/commerce/specs/file-upload/products" }]
+
+[[rule]]
+id = "openai.availability.enum"
+field = "availability"
+kind = "enum"
+values = ["in_stock", "out_of_stock", "pre_order", "backorder", "unknown"]
+foreign_values = ["preorder"]
+severity = "error"
+says = "availability {value} is not one of {values}. OpenAI drops the row."
+cites = "availability: in_stock, out_of_stock, pre_order, backorder or unknown"
+fix = "availability_value"
+title = "availability values the format rejects"
+detail = "Google spells it preorder and OpenAI spells it pre_order. Each feed must use its own format's spelling."
+links = [{ label = "OpenAI: availability", url = "https://developers.openai.com/commerce/specs/file-upload/products" }]
+
+[[rule]]
+id = "openai.url.absolute"
+field = "url"
+kind = "url_absolute"
+severity = "error"
+says = "url {value} {reason}."
+cites = "url: public, absolute http(s) URL"
+fix = "url_not_absolute"
+title = "Product links that are not absolute http(s) URLs"
+links = [{ label = "OpenAI: url", url = "https://developers.openai.com/commerce/specs/file-upload/products" }]
+
+[[rule]]
+id = "openai.image_url.absolute"
+field = "image_url"
+kind = "url_absolute"
+severity = "error"
+says = "image_url {value} {reason}."
+cites = "image_url: public, absolute http(s) URL"
+fix = "image_url_not_absolute"
+title = "Image links that are not absolute http(s) URLs"
+links = [{ label = "OpenAI: image_url", url = "https://developers.openai.com/commerce/specs/file-upload/products" }]
+
+[[rule]]
+id = "openai.additional_image_urls.absolute"
+field = "additional_image_urls"
+kind = "url_absolute"
+separator = ","
+each = true
+severity = "error"
+says = "additional_image_urls has {value}, which {reason}. In CSV a comma inside a URL is written %2C."
+cites = "additional_image_urls: public, absolute http(s) URLs; in CSV a comma inside a URL is written %2C"
+fix = "additional_image_urls_not_absolute"
+title = "Additional image links that are not absolute http(s) URLs"
+links = [{ label = "OpenAI: additional_image_urls", url = "https://developers.openai.com/commerce/specs/file-upload/products" }]
+
+[[rule]]
+id = "openai.title.length"
+field = "title"
+kind = "max_len"
+max_len = 150
+severity = "warning"
+says = "title has {count} characters; OpenAI asks for up to {max}."
+cites = "title: aim for up to 150 characters"
+fix = "title_too_long"
+title = "Titles over 150 characters"
+links = [{ label = "OpenAI: title", url = "https://developers.openai.com/commerce/specs/file-upload/products" }]
+
+[[rule]]
+id = "openai.description.length"
+field = "description"
+kind = "max_len"
+max_len = 5000
+severity = "warning"
+says = "description has {count} characters; OpenAI asks for up to {max}."
+cites = "description: aim for up to 5,000 characters"
+fix = "description_too_long"
+title = "Descriptions over 5,000 characters"
+links = [{ label = "OpenAI: description", url = "https://developers.openai.com/commerce/specs/file-upload/products" }]
+
+[[rule]]
+id = "openai.listing_has_variations.enum"
+field = "listing_has_variations"
+kind = "enum"
+values = ["true", "false"]
+ignore_case = true
+severity = "error"
+says = "listing_has_variations {value} is not true or false."
+cites = "listing_has_variations: true or false"
+fix = "listing_has_variations_value"
+title = "listing_has_variations is not true or false"
+links = [{ label = "OpenAI: variants", url = "https://developers.openai.com/commerce/specs/file-upload/products" }]
+
+# A warning, not an error (decided 2026-11-15): OpenAI does not reject such
+# a row. Its words: listing_has_variations "Set `true` on every variant row.
+# Omitted, empty, or `false`: no variant options are used." The row is kept,
+# without its variant options.
+[[rule]]
+id = "openai.variants.listing_has_variations"
+field = "listing_has_variations"
+kind = "required_if"
+if_field = "group_id"
+if_state = "present"
+severity = "warning"
+says = "group_id is set but listing_has_variations is missing, so OpenAI uses no variant options for this row."
+cites = "listing_has_variations: Set true on every variant row. Omitted, empty, or false: no variant options are used."
+fix = "missing:listing_has_variations"
+title = "listing_has_variations is missing on a variant"
+links = [{ label = "OpenAI: variants", url = "https://developers.openai.com/commerce/specs/file-upload/products" }]
+
+[[rule]]
+id = "openai.variants.group_id"
+field = "group_id"
+kind = "required_if"
+if_field = "listing_has_variations"
+if_state = "in"
+if_values = ["true"]
+severity = "warning"
+says = "listing_has_variations is true but group_id is missing."
+cites = "Variants: group_id, listing_has_variations and variant_dict go together"
+fix = "missing:group_id"
+title = "group_id is missing on a variant"
+links = [{ label = "OpenAI: variants", url = "https://developers.openai.com/commerce/specs/file-upload/products" }]
+
+[[rule]]
+id = "openai.variants.variant_dict"
+field = "variant_dict"
+kind = "required_if"
+if_field = "listing_has_variations"
+if_state = "in"
+if_values = ["true"]
+severity = "warning"
+says = "listing_has_variations is true but variant_dict is missing."
+cites = "Variants: group_id, listing_has_variations and variant_dict go together"
+fix = "missing:variant_dict"
+title = "variant_dict is missing on a variant"
+links = [{ label = "OpenAI: variants", url = "https://developers.openai.com/commerce/specs/file-upload/products" }]
+
+[[rule]]
+id = "openai.checkout.seller_privacy_policy"
+field = "seller_privacy_policy"
+kind = "required_if"
+if_field = "is_eligible_checkout"
+if_state = "in"
+if_values = ["true"]
+severity = "error"
+says = "is_eligible_checkout is true but seller_privacy_policy is missing."
+cites = "Checkout: is_eligible_checkout needs seller_privacy_policy and seller_tos"
+fix = "missing:seller_privacy_policy"
+title = "seller_privacy_policy is missing for checkout"
+links = [{ label = "OpenAI: checkout", url = "https://developers.openai.com/commerce/specs/file-upload/products" }]
+
+[[rule]]
+id = "openai.checkout.seller_tos"
+field = "seller_tos"
+kind = "required_if"
+if_field = "is_eligible_checkout"
+if_state = "in"
+if_values = ["true"]
+severity = "error"
+says = "is_eligible_checkout is true but seller_tos is missing."
+cites = "Checkout: is_eligible_checkout needs seller_privacy_policy and seller_tos"
+fix = "missing:seller_tos"
+title = "seller_tos is missing for checkout"
+links = [{ label = "OpenAI: checkout", url = "https://developers.openai.com/commerce/specs/file-upload/products" }]
+
+[[rule]]
+id = "openai.dimensions_unit.required"
+field = "dimensions_unit"
+kind = "required_if"
+if_fields = ["length", "width", "height"]
+if_state = "present"
+severity = "error"
+says = "length, width or height is set ({if_value}) but dimensions_unit is missing."
+cites = "length, width, height: each requires dimensions_unit (the dimensions object carries its own unit)"
+fix = "missing:dimensions_unit"
+title = "dimensions_unit is missing"
+links = [{ label = "OpenAI: dimensions", url = "https://developers.openai.com/commerce/specs/file-upload/products" }]
+
+[[rule]]
+id = "openai.dimensions_unit.enum"
+field = "dimensions_unit"
+kind = "enum"
+values = ["in", "cm", "ft", "m", "mm"]
+ignore_case = true
+severity = "error"
+says = "dimensions_unit {value} is not one of {values}."
+cites = "dimensions_unit: in, cm, ft, m or mm"
+fix = "dimensions_unit_value"
+title = "dimensions_unit values OpenAI rejects"
+links = [{ label = "OpenAI: dimensions_unit", url = "https://developers.openai.com/commerce/specs/file-upload/products" }]
+
+[[rule]]
+id = "openai.item_weight_unit.required"
+field = "item_weight_unit"
+kind = "required_if"
+if_field = "weight"
+if_state = "present"
+severity = "error"
+says = "weight is set but item_weight_unit is missing."
+cites = "weight: Requires item_weight_unit"
+fix = "missing:item_weight_unit"
+title = "item_weight_unit is missing"
+links = [{ label = "OpenAI: weight", url = "https://developers.openai.com/commerce/specs/file-upload/products" }]
+
+[[rule]]
+id = "openai.item_weight_unit.enum"
+field = "item_weight_unit"
+kind = "enum"
+values = ["g", "kg", "oz", "lb"]
+ignore_case = true
+severity = "error"
+says = "item_weight_unit {value} is not one of {values}."
+cites = "item_weight_unit: g, kg, oz or lb"
+fix = "item_weight_unit_value"
+title = "item_weight_unit values OpenAI rejects"
+links = [{ label = "OpenAI: item_weight_unit", url = "https://developers.openai.com/commerce/specs/file-upload/products" }]
+
+[[rule]]
+id = "openai.condition.enum"
+field = "condition"
+kind = "enum"
+values = ["new", "refurbished", "used"]
+ignore_case = true
+severity = "error"
+says = "condition {value} is not one of {values}."
+cites = "condition: new, refurbished or used"
+fix = "condition_value"
+title = "condition values the format rejects"
+links = [{ label = "OpenAI: condition", url = "https://developers.openai.com/commerce/specs/file-upload/products" }]
+
+[[rule]]
+id = "openai.target_countries.form"
+field = "target_countries"
+kind = "pattern"
+regex = '^[A-Z]{2}$'
+separator = ","
+each = true
+severity = "error"
+says = "target_countries has {value}, which is not an uppercase ISO 3166-1 alpha-2 code such as US."
+cites = "target_countries: Uppercase ISO 3166-1 alpha-2 codes"
+fix = "country_code_form"
+title = "Country codes that are not uppercase ISO 3166-1 alpha-2"
+links = [{ label = "OpenAI: target_countries", url = "https://developers.openai.com/commerce/specs/file-upload/products" }]
+
+[[rule]]
+id = "openai.store_country.form"
+field = "store_country"
+kind = "pattern"
+regex = '^[A-Z]{2}$'
+severity = "error"
+says = "store_country {value} is not an uppercase ISO 3166-1 alpha-2 code such as US."
+cites = "store_country: ISO 3166-1 alpha-2 code"
+fix = "country_code_form"
+title = "Country codes that are not uppercase ISO 3166-1 alpha-2"
+links = [{ label = "OpenAI: store_country", url = "https://developers.openai.com/commerce/specs/file-upload/products" }]

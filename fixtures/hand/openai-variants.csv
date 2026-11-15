@@ -1,0 +1,6 @@
+item_id,title,description,url,brand,seller_name,image_url,availability,price,target_countries,store_country,gtin,group_id,listing_has_variations,variant_dict
+V1-S,"Hand Tee, S",A hand-made row.,https://hand.example/v1,Handmade,Hand Shop,https://hand.example/v1.jpg,in_stock,10.00 USD,US,US,4006381333931,TEE1,,"{""size"":""S""}"
+V2-S,"Hand Cap, S",A hand-made row.,https://hand.example/v2,Handmade,Hand Shop,https://hand.example/v2.jpg,in_stock,10.00 USD,US,US,036000291452,CAP1,true,"{""size"":""S""}"
+V3,"Hand Mug",A hand-made row.,https://hand.example/v3,Handmade,Hand Shop,https://hand.example/v3.jpg,in_stock,10.00 USD,US,US,9780306406157,,false,
+V4,"Hand Bowl",A hand-made row.,https://hand.example/v4,Handmade,Hand Shop,https://hand.example/v4.jpg,in_stock,10.00 USD,US,US,400-6381-333931,,,
+V5,"Hand Plate",A hand-made row.,https://hand.example/v5,Handmade,Hand Shop,https://hand.example/v5.jpg,in_stock,10.00 USD,US,US,400 6381 333932,,,

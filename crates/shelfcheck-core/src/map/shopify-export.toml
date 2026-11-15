@@ -1,0 +1,33 @@
+# Built-in column map: the Shopify product CSV export.
+# Product-level columns appear only on the first row of each Handle, so they
+# are filled down to the following variant rows of the same Handle. Rows with
+# no variant data (extra image rows) are skipped.
+[map]
+id = "shopify-export"
+family = "shopify"
+fill_down_key = "Handle"
+fill_down = ["Title", "Body (HTML)", "Vendor", "Type", "Product Category", "Option1 Name", "Option2 Name", "Option3 Name", "Image Src", "Status"]
+variant_columns = ["Variant SKU", "Variant Price", "Option1 Value", "Variant Barcode"]
+
+[columns]
+"Handle" = "group_id"
+"Title" = "title"
+"Body (HTML)" = "description"
+"Vendor" = "brand"
+"Type" = "product_type"
+"Product Category" = "product_category"
+"Variant SKU" = "item_id"
+"Variant Barcode" = "gtin"
+"Variant Price" = "price"
+"Variant Compare At Price" = "compare_at_price"
+"Image Src" = "image_url"
+"Variant Image" = "variant_image_url"
+"Option1 Name" = "option1_name"
+"Option1 Value" = "option1_value"
+"Option2 Name" = "option2_name"
+"Option2 Value" = "option2_value"
+"Option3 Name" = "option3_name"
+"Option3 Value" = "option3_value"
+"Variant Inventory Qty" = "inventory_quantity"
+"Variant Grams" = "item_weight_grams"
+"Status" = "status"

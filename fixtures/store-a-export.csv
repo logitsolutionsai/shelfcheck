@@ -1,0 +1,6 @@
+Handle,Title,Body (HTML),Vendor,Type,Option1 Name,Option1 Value,Option2 Name,Option2 Value,Variant SKU,Variant Price,Variant Barcode,Image Src
+nova-x2-case,"Nova X2 Phone Case, Black",<p>Case.</p>,Nova,Phone cases,Color,Black,,,PHN-X2-BLK,29.99,0194253098768,https://store-a.example/img/phn-x2-blk.jpg
+slate-tab-s,"Slate Tab S, 128 GB, Grey",<p>Tablet.</p>,Slate,Tablets,Storage,256 GB,Color,Grey,TAB-S-128,399.99,5012345678900,https://store-a.example/img/tab-s-128.jpg
+slate-tab-s,,,,,,256 GB,,Grey,TAB-S-256,449.99,7610000000028,
+slate-tab-s,,,,,,,,,,,,https://store-a.example/img/tab-s-2.jpg
+harbor-mug-12,"Harbor Mug 12 oz, White",<p>Mug.</p>,Harbor & Co,Mugs,Title,Default Title,,,MUG-12OZ-WHT,14.99,0012345678905,

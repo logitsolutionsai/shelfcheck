@@ -1,0 +1,35 @@
+# cargo-about: writes THIRD-PARTY-LICENSES.html, the licence notice for every
+# crate compiled into the shelfcheck binary. dist ships it in each release
+# archive (see `include` in dist-workspace.toml); CI checks it is current.
+#
+# Regenerate after any dependency change:
+#   cargo about generate about.hbs -o THIRD-PARTY-LICENSES.html
+#
+# `accepted` is the same list as deny.toml's [licenses] allow. cargo-about
+# fails if a crate needs a licence that is not listed, so no copyleft licence
+# can reach a release unnoticed.
+accepted = [
+    "Apache-2.0",
+    "Apache-2.0 WITH LLVM-exception",
+    "MIT",
+    "MIT-0",
+    "BSD-2-Clause",
+    "Zlib",
+    "BSL-1.0",
+    "Unicode-3.0",
+]
+# The targets dist builds (dist-workspace.toml).
+targets = [
+    "aarch64-apple-darwin",
+    "x86_64-apple-darwin",
+    "x86_64-unknown-linux-gnu",
+    "aarch64-unknown-linux-gnu",
+    "x86_64-unknown-linux-musl",
+    "x86_64-pc-windows-msvc",
+]
+# Only what ships in the binary: no test-only crates.
+ignore-dev-dependencies = true
+ignore-build-dependencies = false
+# Skips only crates marked publish = false. The three workspace crates are
+# publishable, so they appear too, under Apache-2.0.
+private = { ignore = true }

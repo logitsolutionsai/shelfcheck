@@ -1,0 +1,147 @@
+# GS1 GTIN rules, General Specifications 26.0 (January 2026).
+# Applies to every format checked: a barcode problem counts as a problem in
+# each format the feed is checked against.
+# 977 (ISSN), 978 and 979 (ISBN) are real books and magazines, not errors.
+# Spaces and dashes: OpenAI says "no spaces or dashes", so they are an error
+# for OpenAI. Google says the GTIN is a "Number (spaces and dashes are
+# accepted, but ignored)" (support.google.com/merchants/answer/6324461,
+# checked 2026-11-15), so for Google every rule here checks the value with
+# them removed. The ACP schema keeps the "Raw barcode value as provided by
+# the merchant" and normalises nothing, so ACP checks the value as written.
+
+[pack]
+id = "gs1-gtin"
+name = "GS1 GTIN rules"
+short = "GS1"
+applies_to = "all"
+source = "https://www.gs1.org/standards/barcodes-epcrfid-id-keys/gs1-general-specifications"
+version = "General Specifications 26.0"
+checked = "2026-11-14"
+label = "GS1 General Specifications 26.0"
+notes = [
+  "Spaces and dashes in gtin: an error for the OpenAI product feed (\"no spaces or dashes\") and for ACP, which keeps the raw value. For Google every rule here checks the value with them removed, because Google's help says \"spaces and dashes are accepted, but ignored\".",
+]
+
+[[rule]]
+id = "gs1.gtin.form"
+field = "gtin"
+separators_ignored_by = ["google"]
+kind = "gtin"
+check = "form"
+severity = "error"
+says = "gtin {value} is not a GTIN: {reason}."
+cites = "GTIN-8, 12, 13 or 14: digits only, leading zeros kept, no spaces or dashes"
+fix = "gtin_form"
+title = "Barcodes that are not well-formed GTINs"
+links = [{ label = "GS1 General Specifications 26.0", url = "https://www.gs1.org/standards/barcodes-epcrfid-id-keys/gs1-general-specifications" }, { label = "OpenAI: gtin", url = "https://developers.openai.com/commerce/specs/file-upload/products" }, { label = "Google: GTIN", url = "https://support.google.com/merchants/answer/6324461" }]
+
+[[rule]]
+id = "gs1.gtin.check_digit"
+field = "gtin"
+separators_ignored_by = ["google"]
+kind = "gtin"
+check = "check_digit"
+severity = "error"
+says = "{value} has a wrong check digit. It should end in {expected}."
+cites = "GS1 General Specifications 26.0, check digit calculation for GTIN-8, 12, 13 and 14"
+fix = "gtin_check_digit"
+title = "Barcodes with a wrong check digit"
+links = [{ label = "GS1 General Specifications 26.0", url = "https://www.gs1.org/standards/barcodes-epcrfid-id-keys/gs1-general-specifications" }, { label = "OpenAI: gtin", url = "https://developers.openai.com/commerce/specs/file-upload/products" }, { label = "Google: GTIN", url = "https://support.google.com/merchants/answer/6324461" }]
+
+[[rule]]
+id = "gs1.gtin.restricted_prefix"
+field = "gtin"
+separators_ignored_by = ["google"]
+kind = "gtin_prefix"
+prefixes = ["02", "04", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29"]
+lengths = [12, 13, 14]
+severity = "error"
+says = "{value} starts with {prefix}, a restricted circulation prefix for in-store and company-internal numbers."
+cites = "Prefixes 02, 04 and 20 to 29: restricted circulation numbers"
+fix = "gtin_restricted"
+title = "In-store barcodes (prefix 02, 04, 20 to 29) used on products sold publicly"
+links = [{ label = "GS1 General Specifications 26.0", url = "https://www.gs1.org/standards/barcodes-epcrfid-id-keys/gs1-general-specifications" }, { label = "OpenAI: gtin", url = "https://developers.openai.com/commerce/specs/file-upload/products" }, { label = "Google: GTIN", url = "https://support.google.com/merchants/answer/6324461" }]
+
+[[rule]]
+id = "gs1.gtin.restricted_prefix_8"
+field = "gtin"
+separators_ignored_by = ["google"]
+kind = "gtin_prefix"
+prefixes = ["0", "2"]
+lengths = [8]
+severity = "error"
+says = "GTIN-8 {value} starts with {prefix}, which is reserved for restricted circulation numbers."
+cites = "GTIN-8 prefixes 0 and 2: restricted circulation numbers (RCN-8)"
+fix = "gtin_restricted"
+title = "In-store barcodes (prefix 02, 04, 20 to 29) used on products sold publicly"
+links = [{ label = "GS1 General Specifications 26.0", url = "https://www.gs1.org/standards/barcodes-epcrfid-id-keys/gs1-general-specifications" }, { label = "OpenAI: gtin", url = "https://developers.openai.com/commerce/specs/file-upload/products" }, { label = "Google: GTIN", url = "https://support.google.com/merchants/answer/6324461" }]
+
+[[rule]]
+id = "gs1.gtin.refund_prefix"
+field = "gtin"
+separators_ignored_by = ["google"]
+kind = "gtin_prefix"
+prefixes = ["980"]
+lengths = [12, 13, 14]
+severity = "error"
+says = "{value} starts with 980, which GS1 reserves for refund receipts."
+cites = "Prefix 980: refund receipts"
+fix = "gtin_not_for_products"
+title = "Barcodes from ranges that are never products (refunds, coupons, demo, unused)"
+links = [{ label = "GS1 General Specifications 26.0", url = "https://www.gs1.org/standards/barcodes-epcrfid-id-keys/gs1-general-specifications" }, { label = "OpenAI: gtin", url = "https://developers.openai.com/commerce/specs/file-upload/products" }, { label = "Google: GTIN", url = "https://support.google.com/merchants/answer/6324461" }]
+
+[[rule]]
+id = "gs1.gtin.coupon_prefix"
+field = "gtin"
+separators_ignored_by = ["google"]
+kind = "gtin_prefix"
+prefixes = ["981", "982", "983", "99"]
+lengths = [12, 13, 14]
+severity = "error"
+says = "{value} starts with {prefix}, which GS1 reserves for coupons."
+cites = "Prefixes 981 to 983 and 99: coupons"
+fix = "gtin_not_for_products"
+title = "Barcodes from ranges that are never products (refunds, coupons, demo, unused)"
+links = [{ label = "GS1 General Specifications 26.0", url = "https://www.gs1.org/standards/barcodes-epcrfid-id-keys/gs1-general-specifications" }, { label = "OpenAI: gtin", url = "https://developers.openai.com/commerce/specs/file-upload/products" }, { label = "Google: GTIN", url = "https://support.google.com/merchants/answer/6324461" }]
+
+[[rule]]
+id = "gs1.gtin.demo_prefix"
+field = "gtin"
+separators_ignored_by = ["google"]
+kind = "gtin_prefix"
+prefixes = ["952"]
+lengths = [12, 13, 14]
+severity = "error"
+says = "{value} starts with 952, which GS1 reserves for demonstration numbers."
+cites = "Prefix 952: demonstration numbers"
+fix = "gtin_not_for_products"
+title = "Barcodes from ranges that are never products (refunds, coupons, demo, unused)"
+links = [{ label = "GS1 General Specifications 26.0", url = "https://www.gs1.org/standards/barcodes-epcrfid-id-keys/gs1-general-specifications" }, { label = "OpenAI: gtin", url = "https://developers.openai.com/commerce/specs/file-upload/products" }, { label = "Google: GTIN", url = "https://support.google.com/merchants/answer/6324461" }]
+
+[[rule]]
+id = "gs1.gtin.unused_prefix"
+field = "gtin"
+separators_ignored_by = ["google"]
+kind = "gtin_prefix"
+lengths = [12, 13, 14]
+ranges = [["0000001", "0000099"]]
+severity = "error"
+says = "{value} starts with {prefix}, a range GS1 leaves unused."
+cites = "Prefixes 0000001 to 0000099: unused"
+fix = "gtin_not_for_products"
+title = "Barcodes from ranges that are never products (refunds, coupons, demo, unused)"
+links = [{ label = "GS1 General Specifications 26.0", url = "https://www.gs1.org/standards/barcodes-epcrfid-id-keys/gs1-general-specifications" }, { label = "OpenAI: gtin", url = "https://developers.openai.com/commerce/specs/file-upload/products" }, { label = "Google: GTIN", url = "https://support.google.com/merchants/answer/6324461" }]
+
+[[rule]]
+id = "gs1.gtin.prefix_05"
+field = "gtin"
+separators_ignored_by = ["google"]
+kind = "gtin_prefix"
+prefixes = ["05"]
+lengths = [12, 13, 14]
+severity = "warning"
+says = "{value} starts with 05. Google still calls 05 a coupon prefix; GS1 26.0 reassigned it to company prefixes."
+cites = "Prefix 05: coupons in Google's help, company prefixes in GS1 General Specifications 26.0"
+fix = "gtin_prefix_05"
+title = "Barcodes starting with 05, which Google still treats as coupons"
+links = [{ label = "GS1 General Specifications 26.0", url = "https://www.gs1.org/standards/barcodes-epcrfid-id-keys/gs1-general-specifications" }, { label = "Google: GTIN", url = "https://support.google.com/merchants/answer/6324461" }]

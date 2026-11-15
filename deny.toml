@@ -1,0 +1,42 @@
+# cargo-deny: licence and advisory checks. Run: cargo deny check
+# GPL and AGPL (any version) are never allowed: they are not in `allow`,
+# and cargo-deny denies every licence that is not listed. The list holds only
+# licences the current dependency tree uses (checked 2026-11-15); add one
+# only after reading it. No copyleft licence (MPL, LGPL, GPL, AGPL) is listed.
+
+[graph]
+all-features = false
+
+[advisories]
+version = 2
+yanked = "deny"
+
+[licenses]
+version = 2
+confidence-threshold = 0.9
+allow = [
+    "Apache-2.0",
+    "Apache-2.0 WITH LLVM-exception",
+    "MIT",
+    # MIT No Attribution: borrow-or-share, through jsonschema's referencing.
+    "MIT-0",
+    "BSD-2-Clause",
+    "Zlib",
+    "BSL-1.0",
+    "Unicode-3.0",
+]
+
+[licenses.private]
+# Only crates marked publish = false are skipped. The three workspace crates
+# are publishable and Apache-2.0, so they are checked like any other.
+ignore = true
+
+[bans]
+multiple-versions = "warn"
+wildcards = "deny"
+allow-wildcard-paths = true
+
+[sources]
+unknown-registry = "deny"
+unknown-git = "deny"
+allow-registry = ["https://github.com/rust-lang/crates.io-index"]

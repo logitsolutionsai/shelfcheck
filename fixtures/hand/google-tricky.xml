@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:g="http://base.google.com/ns/1.0">
+<channel>
+<title>Hand feed</title>
+<item>
+  <g:id>G1</g:id>
+  <title>Plain lamp</title>
+  <g:link>https://hand.example/g</g:link>
+  <g:image_link>https://hand.example/g.jpg</g:image_link>
+  <g:description>A hand-made item.</g:description>
+  <g:brand>Handmade</g:brand>
+  <g:gtin>4006381333931</g:gtin>
+  <g:condition>new</g:condition>
+  <g:availability>in_stock</g:availability>
+  <g:price>15.00 USD</g:price>
+</item>
+<item>
+  <g:id>G2</g:id>
+  <title>OpenAI spelling</title>
+  <g:link>https://hand.example/g</g:link>
+  <g:image_link>https://hand.example/g.jpg</g:image_link>
+  <g:description>A hand-made item.</g:description>
+  <g:brand>Handmade</g:brand>
+  <g:gtin>4006381333931</g:gtin>
+  <g:condition>new</g:condition>
+  <g:availability>pre_order</g:availability>
+  <g:availability_date>2027-01-15T00:00:00Z</g:availability_date>
+  <g:price>15.00 USD</g:price>
+</item>
+<item>
+  <g:id>G3</g:id>
+  <title>No availability</title>
+  <g:link>https://hand.example/g</g:link>
+  <g:image_link>https://hand.example/g.jpg</g:image_link>
+  <g:description>A hand-made item.</g:description>
+  <g:brand>Handmade</g:brand>
+  <g:gtin>4006381333931</g:gtin>
+  <g:condition>new</g:condition>
+  <g:price>15.00 USD</g:price>
+</item>
+<item>
+  <g:id>G4</g:id>
+  <title><![CDATA[Mug & Saucer <set>]]></title>
+  <g:link>https://hand.example/g</g:link>
+  <g:image_link>https://hand.example/g.jpg</g:image_link>
+  <g:description>A hand-made item.</g:description>
+  <g:brand>Handmade</g:brand>
+  <g:gtin>4006381333931</g:gtin>
+  <g:condition>new</g:condition>
+  <g:availability>in_stock</g:availability>
+  <g:price>15,00 EUR</g:price>
+</item>
+<item>
+  <g:id>G5</g:id>
+  <title>Preorder, no date</title>
+  <g:link>https://hand.example/g</g:link>
+  <g:image_link>https://hand.example/g.jpg</g:image_link>
+  <g:description>A hand-made item.</g:description>
+  <g:brand>Handmade</g:brand>
+  <g:gtin>4006381333931</g:gtin>
+  <g:condition>new</g:condition>
+  <g:availability>preorder</g:availability>
+  <g:price>15.00 USD</g:price>
+</item>
+<item>
+  <g:id>G6</g:id>
+  <title>Backorder, no date</title>
+  <g:link>https://hand.example/g</g:link>
+  <g:image_link>https://hand.example/g.jpg</g:image_link>
+  <g:description>A hand-made item.</g:description>
+  <g:brand>Handmade</g:brand>
+  <g:gtin>4006381333931</g:gtin>
+  <g:condition>new</g:condition>
+  <g:availability>backorder</g:availability>
+  <g:price>15.00 USD</g:price>
+</item>
+<item>
+  <g:id>G7</g:id>
+  <title>Belt &amp; buckle</title>
+  <g:link>https://hand.example/g</g:link>
+  <g:image_link>https://hand.example/g.jpg</g:image_link>
+  <g:description>A hand-made item.</g:description>
+  <g:brand>Handmade</g:brand>
+  <g:gtin>4006381333931</g:gtin>
+  <g:condition>new</g:condition>
+  <g:availability>in_stock</g:availability>
+  <g:price>15.00 USD</g:price>
+  <g:google_product_category>Apparel &amp; Accessories &gt; Clothing Accessories &gt; Belts</g:google_product_category>
+  <g:color>Brown</g:color>
+  <g:gender>unisex</g:gender>
+  <g:age_group>adult</g:age_group>
+</item>
+<item>
+  <g:id>G8</g:id>
+  <title>Shirt by numeric category</title>
+  <g:link>https://hand.example/g</g:link>
+  <g:image_link>https://hand.example/g.jpg</g:image_link>
+  <g:description>A hand-made item.</g:description>
+  <g:brand>Handmade</g:brand>
+  <g:gtin>4006381333931</g:gtin>
+  <g:condition>new</g:condition>
+  <g:availability>in_stock</g:availability>
+  <g:price>15.00 USD</g:price>
+  <g:google_product_category>1604</g:google_product_category>
+</item>
+</channel>
+</rss>

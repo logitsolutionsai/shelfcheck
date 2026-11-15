@@ -1,0 +1,38 @@
+# Decisions for the store-a-oct to store-a-nov fixture changes.
+
+[[decision]]
+id = "D1"
+change = "id_reused"
+item_id = "PHN-X2-BLK"
+fingerprint = "gtin:0194253012344->0194253098768"
+verdict = "different_product"
+by = "dev@example.com"
+at = "2026-11-14"
+
+[[decision]]
+id = "D2"
+change = "critical_attribute_changed"
+item_id = "TAB-S-128"
+fingerprint = "capacity:128 GB->256 GB"
+verdict = "data_error_fixed"
+by = "dev@example.com"
+at = "2026-11-14"
+
+[[decision]]
+id = "D3"
+change = "id_changed"
+item_id = "LAMP-01"
+fingerprint = "id:LAMP-01->LAMP-01-WHT"
+verdict = "same_product"
+by = "dev@example.com"
+at = "2026-11-14"
+
+[[decision]]
+id = "D4"
+change = "id_changed"
+item_id = "MUG-12-WHT"
+fingerprint = "id:MUG-12-WHT->MUG-12OZ-WHT"
+verdict = "same_product"
+by = "dev@example.com"
+at = "2026-11-14"
+

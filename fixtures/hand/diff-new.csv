@@ -1,0 +1,13 @@
+item_id,title,description,url,brand,mpn,seller_name,image_url,availability,price,target_countries,store_country,gtin,group_id,variant_dict,product_category
+R1,"Nova Phone Case",A row.,https://hand.example/R1,Handmade,,Hand Shop,https://hand.example/R1.jpg,in_stock,10.00 USD,US,US,4012345000115,,"",Phone cases
+C1,"Slate Tab, 256 GB",A row.,https://hand.example/C1,Handmade,,Hand Shop,https://hand.example/C1.jpg,in_stock,10.00 USD,US,US,4012345000023,TAB,"{""storage"":""256 GB""}",Home
+C2,"Slate Tab, 0.128 TB",A row.,https://hand.example/C2,Handmade,,Hand Shop,https://hand.example/C2.jpg,in_stock,10.00 USD,US,US,4012345000030,TAB2,"{""storage"":""0.128 TB""}",Home
+MUG-1B,"Harbor Mug",A row.,https://hand.example/MUG-1B,Handmade,,Hand Shop,https://hand.example/MUG-1B.jpg,in_stock,10.00 USD,US,US,4012345000047,,"",Home
+GRP1,"Towel",A row.,https://hand.example/GRP1,Handmade,,Hand Shop,https://hand.example/GRP1.jpg,in_stock,10.00 USD,US,US,4012345000054,B,"",Home
+P1,"Lamp",A row.,https://hand.example/P1,Handmade,,Hand Shop,https://hand.example/P1.jpg,in_stock,12.00 USD,US,US,4012345000061,,"",Home
+N1,"Bare item",A row.,https://hand.example/N1,Acme,M-2,Hand Shop,https://hand.example/N1.jpg,in_stock,10.00 USD,US,US,,,"",Home
+K1,"Colour item",A row.,https://hand.example/K1,Handmade,,Hand Shop,https://hand.example/K1.jpg,in_stock,10.00 USD,US,US,4012345000078,,"{""color"":""BLK""}",Home
+NEW1,"New item",A row.,https://hand.example/NEW1,Handmade,,Hand Shop,https://hand.example/NEW1.jpg,in_stock,10.00 USD,US,US,4012345000108,,"",Home
+D1,"Dup item",A row.,https://hand.example/D1,Handmade,,Hand Shop,https://hand.example/D1.jpg,in_stock,10.00 USD,US,US,4012345000092,,"",Home
+D1,"Dup item again",A row.,https://hand.example/D1,Handmade,,Hand Shop,https://hand.example/D1.jpg,in_stock,10.00 USD,US,US,4012345000092,,"",Home
+S1,"Slim Tab",A row.,https://hand.example/S1,Handmade,SL-9,Hand Shop,https://hand.example/S1.jpg,in_stock,10.00 USD,US,US,,STAB,"{""storage"":""256 GB""}",Home

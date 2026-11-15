@@ -1,0 +1,51 @@
+# ACP feed schema, version folder 2026-04-17 (the repository is marked Beta).
+# Records are validated against the vendored, unmodified schema in
+# vendor/schema.feed.json (JSON Schema 2020-12). Feeds in other formats are
+# converted to one-variant ACP products first; values are copied as written.
+
+[pack]
+id = "acp-feed"
+name = "ACP feed schema"
+short = "ACP"
+applies_to = "acp"
+source = "https://github.com/agentic-commerce-protocol/agentic-commerce-protocol/tree/main/spec/2026-04-17/json-schema"
+version = "2026-04-17 (Beta)"
+checked = "2026-11-14"
+label = "Version 2026-04-17 (Beta)"
+notes = [
+  "Ingestion is metadata.json plus products.jsonl, as a full replacement.",
+  "Format assertions (uri, date-time) are on.",
+]
+
+[[rule]]
+id = "acp.schema.product"
+kind = "json_schema"
+schema = "acp-feed/vendor/schema.feed.json"
+def = "Product"
+target = "product"
+severity = "error"
+says = "{path}: {error}"
+cites = "ACP feed schema 2026-04-17, $defs/Product"
+fix = "acp.schema"
+links = [{ label = "ACP: schema.feed.json", url = "https://github.com/agentic-commerce-protocol/agentic-commerce-protocol/tree/main/spec/2026-04-17/json-schema" }]
+
+[[rule]]
+id = "acp.schema.metadata"
+kind = "json_schema"
+schema = "acp-feed/vendor/schema.feed.json"
+def = "FeedMetadata"
+target = "metadata"
+severity = "error"
+says = "metadata.json {path}: {error}"
+cites = "ACP feed schema 2026-04-17, $defs/FeedMetadata"
+fix = "acp.metadata"
+links = [{ label = "ACP: schema.feed.json", url = "https://github.com/agentic-commerce-protocol/agentic-commerce-protocol/tree/main/spec/2026-04-17/json-schema" }]
+
+[[fix]]
+key = "acp.schema:type:/variants/*/price/amount"
+title = "ACP prices written as decimals instead of integer minor units"
+detail = "ACP writes a price as amount and currency, with the amount in integer minor units: 79.99 USD is 7999."
+
+[[fix]]
+key = "acp.schema:format:/variants/*/url"
+title = "ACP variant links that are not absolute URIs"

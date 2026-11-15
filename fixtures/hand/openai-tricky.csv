@@ -1,0 +1,29 @@
+item_id,title,description,url,brand,seller_name,image_url,availability,price,sale_price,target_countries,store_country,gtin
+B01,Valid EAN-13,A hand-made row.,https://hand.example/p,Handmade,Hand Shop,https://hand.example/p.jpg,in_stock,10.00 USD,,US,US,4006381333931
+B02,Valid UPC-A,A hand-made row.,https://hand.example/p,Handmade,Hand Shop,https://hand.example/p.jpg,in_stock,10.00 USD,,US,US,036000291452
+B03,Valid ISBN-13,A hand-made row.,https://hand.example/p,Handmade,Hand Shop,https://hand.example/p.jpg,in_stock,10.00 USD,,US,US,9780306406157
+B04,Valid ISSN,A hand-made row.,https://hand.example/p,Handmade,Hand Shop,https://hand.example/p.jpg,in_stock,10.00 USD,,US,US,9771234567003
+B05,Restricted 20,A hand-made row.,https://hand.example/p,Handmade,Hand Shop,https://hand.example/p.jpg,in_stock,10.00 USD,,US,US,2012345678903
+B06,UPC in-store 4,A hand-made row.,https://hand.example/p,Handmade,Hand Shop,https://hand.example/p.jpg,in_stock,10.00 USD,,US,US,412345678903
+B07,Prefix 05,A hand-made row.,https://hand.example/p,Handmade,Hand Shop,https://hand.example/p.jpg,in_stock,10.00 USD,,US,US,0512345678900
+B08,Demo 952,A hand-made row.,https://hand.example/p,Handmade,Hand Shop,https://hand.example/p.jpg,in_stock,10.00 USD,,US,US,9521234567899
+B09,Coupon 981,A hand-made row.,https://hand.example/p,Handmade,Hand Shop,https://hand.example/p.jpg,in_stock,10.00 USD,,US,US,9812345678902
+B10,Refund 980,A hand-made row.,https://hand.example/p,Handmade,Hand Shop,https://hand.example/p.jpg,in_stock,10.00 USD,,US,US,9801234567892
+B11,Coupon 99,A hand-made row.,https://hand.example/p,Handmade,Hand Shop,https://hand.example/p.jpg,in_stock,10.00 USD,,US,US,9912345678909
+B12,Unused 0000042,A hand-made row.,https://hand.example/p,Handmade,Hand Shop,https://hand.example/p.jpg,in_stock,10.00 USD,,US,US,0000042123453
+B13,Wrong check digit,A hand-made row.,https://hand.example/p,Handmade,Hand Shop,https://hand.example/p.jpg,in_stock,10.00 USD,,US,US,4006381333932
+B14,Dashes,A hand-made row.,https://hand.example/p,Handmade,Hand Shop,https://hand.example/p.jpg,in_stock,10.00 USD,,US,US,4006-381333931
+B15,ISBN-10,A hand-made row.,https://hand.example/p,Handmade,Hand Shop,https://hand.example/p.jpg,in_stock,10.00 USD,,US,US,030640615X
+B16,Valid GTIN-14,A hand-made row.,https://hand.example/p,Handmade,Hand Shop,https://hand.example/p.jpg,in_stock,10.00 USD,,US,US,10614141000415
+B17,Valid GTIN-8,A hand-made row.,https://hand.example/p,Handmade,Hand Shop,https://hand.example/p.jpg,in_stock,10.00 USD,,US,US,96385074
+B18,GTIN-8 prefix 2,A hand-made row.,https://hand.example/p,Handmade,Hand Shop,https://hand.example/p.jpg,in_stock,10.00 USD,,US,US,20123451
+B19,ISBN 979,A hand-made row.,https://hand.example/p,Handmade,Hand Shop,https://hand.example/p.jpg,in_stock,10.00 USD,,US,US,9790000000001
+U01,éééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééé,A hand-made row.,https://hand.example/p,Handmade,Hand Shop,https://hand.example/p.jpg,in_stock,10.00 USD,,US,US,4006381333931
+U02,ééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééééé,A hand-made row.,https://hand.example/p,Handmade,Hand Shop,https://hand.example/p.jpg,in_stock,10.00 USD,,US,US,4006381333931
+U03,"Café Crème Mug, 12 oz ☕",A hand-made row.,https://hand.example/p,Handmade,Hand Shop,https://hand.example/p.jpg,in_stock,10.00 USD,,US,US,4006381333931
+P01,Comma price,A hand-made row.,https://hand.example/p,Handmade,Hand Shop,https://hand.example/p.jpg,in_stock,"1,299.00 USD",,US,US,4006381333931
+P02,Euro sign,A hand-made row.,https://hand.example/p,Handmade,Hand Shop,https://hand.example/p.jpg,in_stock,€79.99,,US,US,4006381333931
+P03,Lowercase code,A hand-made row.,https://hand.example/p,Handmade,Hand Shop,https://hand.example/p.jpg,in_stock,79.99 usd,,US,US,4006381333931
+P04,Sale above price,A hand-made row.,https://hand.example/p,Handmade,Hand Shop,https://hand.example/p.jpg,in_stock,79.99 USD,89.99 USD,US,US,4006381333931
+P05,Sale other currency,A hand-made row.,https://hand.example/p,Handmade,Hand Shop,https://hand.example/p.jpg,in_stock,79.99 USD,70.00 EUR,US,US,4006381333931
+P06,Good sale,A hand-made row.,https://hand.example/p,Handmade,Hand Shop,https://hand.example/p.jpg,in_stock,79.99 USD,69.99 USD,US,US,4006381333931

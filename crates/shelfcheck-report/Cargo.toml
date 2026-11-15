@@ -1,0 +1,24 @@
+[package]
+name = "shelfcheck-report"
+description = "Report outputs for shelfcheck: HTML, SARIF, JUnit, CSV and terminal"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+repository.workspace = true
+homepage.workspace = true
+authors.workspace = true
+keywords = ["sarif", "junit", "report", "product-feed"]
+categories = ["development-tools"]
+# The fonts are embedded from `assets/fonts/` in this crate, a copy of the
+# workspace's `assets/fonts/` (scripts/sync-crate-data.sh); the report
+# template is `templates/report.html`.
+include = ["src/**/*", "templates/**/*", "assets/fonts/**/*", "tests/**/*", "LICENSE", "NOTICE", "Cargo.toml"]
+
+[dependencies]
+shelfcheck-core.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+csv.workspace = true
+minijinja.workspace = true
+quick-junit.workspace = true

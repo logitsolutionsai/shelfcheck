@@ -1,0 +1,40 @@
+[package]
+name = "shelfcheck"
+description = "Checks product feeds against the formats AI shopping assistants read, and flags identity changes between feeds"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+repository.workspace = true
+homepage.workspace = true
+authors.workspace = true
+readme = "../../README.md"
+# The tests read the workspace fixtures, which are not packaged, so the
+# published crate carries the binary's sources only.
+include = ["src/**/*", "LICENSE", "NOTICE", "Cargo.toml"]
+keywords = ["product-feed", "gtin", "ecommerce", "validator", "sarif"]
+categories = ["command-line-utilities", "development-tools"]
+
+[[bin]]
+name = "shelfcheck"
+path = "src/main.rs"
+
+[dependencies]
+shelfcheck-core.workspace = true
+shelfcheck-report.workspace = true
+clap.workspace = true
+serde_json.workspace = true
+
+[dev-dependencies]
+serde.workspace = true
+serde_json.workspace = true
+tempfile.workspace = true
+insta.workspace = true
+regex.workspace = true
+# Validates results.sarif against the official SARIF 2.1.0 schema in tests.
+jsonschema.workspace = true
+
+# dist reads this table for release binaries, installers, npm and Homebrew;
+# the main dist config is in dist-workspace.toml.
+[package.metadata.dist]
+dist = true

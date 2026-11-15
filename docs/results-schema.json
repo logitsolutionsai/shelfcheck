@@ -1,0 +1,267 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://logitsolutions.ai/schemas/shelfcheck/results-0.1.json",
+  "title": "shelfcheck results.json",
+  "description": "Hand-written from crates/shelfcheck-core/src/results.rs and src/diff/mod.rs (version 0.1.0). Keep in step with those types; a generated schema can replace this file.",
+  "type": "object",
+  "required": ["tool", "version"],
+  "properties": {
+    "tool": { "const": "shelfcheck" },
+    "version": { "type": "string" },
+    "check": { "$ref": "#/$defs/CheckResults" },
+    "diff": { "$ref": "#/$defs/DiffResults" }
+  },
+  "$defs": {
+    "TargetFormat": { "enum": ["openai", "acp", "google"] },
+    "Severity": { "enum": ["error", "warning", "info"] },
+    "Location": {
+      "type": "object",
+      "required": ["file", "line"],
+      "properties": {
+        "file": { "type": "string" },
+        "line": { "type": "integer", "minimum": 0 },
+        "column": { "type": "integer", "minimum": 1 },
+        "column_name": { "type": "string" },
+        "pointer": { "type": "string" }
+      }
+    },
+    "Input": {
+      "type": "object",
+      "required": ["path", "records_path", "format", "format_label", "sha256", "bytes"],
+      "properties": {
+        "path": { "type": "string" },
+        "records_path": { "type": "string" },
+        "format": {
+          "type": "object",
+          "required": ["family", "container"],
+          "properties": {
+            "family": { "enum": ["openai", "google", "acp", "shopify", "generic"] },
+            "container": { "enum": ["csv", "tsv", "jsonl", "xml", "acp_bundle"] }
+          }
+        },
+        "format_label": { "type": "string" },
+        "sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+        "bytes": { "type": "integer", "minimum": 0 },
+        "metadata_path": { "type": "string" }
+      }
+    },
+    "Link": {
+      "type": "object",
+      "required": ["label", "url"],
+      "properties": { "label": { "type": "string" }, "url": { "type": "string" } }
+    },
+    "Problem": {
+      "type": "object",
+      "required": ["rule", "pack", "fix", "severity", "formats", "item_id", "product", "feed", "location", "message"],
+      "properties": {
+        "rule": { "type": "string" },
+        "pack": { "type": "string" },
+        "fix": { "type": "string" },
+        "severity": { "$ref": "#/$defs/Severity" },
+        "formats": { "type": "array", "items": { "$ref": "#/$defs/TargetFormat" } },
+        "item_id": { "type": "string" },
+        "product": { "type": "string" },
+        "feed": { "type": "integer", "minimum": 0 },
+        "location": { "$ref": "#/$defs/Location" },
+        "field": { "type": "string" },
+        "value": { "type": "string" },
+        "expected": { "type": "string" },
+        "message": { "type": "string" },
+        "related": { "$ref": "#/$defs/Location" }
+      }
+    },
+    "PackInfo": {
+      "type": "object",
+      "required": ["id", "name", "short", "applies_to", "source", "version", "checked", "origin", "rules"],
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string" },
+        "short": { "type": "string" },
+        "applies_to": { "enum": ["openai", "acp", "google", "all", "cross"] },
+        "source": { "type": "string" },
+        "version": { "type": "string" },
+        "checked": { "type": "string" },
+        "label": { "type": "string" },
+        "origin": { "type": "string" },
+        "rules": { "type": "integer" },
+        "notes": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "Readiness": {
+      "type": "object",
+      "required": ["format", "label", "products", "ready", "with_errors", "with_warnings", "percent_ready", "rules_as_of"],
+      "properties": {
+        "format": { "$ref": "#/$defs/TargetFormat" },
+        "label": { "type": "string" },
+        "products": { "type": "integer" },
+        "ready": { "type": "integer" },
+        "with_errors": { "type": "integer" },
+        "with_warnings": { "type": "integer" },
+        "percent_ready": { "type": "string", "pattern": "^[0-9]+\\.[0-9]$" },
+        "pack": { "type": "string" },
+        "rules_as_of": { "type": "string" }
+      }
+    },
+    "Fix": {
+      "type": "object",
+      "required": ["rank", "key", "title", "severity", "products", "problems", "formats", "cross", "rules", "cites", "links", "example"],
+      "properties": {
+        "rank": { "type": "integer", "minimum": 1 },
+        "key": { "type": "string" },
+        "title": { "type": "string" },
+        "detail": { "type": "string" },
+        "severity": { "$ref": "#/$defs/Severity" },
+        "products": { "type": "integer" },
+        "problems": { "type": "integer" },
+        "formats": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["format", "status"],
+            "properties": {
+              "format": { "$ref": "#/$defs/TargetFormat" },
+              "status": { "enum": ["error", "warning", "passes", "not_used", "not_checked"] }
+            }
+          }
+        },
+        "cross": { "type": "boolean" },
+        "rules": { "type": "array", "items": { "type": "string" } },
+        "cites": { "type": "array", "items": { "type": "string" } },
+        "links": { "type": "array", "items": { "$ref": "#/$defs/Link" } },
+        "example": { "$ref": "#/$defs/Problem" }
+      }
+    },
+    "CheckResults": {
+      "type": "object",
+      "required": ["inputs", "formats", "packs", "summary", "readiness", "fixes", "problems", "ignored", "not_checked"],
+      "properties": {
+        "inputs": { "type": "array", "items": { "$ref": "#/$defs/Input" } },
+        "formats": { "type": "array", "items": { "$ref": "#/$defs/TargetFormat" } },
+        "packs": { "type": "array", "items": { "$ref": "#/$defs/PackInfo" } },
+        "summary": {
+          "type": "object",
+          "required": ["products", "items", "products_needing_fixes", "errors", "warnings"],
+          "properties": {
+            "products": { "type": "integer" },
+            "items": { "type": "integer" },
+            "products_needing_fixes": { "type": "integer" },
+            "errors": { "type": "integer" },
+            "warnings": { "type": "integer" }
+          }
+        },
+        "readiness": { "type": "array", "items": { "$ref": "#/$defs/Readiness" } },
+        "fixes": { "type": "array", "items": { "$ref": "#/$defs/Fix" } },
+        "problems": { "type": "array", "items": { "$ref": "#/$defs/Problem" } },
+        "ignored": {
+          "type": "array",
+          "items": { "type": "object", "required": ["id", "pack"], "properties": { "id": { "type": "string" }, "pack": { "type": "string" } } }
+        },
+        "not_checked": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["id", "title", "says"],
+            "properties": { "id": { "type": "string" }, "title": { "type": "string" }, "says": { "type": "string" } }
+          }
+        }
+      }
+    },
+    "Snapshot": {
+      "type": "object",
+      "required": ["item_id", "location"],
+      "properties": {
+        "item_id": { "type": "string" },
+        "title": { "type": "string" },
+        "gtin": { "type": "string" },
+        "brand": { "type": "string" },
+        "mpn": { "type": "string" },
+        "product_type": { "type": "string" },
+        "group_id": { "type": "string" },
+        "price": { "type": "string" },
+        "availability": { "type": "string" },
+        "options": { "type": "array", "items": { "type": "array", "prefixItems": [{ "type": "string" }, { "type": "string" }], "minItems": 2, "maxItems": 2 } },
+        "location": { "$ref": "#/$defs/Location" }
+      }
+    },
+    "Change": {
+      "type": "object",
+      "required": ["id", "kind", "level", "item_id", "fingerprint", "sentence", "status"],
+      "properties": {
+        "id": { "type": "string", "pattern": "^[DWI][0-9]+$" },
+        "kind": {
+          "enum": ["id_reused", "critical_attribute_changed", "id_changed", "store_stale", "group_changed", "offer_id_has_price", "duplicate_id", "new", "retired", "price_only", "stock_only"]
+        },
+        "level": { "enum": ["decision", "warning", "info"] },
+        "item_id": { "type": "string" },
+        "new_item_id": { "type": "string" },
+        "fingerprint": { "type": "string" },
+        "sentence": { "type": "string" },
+        "evidence": { "type": "array", "items": { "type": "string" } },
+        "attributes": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["attribute", "name", "old", "new"],
+            "properties": {
+              "attribute": { "enum": ["capacity", "size", "colour", "material", "pack_quantity"] },
+              "name": { "type": "string" },
+              "old": { "type": "string" },
+              "new": { "type": "string" },
+              "note": { "type": "string" }
+            }
+          }
+        },
+        "matched_by": { "enum": ["gtin", "brand_mpn", "id"] },
+        "title_similarity": { "type": "string" },
+        "old": { "$ref": "#/$defs/Snapshot" },
+        "new": { "$ref": "#/$defs/Snapshot" },
+        "status": { "enum": ["open", "decided"] },
+        "decision": {
+          "type": "object",
+          "required": ["id", "verdict", "by", "at"],
+          "properties": {
+            "id": { "type": "string" },
+            "verdict": { "enum": ["same_product", "different_product", "data_error_fixed"] },
+            "by": { "type": "string" },
+            "at": { "type": "string" }
+          }
+        },
+        "commands": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "DiffResults": {
+      "type": "object",
+      "required": ["old", "new", "decisions_file", "stats", "summary", "changes"],
+      "properties": {
+        "old": { "$ref": "#/$defs/Input" },
+        "new": { "$ref": "#/$defs/Input" },
+        "store": { "$ref": "#/$defs/Input" },
+        "decisions_file": { "type": "string" },
+        "stats": {
+          "type": "object",
+          "required": ["old_items", "new_items", "in_both", "by_gtin", "by_brand_mpn", "by_id"],
+          "properties": {
+            "old_items": { "type": "integer" },
+            "new_items": { "type": "integer" },
+            "in_both": { "type": "integer" },
+            "by_gtin": { "type": "integer" },
+            "by_brand_mpn": { "type": "integer" },
+            "by_id": { "type": "integer" }
+          }
+        },
+        "summary": {
+          "type": "object",
+          "required": ["needs_decision", "decided", "warnings", "info", "by_kind"],
+          "properties": {
+            "needs_decision": { "type": "integer" },
+            "decided": { "type": "integer" },
+            "warnings": { "type": "integer" },
+            "info": { "type": "integer" },
+            "by_kind": { "type": "object", "additionalProperties": { "type": "integer" } }
+          }
+        },
+        "changes": { "type": "array", "items": { "$ref": "#/$defs/Change" } }
+      }
+    }
+  }
+}

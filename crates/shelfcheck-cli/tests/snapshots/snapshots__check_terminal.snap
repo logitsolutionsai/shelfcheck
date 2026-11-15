@@ -1,0 +1,20 @@
+---
+source: crates/shelfcheck-cli/tests/snapshots.rs
+expression: normalise_terminal(&terminal)
+---
+shelfcheck 0.1.0 · rules OpenAI 2026-11-14 · ACP 2026-04-17 · Google 2026-11-14 · GS1 26.0
+
+read      OpenAI CSV · 1,400 products, 3,912 variants                     [time] s
+
+          ready            errors   warnings
+OpenAI    1,228    87.7%   172      27
+ACP       1,310    93.6%   90       0
+Google    1,293    92.4%   107      0
+
+✗   82  Barcodes with a wrong check digit       OpenAI, ACP, Google · e.g. PHO0071-3, line 157
+✗   61  target_countries is missing             OpenAI · e.g. LAM0015-3, line 36
+✗   23  availability values the format rejects  OpenAI · e.g. MUG0033-1, line 79
+    + 4 more fixes, 43 products. All of them are in the report.
+
+182 of 1,400 products need fixes before every format accepts them.
+report    target/insta-demo/check/report.html   sarif results.sarif   csv failing-products.csv

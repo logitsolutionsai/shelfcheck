@@ -1,0 +1,3 @@
+id,title,description,link,image_link,availability,price,brand,gtin,question_and_answer
+Q1,Hand Lamp,A hand-made row.,https://hand.example/q1,https://hand.example/q1.jpg,in_stock,15.00 USD,Handmade,4006381333931,"""Is it dimmable?"":""Yes"",""Does it need a bulb?"":""No, it has one"""
+Q2,Hand Vase,A hand-made row.,https://hand.example/q2,https://hand.example/q2.jpg,in_stock,15.00 USD,Handmade,036000291452,

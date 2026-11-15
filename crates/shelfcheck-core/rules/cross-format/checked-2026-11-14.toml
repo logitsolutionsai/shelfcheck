@@ -1,0 +1,57 @@
+# Cross-format consistency: when more than one feed is given, the same item
+# (matched on item id) must agree on price, availability, brand and gtin.
+# Availability is compared by meaning: pre_order (OpenAI) and preorder
+# (Google) are the same.
+
+[pack]
+id = "cross-format"
+name = "Cross-format consistency"
+short = "Cross"
+applies_to = "cross"
+source = "shelfcheck"
+version = "1"
+checked = "2026-11-14"
+
+[[rule]]
+id = "cross.price"
+field = "price"
+kind = "same_across_formats"
+severity = "error"
+says = "price is {value} here but {other} in {other_file}."
+cites = "The same item must have the same price in every feed"
+fix = "cross:price"
+title = "price differs between feeds"
+links = [{ label = "shelfcheck: cross-format rules", url = "https://logitsolutions.ai/guides/ai-in-ecommerce/" }]
+
+[[rule]]
+id = "cross.availability"
+field = "availability"
+kind = "same_across_formats"
+severity = "error"
+says = "availability is {value} here but {other} in {other_file}."
+cites = "The same item must have the same availability in every feed"
+fix = "cross:availability"
+title = "availability differs between feeds"
+links = [{ label = "shelfcheck: cross-format rules", url = "https://logitsolutions.ai/guides/ai-in-ecommerce/" }]
+
+[[rule]]
+id = "cross.brand"
+field = "brand"
+kind = "same_across_formats"
+severity = "error"
+says = "brand is {value} here but {other} in {other_file}."
+cites = "The same item must have the same brand in every feed"
+fix = "cross:brand"
+title = "brand differs between feeds"
+links = [{ label = "shelfcheck: cross-format rules", url = "https://logitsolutions.ai/guides/ai-in-ecommerce/" }]
+
+[[rule]]
+id = "cross.gtin"
+field = "gtin"
+kind = "same_across_formats"
+severity = "error"
+says = "gtin is {value} here but {other} in {other_file}."
+cites = "The same item must have the same gtin in every feed"
+fix = "cross:gtin"
+title = "gtin differs between feeds"
+links = [{ label = "shelfcheck: cross-format rules", url = "https://logitsolutions.ai/guides/ai-in-ecommerce/" }]

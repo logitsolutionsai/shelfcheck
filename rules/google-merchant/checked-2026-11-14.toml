@@ -1,0 +1,513 @@
+# Google Merchant Center product data specification, plus the six
+# conversational attributes. Checked 2026-11-14.
+# Barcode rules are in the GS1 pack, which applies to every format.
+
+[pack]
+id = "google-merchant"
+name = "Google Merchant Center"
+short = "Google"
+applies_to = "google"
+source = "https://support.google.com/merchants/answer/7052112"
+version = "product data specification, checked 2026-11-14"
+checked = "2026-11-14"
+label = "Checked 2026-11-14"
+notes = [
+  "Images must be at least 500 x 500 pixels, enforced from 31 January 2027 (a warning until then). Checked only with --images, from the local file named by the last segment of image_link; otherwise reported as not checked.",
+  "question_and_answer is not read in this version. Google's example writes quoted pairs separated by commas (\"Q\":\"A\",\"Q2\":\"A2\"); that form, and any XML groups nested inside the element, are left for a later version. Its limits (30 pairs, 1,000 characters per question and per answer, 10,000 in total) are not checked; a run lists the attribute under What This Run Did Not Check when a feed has it.",
+  "Apparel rules match the category path or its top-level numeric id (166, 1604 Clothing, 187 Shoes); a numeric id of a subcategory is not recognised.",
+  "mpn is required when there is no gtin. identifier_exists = no is not modelled in this version.",
+]
+
+[[not_checked]]
+id = "google.question_and_answer"
+title = "Questions and answers"
+when_field = "question_and_answer"
+says = "question_and_answer was not read on {count} of the items checked. This version does not read Google's quoted, comma-separated pairs, so their limits were not checked."
+
+[[not_checked]]
+id = "google.images.min_size"
+title = "Images"
+says = "No image folder was given, so Google's 500 x 500 minimum, enforced from 31 January 2027, was not checked. Add --images."
+
+[[rule]]
+id = "google.required.id"
+field = "item_id"
+kind = "required"
+when = "always"
+severity = "error"
+says = "id is missing. Google Merchant Center always requires it."
+cites = "id: required for all products"
+fix = "missing:item_id"
+title = "item_id is missing (Google calls it id)"
+links = [{ label = "Google: id", url = "https://support.google.com/merchants/answer/7052112" }]
+
+[[rule]]
+id = "google.required.title"
+field = "title"
+kind = "required"
+when = "always"
+severity = "error"
+says = "title is missing. Google Merchant Center always requires it."
+cites = "title: required for all products"
+fix = "missing:title"
+title = "title is missing"
+links = [{ label = "Google: title", url = "https://support.google.com/merchants/answer/7052112" }]
+
+[[rule]]
+id = "google.required.description"
+field = "description"
+kind = "required"
+when = "always"
+severity = "error"
+says = "description is missing. Google Merchant Center always requires it."
+cites = "description: required for all products"
+fix = "missing:description"
+title = "description is missing"
+links = [{ label = "Google: description", url = "https://support.google.com/merchants/answer/7052112" }]
+
+[[rule]]
+id = "google.required.link"
+field = "url"
+kind = "required"
+when = "always"
+severity = "error"
+says = "link is missing. Google Merchant Center always requires it."
+cites = "link: required for all products"
+fix = "missing:url"
+title = "url is missing (Google calls it link)"
+links = [{ label = "Google: link", url = "https://support.google.com/merchants/answer/7052112" }]
+
+[[rule]]
+id = "google.required.image_link"
+field = "image_url"
+kind = "required"
+when = "always"
+severity = "error"
+says = "image_link is missing. Google Merchant Center always requires it."
+cites = "image_link: required for all products"
+fix = "missing:image_url"
+title = "image_url is missing (Google calls it image_link)"
+links = [{ label = "Google: image_link", url = "https://support.google.com/merchants/answer/7052112" }]
+
+[[rule]]
+id = "google.required.availability"
+field = "availability"
+kind = "required"
+when = "always"
+severity = "error"
+says = "availability is missing. Google Merchant Center always requires it."
+cites = "availability: required for all products"
+fix = "missing:availability"
+title = "availability is missing"
+links = [{ label = "Google: availability", url = "https://support.google.com/merchants/answer/7052112" }]
+
+[[rule]]
+id = "google.required.price"
+field = "price"
+kind = "required"
+when = "always"
+severity = "error"
+says = "price is missing. Google Merchant Center always requires it."
+cites = "price: required for all products"
+fix = "missing:price"
+title = "price is missing"
+links = [{ label = "Google: price", url = "https://support.google.com/merchants/answer/7052112" }]
+
+[[rule]]
+id = "google.id.length"
+field = "item_id"
+kind = "max_len"
+max_len = 50
+severity = "error"
+says = "id has {count} characters; Google allows up to {max}."
+cites = "id: up to 50 characters"
+fix = "id_too_long"
+title = "Ids over 50 characters"
+links = [{ label = "Google: id", url = "https://support.google.com/merchants/answer/7052112" }]
+
+[[rule]]
+id = "google.title.length"
+field = "title"
+kind = "max_len"
+max_len = 150
+severity = "error"
+says = "title has {count} characters; Google allows up to {max}."
+cites = "title: up to 150 characters"
+fix = "title_too_long"
+title = "Titles over 150 characters"
+links = [{ label = "Google: title", url = "https://support.google.com/merchants/answer/7052112" }]
+
+[[rule]]
+id = "google.description.length"
+field = "description"
+kind = "max_len"
+max_len = 5000
+severity = "error"
+says = "description has {count} characters; Google allows up to {max}."
+cites = "description: up to 5,000 characters"
+fix = "description_too_long"
+title = "Descriptions over 5,000 characters"
+links = [{ label = "Google: description", url = "https://support.google.com/merchants/answer/7052112" }]
+
+[[rule]]
+id = "google.link.absolute"
+field = "url"
+kind = "url_absolute"
+severity = "error"
+says = "link {value} {reason}."
+cites = "link: absolute URL starting with http or https"
+fix = "url_not_absolute"
+title = "Product links that are not absolute http(s) URLs"
+links = [{ label = "Google: link", url = "https://support.google.com/merchants/answer/7052112" }]
+
+[[rule]]
+id = "google.image_link.absolute"
+field = "image_url"
+kind = "url_absolute"
+severity = "error"
+says = "image_link {value} {reason}."
+cites = "image_link: absolute URL starting with http or https"
+fix = "image_url_not_absolute"
+title = "Image links that are not absolute http(s) URLs"
+links = [{ label = "Google: image_link", url = "https://support.google.com/merchants/answer/7052112" }]
+
+[[rule]]
+id = "google.availability.enum"
+field = "availability"
+kind = "enum"
+values = ["in_stock", "out_of_stock", "preorder", "backorder"]
+foreign_values = ["pre_order"]
+severity = "error"
+says = "availability {value} is not one of {values}."
+cites = "availability: in_stock, out_of_stock, preorder or backorder"
+fix = "availability_value"
+title = "availability values the format rejects"
+detail = "Google spells it preorder and OpenAI spells it pre_order. Each feed must use its own format's spelling."
+links = [{ label = "Google: availability", url = "https://support.google.com/merchants/answer/7052112" }]
+
+[[rule]]
+id = "google.price.form"
+field = "price"
+kind = "price"
+severity = "error"
+says = "price {value} {reason}."
+cites = "price: amount and ISO 4217 currency, such as 15.00 USD"
+fix = "price_form"
+title = "price is not written as amount and currency, such as 79.99 USD"
+links = [{ label = "Google: price", url = "https://support.google.com/merchants/answer/7052112" }]
+
+[[rule]]
+id = "google.brand.required_new"
+field = "brand"
+kind = "required_if"
+if_field = "condition"
+if_state = "missing_or_in"
+if_values = ["new"]
+severity = "error"
+says = "brand is missing. Google requires a brand for new products."
+cites = "brand: required for all new products (except movies, books and music)"
+fix = "missing:brand"
+title = "brand is missing"
+links = [{ label = "Google: brand", url = "https://support.google.com/merchants/answer/7052112" }]
+
+[[rule]]
+id = "google.mpn.without_gtin"
+field = "mpn"
+kind = "required_if"
+if_field = "gtin"
+if_state = "missing"
+severity = "error"
+says = "There is no gtin, so Google requires an mpn."
+cites = "mpn: required if the product has no manufacturer-assigned GTIN"
+fix = "missing:mpn"
+title = "mpn is missing on a product without a gtin"
+links = [{ label = "Google: mpn", url = "https://support.google.com/merchants/answer/7052112" }]
+
+[[rule]]
+id = "google.condition.enum"
+field = "condition"
+kind = "enum"
+values = ["new", "refurbished", "used"]
+severity = "error"
+says = "condition {value} is not one of {values}."
+cites = "condition: new, refurbished or used"
+fix = "condition_value"
+title = "condition values Google rejects"
+links = [{ label = "Google: condition", url = "https://support.google.com/merchants/answer/7052112" }]
+
+[[rule]]
+id = "google.availability_date.required"
+field = "availability_date"
+kind = "required_if"
+if_field = "availability"
+if_state = "in"
+if_values = ["preorder", "pre_order"]
+severity = "error"
+says = "availability is {if_value}, so Google requires availability_date."
+cites = "availability_date: Required if product availability is set to preorder"
+fix = "missing:availability_date"
+title = "availability_date is missing on a preorder product"
+links = [{ label = "Google: availability_date", url = "https://support.google.com/merchants/answer/7052112" }]
+
+[[rule]]
+id = "google.availability_date.backorder"
+field = "availability_date"
+kind = "required_if"
+if_field = "availability"
+if_state = "in"
+if_values = ["backorder", "back_order"]
+severity = "warning"
+says = "availability is {if_value}; Google asks for availability_date on backorder products."
+cites = "availability: Provide the availability date attribute if you submit preorder or backorder"
+fix = "missing:availability_date_backorder"
+title = "availability_date is missing on a backorder product"
+links = [{ label = "Google: availability_date", url = "https://support.google.com/merchants/answer/7052112" }]
+
+[[rule]]
+id = "google.apparel.color"
+field = "color"
+kind = "required_if"
+if_field = "product_category"
+if_state = "starts_with"
+if_values = ["Apparel & Accessories", "166", "1604", "187"]
+severity = "error"
+says = "color is missing. Google requires it for apparel."
+cites = "color: required for apparel products"
+fix = "missing:color"
+title = "color is missing on an apparel product"
+links = [{ label = "Google: color", url = "https://support.google.com/merchants/answer/7052112" }]
+
+[[rule]]
+id = "google.apparel.size"
+field = "size"
+kind = "required_if"
+if_field = "product_category"
+if_state = "starts_with"
+if_values = ["Apparel & Accessories > Clothing", "1604", "Apparel & Accessories > Shoes", "187"]
+severity = "error"
+says = "size is missing. Google requires it for clothing and shoes."
+cites = "size: Required for all apparel products in Apparel & Accessories > Clothing (ID:1604) and Apparel & Accessories > Shoes (ID:187)"
+fix = "missing:size"
+title = "size is missing on an apparel product"
+links = [{ label = "Google: size", url = "https://support.google.com/merchants/answer/7052112" }]
+
+[[rule]]
+id = "google.apparel.gender"
+field = "gender"
+kind = "required_if"
+if_field = "product_category"
+if_state = "starts_with"
+if_values = ["Apparel & Accessories", "166", "1604", "187"]
+severity = "error"
+says = "gender is missing. Google requires it for apparel."
+cites = "gender: required for apparel products"
+fix = "missing:gender"
+title = "gender is missing on an apparel product"
+links = [{ label = "Google: gender", url = "https://support.google.com/merchants/answer/7052112" }]
+
+[[rule]]
+id = "google.apparel.age_group"
+field = "age_group"
+kind = "required_if"
+if_field = "product_category"
+if_state = "starts_with"
+if_values = ["Apparel & Accessories", "166", "1604", "187"]
+severity = "error"
+says = "age_group is missing. Google requires it for apparel."
+cites = "age_group: required for apparel products"
+fix = "missing:age_group"
+title = "age_group is missing on an apparel product"
+links = [{ label = "Google: age_group", url = "https://support.google.com/merchants/answer/7052112" }]
+
+[[rule]]
+id = "google.related_product.form"
+field = "related_product"
+kind = "pattern"
+separator = ","
+regex = '^[^:\s]+:[^:\s]+:\S.*$'
+each = true
+severity = "error"
+says = "related_product {value} is not relationship_type:identifier_type:identifier."
+cites = "related_product: relationship_type:identifier_type:identifier"
+fix = "related_product_form"
+title = "related_product is not relationship_type:identifier_type:identifier"
+links = [{ label = "Google: related_product", url = "https://support.google.com/merchants/answer/7052112" }]
+
+[[rule]]
+id = "google.document_link.count"
+field = "document_link"
+kind = "list_max"
+separator = ","
+max_items = 5
+severity = "error"
+says = "document_link has {count} links; Google allows up to {max}."
+cites = "document_link: up to 5 PDF links"
+fix = "document_link_limits"
+title = "document_link over its limits"
+links = [{ label = "Google: document_link", url = "https://support.google.com/merchants/answer/7052112" }]
+
+[[rule]]
+id = "google.document_link.absolute"
+field = "document_link"
+kind = "url_absolute"
+separator = ","
+each = true
+severity = "error"
+says = "document_link {value} {reason}."
+cites = "document_link: up to 5 PDF links"
+fix = "document_link_limits"
+title = "document_link over its limits"
+links = [{ label = "Google: document_link", url = "https://support.google.com/merchants/answer/7052112" }]
+
+[[rule]]
+id = "google.document_link.pdf"
+field = "document_link"
+kind = "pattern"
+separator = ","
+regex = '(?i)\.pdf([?#].*)?$'
+each = true
+severity = "warning"
+says = "document_link {value} does not end in .pdf. Google needs a link to a valid PDF file."
+cites = "document_link: up to 5 PDF links"
+fix = "document_link_limits"
+title = "document_link over its limits"
+links = [{ label = "Google: document_link", url = "https://support.google.com/merchants/answer/7052112" }]
+
+[[rule]]
+id = "google.item_group_title.length"
+field = "item_group_title"
+kind = "max_len"
+max_len = 150
+severity = "error"
+says = "item_group_title has {count} characters; Google allows up to {max}."
+cites = "item_group_title: up to 150 characters"
+fix = "item_group_title_too_long"
+title = "item_group_title over 150 characters"
+links = [{ label = "Google: item_group_title", url = "https://support.google.com/merchants/answer/7052112" }]
+
+[[rule]]
+id = "google.variant_option.count"
+field = "variant_option"
+kind = "list_max"
+separator = ","
+max_items = 30
+severity = "error"
+says = "variant_option has {count} values; Google allows up to {max}."
+cites = "variant_option: up to 30 values, such as Memory size:128 GB"
+fix = "variant_option_limits"
+title = "variant_option over its limits"
+links = [{ label = "Google: variant_option", url = "https://support.google.com/merchants/answer/7052112" }]
+
+[[rule]]
+id = "google.variant_option.form"
+field = "variant_option"
+kind = "pattern"
+separator = ","
+regex = '^[^:]+:.+$'
+each = true
+severity = "error"
+says = "variant_option {value} is not name:value, such as Memory size:128 GB."
+cites = "variant_option: name:value, such as Memory size:128 GB"
+fix = "variant_option_limits"
+title = "variant_option over its limits"
+links = [{ label = "Google: variant_option", url = "https://support.google.com/merchants/answer/7052112" }]
+
+[[rule]]
+id = "google.image_link.min_width"
+field = "image_width"
+kind = "range"
+min = 500
+severity = "warning"
+says = "The image is {value} pixels wide. Google requires at least 500 x 500, enforced from 31 January 2027."
+cites = "image_link: at least 500 x 500 pixels, enforced from 31 January 2027 (checked only with --images)"
+fix = "image_too_small"
+title = "Images under 500 x 500 pixels"
+links = [{ label = "Google: image_link", url = "https://support.google.com/merchants/answer/7052112" }]
+
+[[rule]]
+id = "google.image_link.min_height"
+field = "image_height"
+kind = "range"
+min = 500
+severity = "warning"
+says = "The image is {value} pixels high. Google requires at least 500 x 500, enforced from 31 January 2027."
+cites = "image_link: at least 500 x 500 pixels, enforced from 31 January 2027 (checked only with --images)"
+fix = "image_too_small"
+title = "Images under 500 x 500 pixels"
+links = [{ label = "Google: image_link", url = "https://support.google.com/merchants/answer/7052112" }]
+
+[[rule]]
+id = "google.popularity_rank.range"
+field = "popularity_rank"
+kind = "range"
+min = 0
+max = 100
+severity = "error"
+says = "popularity_rank {value} {reason}."
+cites = "popularity_rank: from 0 to 100"
+fix = "popularity_rank_range"
+title = "popularity_rank outside 0 to 100"
+links = [{ label = "Google: popularity_rank", url = "https://support.google.com/merchants/answer/7052112" }]
+
+[[rule]]
+id = "google.gender.enum"
+field = "gender"
+kind = "enum"
+values = ["male", "female", "unisex"]
+ignore_case = true
+severity = "error"
+says = "gender {value} is not one of {values}."
+cites = "gender: male, female or unisex"
+fix = "gender_value"
+title = "gender values Google rejects"
+links = [{ label = "Google: gender", url = "https://support.google.com/merchants/answer/7052112" }]
+
+[[rule]]
+id = "google.age_group.enum"
+field = "age_group"
+kind = "enum"
+values = ["newborn", "infant", "toddler", "kids", "adult"]
+ignore_case = true
+severity = "error"
+says = "age_group {value} is not one of {values}."
+cites = "age_group: newborn, infant, toddler, kids or adult"
+fix = "age_group_value"
+title = "age_group values Google rejects"
+links = [{ label = "Google: age_group", url = "https://support.google.com/merchants/answer/7052112" }]
+
+[[rule]]
+id = "google.related_product.count"
+field = "related_product"
+kind = "list_max"
+separator = ","
+max_items = 30
+severity = "error"
+says = "related_product has {count} values; Google allows up to {max}."
+cites = "related_product: Max 30 values"
+fix = "related_product_form"
+title = "related_product is not relationship_type:identifier_type:identifier"
+links = [{ label = "Google: related_product", url = "https://support.google.com/merchants/answer/7052112" }]
+
+[[rule]]
+id = "google.brand.length"
+field = "brand"
+kind = "max_len"
+max_len = 70
+severity = "error"
+says = "brand has {count} characters; Google allows up to {max}."
+cites = "brand: Max 70 characters"
+fix = "brand_length"
+title = "brand is longer than Google allows"
+links = [{ label = "Google: brand", url = "https://support.google.com/merchants/answer/7052112" }]
+
+[[rule]]
+id = "google.mpn.length"
+field = "mpn"
+kind = "max_len"
+max_len = 70
+severity = "error"
+says = "mpn has {count} characters; Google allows up to {max}."
+cites = "mpn: Max 70 characters"
+fix = "mpn_length"
+title = "mpn is longer than Google allows"
+links = [{ label = "Google: mpn", url = "https://support.google.com/merchants/answer/7052112" }]

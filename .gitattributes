@@ -1,0 +1,8 @@
+# Fixtures are compared byte for byte (line numbers, input hashes), and
+# fixtures/hand/openai-tricky.csv and google-tricky.xml are CRLF on purpose.
+# Keep every fixture exactly as written on every platform.
+fixtures/** -text
+# Embedded binary and vendored files: never touch their bytes.
+*.woff2 binary
+rules/acp-feed/vendor/** -text
+crates/shelfcheck-core/rules/acp-feed/vendor/** -text

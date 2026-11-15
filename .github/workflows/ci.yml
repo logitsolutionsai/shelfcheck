@@ -1,0 +1,88 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+env:
+  CARGO_TERM_COLOR: always
+
+jobs:
+  test:
+    name: Test (${{ matrix.os }})
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest, windows-latest]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          components: rustfmt, clippy
+      - uses: Swatinem/rust-cache@v2
+      - run: cargo fmt --all --check
+      - run: cargo clippy --workspace --all-targets -- -D warnings
+      - run: cargo test --workspace
+
+  msrv:
+    name: MSRV 1.86
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@1.86
+      - uses: Swatinem/rust-cache@v2
+      - run: cargo check --workspace
+
+  fixtures:
+    name: Fixtures are up to date
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - run: python fixtures/generate.py
+      - run: git diff --exit-code -- fixtures
+
+  deny:
+    name: Licences and advisories
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: EmbarkStudios/cargo-deny-action@v2
+        with:
+          command: check
+
+  third-party-licences:
+    name: Third-party licence notice is current
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+      - uses: taiki-e/install-action@v2
+        with:
+          tool: cargo-about@0.9.3
+      - run: cargo fetch
+      # Offline: licence texts come from the fetched crates only, so the
+      # output does not depend on a web service.
+      - run: cargo about generate --offline about.hbs -o THIRD-PARTY-LICENSES.html
+      - run: git diff --exit-code -- THIRD-PARTY-LICENSES.html
+
+  perf:
+    name: 1,000,000-row performance run
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+      - uses: Swatinem/rust-cache@v2
+      - run: cargo test --release -p shelfcheck --test perf one_million_rows -- --ignored --nocapture
+      - run: echo "Runner CPU: $(nproc) cores, $(grep -m1 'model name' /proc/cpuinfo | cut -d: -f2)" >> target/perf-1m.txt
+      - uses: actions/upload-artifact@v4
+        with:
+          name: perf-1m
+          path: target/perf-1m.txt
