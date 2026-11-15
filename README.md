@@ -1,7 +1,5 @@
 # shelfcheck
 
-> **Status: pre-release.** Version 0.1.0 is not published yet; until it is, build from source. The code builds and its tests pass.
-
 shelfcheck checks your product feed against the formats AI shopping assistants read, and tells you what changed since your last feed in ways that will cause problems.
 
 ## An Example
@@ -145,7 +143,15 @@ A feed that passes shelfcheck is accepted by the formats checked, as far as thes
 
 ## Install
 
-shelfcheck will ship as a single command-line program for macOS, Linux and Windows, and through npm and Homebrew. Install steps arrive with the first release. Each release archive includes `THIRD-PARTY-LICENSES.html`, the licences of every crate built into the program.
+```sh
+npx shelfcheck check products.csv                 # npm, without installing
+npm install -g shelfcheck                         # npm
+brew install logitsolutionsai/tap/shelfcheck      # Homebrew (macOS, Linux)
+cargo install shelfcheck                          # crates.io
+curl --proto '=https' --tlsv1.2 -LsSf https://github.com/logitsolutionsai/shelfcheck/releases/latest/download/shelfcheck-installer.sh | sh
+```
+
+Prebuilt binaries for macOS, Linux and Windows, and a PowerShell installer, are on the [releases page](https://github.com/logitsolutionsai/shelfcheck/releases/latest). Each release archive includes `THIRD-PARTY-LICENSES.html`, the licences of every crate built into the program.
 
 ## Learn More
 
