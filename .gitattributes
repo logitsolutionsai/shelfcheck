@@ -1,3 +1,8 @@
+# Every other text file is checked out with LF on every platform, so hashes and
+# snapshots match on Windows too.
+* text=auto eol=lf
+*.png binary
+
 # Fixtures are compared byte for byte (line numbers, input hashes), and
 # fixtures/hand/openai-tricky.csv and google-tricky.xml are CRLF on purpose.
 # Keep every fixture exactly as written on every platform.
