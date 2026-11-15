@@ -1,3 +1,6 @@
 /target
 shelfcheck-results/
 *.swp
+
+# Launch video output (made by Projects/brag-kit)
+brag-output/
