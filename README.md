@@ -1,3 +1,11 @@
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="docs/media/hero-dark.webp">
+    <source media="(prefers-color-scheme: light)" srcset="docs/media/hero-light.webp">
+    <img src="docs/media/hero-light.webp" width="100%" alt="The formats shelfcheck checks a product feed against, beside its report on the example store: 182 of 1,400 products need fixes, readiness for OpenAI, ACP and Google, and a change where the id PHN-X2-BLK went from a phone to a phone case.">
+  </picture>
+</p>
+
 # shelfcheck
 
 shelfcheck checks your product feed against the formats AI shopping assistants read, and tells you what changed since your last feed in ways that will cause problems.
